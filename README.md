@@ -1,4 +1,4 @@
-### Olá! Eu sou a Luiza Gusmão, profissional de QA e estudante na área de programação! <br><br>
+### Olá! Eu sou a Luiza Gusmão, profissional de QA com conhecimento em automação! <br><br>
 <div align="center">
   <a href="https://github.com/andradeg-luiza">
   <img height="180em" src="https://github-readme-stats.vercel.app/api?username=andradeg-luiza&show_icons=true&theme=dracula&include_all_commits=true&count_private=true"/>
