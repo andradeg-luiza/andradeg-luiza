@@ -1,4 +1,4 @@
-#### Atuo como Analista de Qualidade de Software, com 3 anos de experiência na execução de testes manuais e automatizados, tanto no frontend quanto no backend.
+### Atuo como Analista de Qualidade de Software, com 3 anos de experiência na execução de testes manuais e automatizados, tanto no frontend quanto no backend.
 
 **Minhas principais competências incluem**: 
 **Testes Manuais (Frontend e Backend)**: 
