@@ -1,4 +1,4 @@
-**Atuo como Analista de Qualidade de Software, com 3 anos de experiência na execução de testes manuais e automatizados, tanto no frontend quanto no backend.**
+#### Atuo como Analista de Qualidade de Software, com 3 anos de experiência na execução de testes manuais e automatizados, tanto no frontend quanto no backend.
 
 **Minhas principais competências incluem**: 
 **Testes Manuais (Frontend e Backend)**: 
@@ -35,7 +35,7 @@ https://github.com/andradeg-luiza/E2ETODO
 
 ## Projeto Pessoal
 ### Futuro em Foco 
-**Nesse momento esse projeto está fase inicial, porém em andamento, pois em paralelo estou trabalhando em outros projetos. O objetivo é criar minha própria página WEB e criar automação E2E com Cypress. A documentação desse projeto está disponível na wiki do repositório.**
+**Nesse momento esse projeto está fase inicial, pois em paralelo estou trabalhando em outros projetos. O objetivo é criar minha própria página WEB e criar automação E2E com Cypress. A documentação funcional desse projeto está disponível na wiki do repositório.**
 ```
 https://github.com/andradeg-luiza/Futuro-em-Foco
 ```
