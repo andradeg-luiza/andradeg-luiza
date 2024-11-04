@@ -27,7 +27,7 @@ Capacidade de comunicação em inglês em contextos profissionais e pessoais, co
 
 ## Automações utilizando portais criados para automação de testes 
 
-1. TodoMVC (https://todomvc.com/) (em andamento)
+1. TodoMVC (em andamento)
 ```
 https://github.com/andradeg-luiza/E2ETODO
 ```
