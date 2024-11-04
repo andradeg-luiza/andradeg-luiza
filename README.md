@@ -25,13 +25,15 @@
 **Inglês: Nível B2** (Intermediário Avançado) 
 Capacidade de comunicação em inglês em contextos profissionais e pessoais, com habilidade para participar de reuniões, discutir assuntos técnicos, redigir e-mails e documentos de maneira clara e eficiente. Confortável em conversações formais e informais, com bom entendimento de textos mais complexos. 
 
-## Automações utilizando portais criados para automação de testes 
+## Projetos de automação de testes em sites de terceiros
 
 1. TodoMVC (em andamento)
 ```
 https://github.com/andradeg-luiza/E2ETODO
 ```
-2.  TaskListFull (em andamento)
+## Projetos de desenvolvimento + automação de testes
+
+1.  TaskListFull (em andamento)
 ```
 https://github.com/andradeg-luiza/taskListFull
 ```
