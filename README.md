@@ -31,11 +31,14 @@ Capacidade de comunicação em inglês em contextos profissionais e pessoais, co
 ```
 https://github.com/andradeg-luiza/E2ETODO
 ```
-2.  Parabank (https://parabank.parasoft.com/) (em breve)
+2.  TaskListFull (em andamento)
+```
+https://github.com/andradeg-luiza/taskListFull
+```
 
 ## Projeto Pessoal
 ### Futuro em Foco 
-**Nesse momento esse projeto está fase inicial, pois em paralelo estou trabalhando em outros projetos. O objetivo é criar minha própria página WEB e criar automação E2E com Cypress. A documentação funcional desse projeto está disponível na wiki do repositório.**
+**Nesse momento esse projeto está fase inicial, pois em paralelo estou trabalhando em outros projetos. O objetivo é criar meu Portfólio e publicar na WEB.**
 ```
 https://github.com/andradeg-luiza/Futuro-em-Foco
 ```
