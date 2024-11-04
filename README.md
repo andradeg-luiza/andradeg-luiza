@@ -40,5 +40,5 @@ https://github.com/andradeg-luiza/taskListFull
 ### Futuro em Foco 
 **Nesse momento esse projeto está fase inicial, pois em paralelo estou trabalhando em outros projetos. O objetivo é criar meu Portfólio e publicar na WEB.**
 ```
-https://github.com/andradeg-luiza/Futuro-em-Foco
+https://github.com/andradeg-luiza/Luiza-Portfolio
 ```
