@@ -31,7 +31,7 @@ Capacidade de comunicação em inglês em contextos profissionais e pessoais, co
 ```
 https://github.com/andradeg-luiza/taskListFull
 ```
-2. ## Projeto Pessoal de WEB
+2. Projeto Pessoal de WEB
 **Em fase inicial, pois em paralelo estou trabalhando em outros projetos. O objetivo é criar meu Portfólio e publicar na WEB.**
 ```
 https://github.com/andradeg-luiza/Luiza-Portfolio
