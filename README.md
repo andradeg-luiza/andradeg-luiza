@@ -25,21 +25,13 @@
 **Inglês: Nível B2** (Intermediário Avançado) 
 Capacidade de comunicação em inglês em contextos profissionais e pessoais, com habilidade para participar de reuniões, discutir assuntos técnicos, redigir e-mails e documentos de maneira clara e eficiente. Confortável em conversações formais e informais, com bom entendimento de textos mais complexos. 
 
-## Projetos de automação de testes em sites de terceiros
-
-1. TodoMVC (em andamento)
-```
-https://github.com/andradeg-luiza/E2ETODO
-```
 ## Projetos de desenvolvimento + automação de testes
 
 1.  TaskListFull (em andamento)
 ```
 https://github.com/andradeg-luiza/taskListFull
 ```
-
-## Projeto Pessoal
-### Portfólio WEB 
+2. ## Projeto Pessoal de WEB
 **Em fase inicial, pois em paralelo estou trabalhando em outros projetos. O objetivo é criar meu Portfólio e publicar na WEB.**
 ```
 https://github.com/andradeg-luiza/Luiza-Portfolio
