@@ -31,7 +31,11 @@ Capacidade de comunicação em inglês em contextos profissionais e pessoais, co
 ```
 https://github.com/andradeg-luiza/taskListFull
 ```
-2. Projeto Pessoal de Portfólio WEB (em planejamento)
+2.  DemoQA (em andamento)
+```
+https://github.com/andradeg-luiza/taskListFull
+```
+3. Projeto Pessoal de Portfólio WEB (em planejamento)
 ```
 https://github.com/andradeg-luiza/Luiza-Portfolio
 ```
