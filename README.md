@@ -8,13 +8,13 @@ With 4+ years in software quality assurance, I ensure systems are stable, effici
 🔹 Proficient in functional, regression, integration, and exploratory testing.
 🔹 Active in Agile environments (Scrum & Kanban), collaborating daily with developers and product teams.
 
-🛠️ Tech Stack:
-🔹 Playwright + TypeScript (frontend)
-🔹 PactumJs + TypeScript (backend)
-🔹 Cucumber
-🔹 SQL
-🔹 Git
-🔹 CI/CD pipelines
+🛠️ Tech Stack:<br>
+🔹 Playwright + TypeScript (frontend)<br>
+🔹 PactumJs + TypeScript (backend)<br>
+🔹 Cucumber<br>
+🔹 SQL<br>
+🔹 Git<br>
+🔹 CI/CD pipelines<br>
 
 🤝 I bring strong communication, teamwork, and QA expertise to every project.
 
