@@ -3,7 +3,8 @@
 
 I build **reliable, scalable, and user-ready software**.
 
-With **4+ years of experience in Software Quality Assurance**, I help teams deliver high-quality products by preventing <br> issues early and ensuring consistent performance across systems.
+With **4+ years of experience in Software Quality Assurance**, I help teams deliver high-quality products by preventing
+issues early and ensuring consistent performance across systems.
 
 ### 🔍 What I do
 - Manual and automated testing for **web and mobile applications**
