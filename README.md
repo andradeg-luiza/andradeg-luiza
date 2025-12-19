@@ -1,23 +1,31 @@
-I make software more reliable.
+```markdown
+## 👋 Hi, I’m a Quality Assurance Engineer
 
-With 4+ years in software quality assurance, I ensure systems are stable, efficient, and user-ready.
+I build **reliable, scalable, and user-ready software**.
 
-🔹 Manual and automated testing across web and mobile applications.
-🔹 Skilled at identifying, documenting, and reporting bugs.
-🔹 Experienced in creating and maintaining test cases and plans.
-🔹 Proficient in functional, regression, integration, and exploratory testing.
-🔹 Active in Agile environments (Scrum & Kanban), collaborating daily with developers and product teams.
+With **4+ years of experience in Software Quality Assurance**, I help teams deliver high-quality products by preventing issues early and ensuring consistent performance across systems.
 
-🛠️ Tech Stack:<br>
-🔹 Playwright + TypeScript (frontend)<br>
-🔹 PactumJs + TypeScript (backend)<br>
-🔹 Cucumber<br>
-🔹 SQL<br>
-🔹 Git<br>
-🔹 CI/CD pipelines<br>
+### 🔍 What I do
+- Manual and automated testing for **web and mobile applications**
+- Bug identification, documentation, and reporting with a strong attention to detail
+- Design, creation, and maintenance of **test cases, test plans, and test strategies**
+- Expertise in **functional, regression, integration, and exploratory testing**
+- Daily collaboration in **Agile environments** (Scrum & Kanban) with developers, product managers, and designers
 
-🤝 I bring strong communication, teamwork, and QA expertise to every project.
+### 🛠️ Tech Stack
+- **Cypress + JavaScript** (Frontend testing)
+- **PactumJS + TypeScript + Mocha** (Backend testing)
+- **Cucumber (BDD)**
+- **SQL**
+- **Git**
+- **CI/CD pipelines**
 
-📌 Currently working as a Quality Analyst, ensuring performance, usability, and scalability in high-scale systems.
+### 🤝 How I add value
+- Strong communication and teamwork skills  
+- Quality mindset from **planning to production**
+- Focus on **performance, usability, and scalability**
 
-👉 If you’re looking for a QA professional who ensures quality from planning to delivery, let’s connect.
+📌 Currently working as a **Quality Analyst**, ensuring high standards in **large-scale systems**.
+
+👉 If you’re looking for a QA professional who treats quality as a core part of the product — **let’s connect**.
+```
