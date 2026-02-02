@@ -1,13 +1,13 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro'
+import BaseLayout from "../layouts/BaseLayout.astro"
+import SectionTitle from "../components/SectionTitle.astro"
 ---
 
-<BaseLayout title="Luiza Gusmão — Portfolio">
-  <h1 class="text-4xl font-bold text-purple-600">
-    Tailwind funcionando!
-  </h1>
-
-  <p class="mt-4 text-lg">
-    Ambiente inicial configurado com sucesso.
-  </p>
+<BaseLayout title="Home">
+  <main class="py-paddingPage">
+    <SectionTitle 
+      title="A Professional Overview of My Engineering Journey"
+      subtitle="This platform introduces my work in quality engineering, automation, and product development — a clear path through my experience, solutions, and the systems I build"
+    />
+  </main>
 </BaseLayout>

@@ -1,0 +1,39 @@
+---
+const {
+  title,
+  description,
+  icon = null,
+  href = null,
+  cta = "Saiba mais"
+} = Astro.props
+---
+
+<div class="bg-brand-surface border border-neutralTech-200 rounded-md p-4 shadow-soft transition-colors fast ease-linearish hover:border-neutralTech-300">
+  <div class="flex flex-col gap-3">
+
+    {icon && (
+      <div class="text-brand-wine text-h3">
+        {icon}
+      </div>
+    )}
+
+    <h3 class="text-h3 text-brand-wine">
+      {title}
+    </h3>
+
+    {description && (
+      <p class="text-body text-neutralTech-700">
+        {description}
+      </p>
+    )}
+
+    {href && (
+      <a 
+        href={href}
+        class="text-body text-brand-wine transition-colors fast ease-linearish hover:text-brand-wineMuted"
+      >
+        {cta} →
+      </a>
+    )}
+  </div>
+</div>

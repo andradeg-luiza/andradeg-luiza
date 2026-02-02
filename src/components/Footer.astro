@@ -1,0 +1,59 @@
+---
+const social = [
+  { href: "https://github.com/luizagusmao", label: "GitHub" },
+  { href: "https://www.linkedin.com/in/luizagusmao", label: "LinkedIn" },
+  { href: "https://youtube.com", label: "YouTube" },
+]
+---
+
+<footer class="w-full bg-brand-surface border-t border-neutralTech-200 mt-section">
+  <div class="max-w-container mx-auto px-4 py-section flex flex-col gap-gapSection">
+
+    <!-- Newsletter -->
+    <div class="flex flex-col gap-2">
+      <h2 class="text-h3 text-brand-wine">Newsletter</h2>
+      <p class="text-body text-neutralTech-700">
+        Receba atualizações sobre projetos, artigos e novos conteúdos.
+      </p>
+
+      <form class="flex flex-col sm:flex-row gap-2">
+        <input 
+          type="email" 
+          placeholder="Seu email"
+          class="px-3 py-2 border border-neutralTech-300 rounded-sm text-body text-neutralTech-800 bg-neutralTech-50 transition-colors fast ease-linearish focus:shadow-focus"
+        />
+        <button 
+          type="submit"
+          class="px-4 py-2 bg-brand-wine text-neutralTech-50 rounded-sm text-body transition-colors fast ease-linearish hover:bg-brand-wineMuted"
+        >
+          Inscrever
+        </button>
+      </form>
+    </div>
+
+    <!-- Redes sociais -->
+    <div class="flex flex-col gap-2">
+      <h2 class="text-h3 text-brand-wine">Redes sociais</h2>
+      <ul class="flex gap-gapSection text-body">
+        {social.map(item => (
+          <li>
+            <a 
+              href={item.href}
+              class="text-neutralTech-700 transition-colors fast ease-linearish hover:text-brand-wineMuted"
+            >
+              {item.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+
+    <!-- Copyright -->
+    <div class="pt-4 border-t border-neutralTech-200">
+      <p class="text-small text-neutralTech-600">
+        © {new Date().getFullYear()} Luiza Gusmão — Todos os direitos reservados.
+      </p>
+    </div>
+
+  </div>
+</footer>

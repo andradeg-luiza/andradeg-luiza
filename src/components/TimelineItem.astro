@@ -1,0 +1,18 @@
+---
+const { year, title, description } = Astro.props
+---
+
+<div class="grid grid-cols-[auto_1fr] gap-4">
+  <!-- Coluna da linha vertical -->
+  <div class="flex flex-col items-center">
+    <div class="w-3 h-3 rounded-full bg-brand-wine"></div>
+    <div class="flex-1 w-px bg-neutralTech-300"></div>
+  </div>
+
+  <!-- Conteúdo -->
+  <div class="flex flex-col gap-1 pb-6">
+    <span class="text-h4 text-brand-wine">{year}</span>
+    <h3 class="text-h3 text-neutralTech-900">{title}</h3>
+    <p class="text-body text-neutralTech-700">{description}</p>
+  </div>
+</div>

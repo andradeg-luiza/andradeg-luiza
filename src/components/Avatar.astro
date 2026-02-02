@@ -1,0 +1,27 @@
+---
+const {
+  src,
+  alt = "",
+  size = "md",
+  bordered = false
+} = Astro.props
+
+const sizes = {
+  sm: "w-12 h-12",
+  md: "w-20 h-20",
+  lg: "w-32 h-32"
+}
+
+const borderClass = bordered
+  ? "border-2 border-neutralTech-300"
+  : ""
+---
+
+<div class={`rounded-full overflow-hidden ${sizes[size]} ${borderClass}`}>
+  <img 
+    src={src} 
+    alt={alt} 
+    class="w-full h-full object-cover"
+    loading="lazy"
+  />
+</div>

@@ -1,0 +1,70 @@
+---
+const links = [
+  { href: "/", label: "Home" },
+  { href: "/about", label: "About" },
+  { href: "/timeline", label: "Timeline" },
+  { href: "/tech", label: "Tech" },
+  { href: "/projects", label: "Projects" },
+  { href: "/products", label: "Products" },
+  { href: "/blog", label: "Blog" },
+  { href: "/services", label: "Services" },
+  { href: "/contact", label: "Contact" }
+]
+
+let isOpen = false
+---
+<header class="w-full bg-brand-surface border-b border-neutralTech-200">
+  <nav class="max-w-container mx-auto px-4 py-4 flex items-center justify-between">
+
+    <!-- Marca -->
+    <a 
+      href="/" 
+      class="text-brand-wine text-h3 font-medium transition-colors fast ease-linearish hover:text-brand-wineMuted"
+    >
+      Luiza Gusmão
+    </a>
+
+    <!-- Navegação Desktop -->
+    <ul class="hidden md:flex gap-gapSection text-body">
+      {links.map(link => (
+        <li>
+          <a 
+            href={link.href}
+            class="text-neutralTech-700 transition-colors fast ease-linearish hover:text-brand-wineMuted"
+          >
+            {link.label}
+          </a>
+        </li>
+      ))}
+    </ul>
+
+    <!-- Botão Mobile -->
+    <button
+      class="md:hidden flex flex-col gap-1 transition-colors fast ease-linearish"
+      aria-expanded={isOpen}
+      on:click={() => isOpen = !isOpen}
+    >
+      <span class="w-6 h-0.5 bg-neutralTech-800"></span>
+      <span class="w-6 h-0.5 bg-neutralTech-800"></span>
+      <span class="w-6 h-0.5 bg-neutralTech-800"></span>
+    </button>
+  </nav>
+
+  <!-- Navegação Mobile -->
+  {isOpen && (
+    <div class="md:hidden px-4 pb-4">
+      <ul class="flex flex-col gap-4 text-body">
+        {links.map(link => (
+          <li>
+            <a 
+              href={link.href}
+              class="block py-2 text-neutralTech-700 transition-colors fast ease-linearish hover:text-brand-wineMuted"
+            >
+              {link.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  )}
+</header>

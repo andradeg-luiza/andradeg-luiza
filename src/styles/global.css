@@ -1,3 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-brand-beige text-neutralTech-900 antialiased font-sans;
+}
+
+a {
+  @apply transition-colors duration-100 ease-linear;
+}
+
+button:focus,
+a:focus {
+  @apply outline-none shadow-focus;
+}
