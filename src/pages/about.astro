@@ -1,0 +1,57 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro"
+import SectionTitle from "../components/SectionTitle.astro"
+import Avatar from "../components/Avatar.astro"
+---
+
+<BaseLayout title="About">
+  <main class="py-paddingPage flex flex-col items-center text-center gap-12">
+
+    <!-- Foto -->
+    <Avatar 
+      src="/images/me.jpg"
+      alt="Luiza Gusmão"
+      size="xl"
+      bordered={true}
+    />
+
+    <!-- Título da página -->
+    <SectionTitle 
+      title="A Professional Overview of My Career"
+      subtitle="A structured introduction to my background, principles, and long-term direction in engineering and product development"
+    />
+
+    <!-- História -->
+    <section class="max-w-3xl text-left flex flex-col gap-6">
+      <h2 class="text-h2 text-brand-wine">My Story</h2>
+      <p class="text-body text-neutralTech-700">
+        With over 16 years of experience in technology, my career has evolved through multiple layers of the software lifecycle. I began in technical support, transitioned into Quality Assurance, and expanded into Software Development Engineering in Test (SDET). This path allowed me to develop a strong foundation in automation, modern engineering practices, and product-oriented thinking. My work is grounded in clarity, reliability, and long-term value — qualities that guide every system, workflow, and solution I help build.
+      </p>
+    </section>
+
+    <!-- Valores -->
+    <section class="max-w-3xl text-left flex flex-col gap-6">
+      <h2 class="text-h2 text-brand-wine">Core Values</h2>
+      <p class="text-body text-neutralTech-700">
+        I believe in engineering as a discipline that requires consistency, transparency, and a commitment to continuous improvement. My approach is centered on building solutions that are both robust and elegant, balancing technical depth with practical execution. I value clear communication, thoughtful design, and processes that empower teams to deliver with confidence.
+      </p>
+    </section>
+
+    <!-- Missão -->
+    <section class="max-w-3xl text-left flex flex-col gap-6">
+      <h2 class="text-h2 text-brand-wine">Mission</h2>
+      <p class="text-body text-neutralTech-700">
+        My mission is to elevate software quality through automation, engineering excellence, and well‑defined processes. I aim to create environments where teams can move faster, reduce risk, and maintain a high standard of technical integrity across every stage of development.
+      </p>
+    </section>
+
+    <!-- Visão -->
+    <section class="max-w-3xl text-left flex flex-col gap-6">
+      <h2 class="text-h2 text-brand-wine">Vision for the Future</h2>
+      <p class="text-body text-neutralTech-700">
+        Looking ahead, I intend to continue shaping tools, products, and engineering practices that support teams globally. My long‑term vision includes expanding FocusFlow and Donna into international references for productivity, automation, and technical clarity — combining my experience in QA, development, and product strategy to build solutions with real impact.
+      </p>
+    </section>
+
+  </main>
+</BaseLayout>

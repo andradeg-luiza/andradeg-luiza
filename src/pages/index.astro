@@ -1,13 +1,43 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro"
 import SectionTitle from "../components/SectionTitle.astro"
+import Button from "../components/Button.astro"
+import Avatar from "../components/Avatar.astro"
 ---
 
-<BaseLayout title="Home">
-  <main class="py-paddingPage">
-    <SectionTitle 
-      title="A Professional Overview of My Engineering Journey"
-      subtitle="This platform introduces my work in quality engineering, automation, and product development — a clear path through my experience, solutions, and the systems I build"
+<BaseLayout title="Luiza Gusmão">
+  <main class="py-paddingPage flex flex-col items-center text-center gap-10">
+
+    <!-- Foto / Avatar -->
+    <Avatar 
+      src="/images/me.jpg" 
+      alt="Luiza Gusmão" 
+      size="xl" 
+      bordered={true}
     />
+
+    <!-- Headline principal -->
+    <h1 class="text-h1 text-brand-wine max-w-3xl">
+      A Professional Overview of My Engineering Journey
+    </h1>
+
+    <!-- Subheadline -->
+    <p class="text-body text-neutralTech-700 max-w-2xl">
+      This platform introduces my work in quality engineering, automation, and product development —
+      a clear path through my experience, solutions, and the systems I build.
+    </p>
+
+    <!-- CTAs -->
+    <div class="flex gap-4">
+      <Button href="/contact" size="lg">Contact</Button>
+      <Button href="/services" variant="secondary" size="lg">Services</Button>
+    </div>
+
+    <!-- Seção de introdução -->
+    <SectionTitle 
+      title="A Clear and Structured Presentation"
+      subtitle="Explore my experience, technologies, projects, products, and the evolution of my career"
+    />
+
   </main>
 </BaseLayout>
