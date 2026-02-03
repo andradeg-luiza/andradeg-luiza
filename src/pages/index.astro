@@ -17,7 +17,7 @@ import Avatar from "../components/Avatar.astro"
     />
 
     <!-- Headline principal -->
-    <h1 class="text-h1 text-brand-wine max-w-3xl">
+    <h1 class="text-h1 md:text-display font-semibold text-brand-wine max-w-3xl">
       A Professional Overview of My Engineering Journey
     </h1>
 
@@ -27,14 +27,15 @@ import Avatar from "../components/Avatar.astro"
       a clear path through my experience, solutions, and the systems I build.
     </p>
 
-    <!-- CTAs -->
+    <!-- CTAs (sem link, para futuro Light/Dark mode) -->
     <div class="flex gap-4">
-      <Button href="/contact" size="lg">Contact</Button>
-      <Button href="/services" variant="secondary" size="lg">Services</Button>
+      <Button size="lg">Light</Button>
+      <Button variant="secondary" size="lg">Dark</Button>
     </div>
 
     <!-- Seção de introdução -->
     <SectionTitle 
+      class="mt-24"
       title="A Clear and Structured Presentation"
       subtitle="Explore my experience, technologies, projects, products, and the evolution of my career"
     />
