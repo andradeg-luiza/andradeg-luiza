@@ -1,0 +1,132 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro"
+import SectionTitle from "../components/SectionTitle.astro"
+import ResponsiveGrid from "../components/ResponsiveGrid.astro"
+import Card from "../components/Card.astro"
+---
+
+<BaseLayout title="Tech">
+  <main class="py-paddingPage flex flex-col items-center gap-12">
+
+    <SectionTitle 
+      title="Technologies & Tools"
+      subtitle="A clear overview of the technologies I apply across quality engineering, automation, development, and modern software workflows"
+    />
+
+    <!-- QA -->
+    <section class="w-full max-w-5xl flex flex-col gap-6">
+      <h2 class="text-h2 text-brand-wine">QA</h2>
+      <ResponsiveGrid>
+        <Card 
+          title="Manual Testing" 
+          description="Exploratory testing, structured test design, documentation, and quality analysis across different product contexts." 
+        />
+        <Card 
+          title="Automation" 
+          description="End-to-end, integration, API, and regression automation focused on reliability, maintainability, and speed." 
+        />
+        <Card 
+          title="Test Architecture" 
+          description="Framework design, scalability, code quality, and integration with CI/CD pipelines." 
+        />
+        <Card 
+          title="Quality Processes" 
+          description="Risk assessment, coverage strategy, engineering alignment, and continuous improvement practices." 
+        />
+      </ResponsiveGrid>
+    </section>
+
+    <!-- DevTools -->
+    <section class="w-full max-w-5xl flex flex-col gap-6">
+      <h2 class="text-h2 text-brand-wine">DevTools</h2>
+      <ResponsiveGrid>
+        <Card 
+          title="Git" 
+          description="Version control, branching strategies, and workflow optimization for collaborative engineering." 
+        />
+        <Card 
+          title="Docker" 
+          description="Containerization, reproducible environments, and automation pipelines for consistent delivery." 
+        />
+        <Card 
+          title="VS Code" 
+          description="Productive development environments, extensions, and workspace organization." 
+        />
+        <Card 
+          title="Postman" 
+          description="API testing, collections, automation flows, and contract validation." 
+        />
+      </ResponsiveGrid>
+    </section>
+
+    <!-- Front-end -->
+    <section class="w-full max-w-5xl flex flex-col gap-6">
+      <h2 class="text-h2 text-brand-wine">Front-end</h2>
+      <ResponsiveGrid>
+        <Card 
+          title="JavaScript" 
+          description="Core language fundamentals, DOM manipulation, async flows, and tooling." 
+        />
+        <Card 
+          title="TypeScript" 
+          description="Static typing, interfaces, and safer engineering practices for scalable codebases." 
+        />
+        <Card 
+          title="Astro" 
+          description="Fast, modern, component‑based architecture for clean and efficient front‑end experiences." 
+        />
+        <Card 
+          title="TailwindCSS" 
+          description="Utility‑first styling, design tokens, and responsive layout strategies." 
+        />
+      </ResponsiveGrid>
+    </section>
+
+    <!-- Back-end -->
+    <section class="w-full max-w-5xl flex flex-col gap-6">
+      <h2 class="text-h2 text-brand-wine">Back-end</h2>
+      <ResponsiveGrid>
+        <Card 
+          title="Node.js" 
+          description="API development, automation scripts, and backend tooling for modern applications." 
+        />
+        <Card 
+          title="Express" 
+          description="Lightweight services, routing, and middleware for structured backend solutions." 
+        />
+        <Card 
+          title="Python" 
+          description="Automation, scripting, and data processing for engineering workflows." 
+        />
+        <Card 
+          title="SQL" 
+          description="Relational modeling, queries, and data validation for reliable storage layers." 
+        />
+      </ResponsiveGrid>
+    </section>
+
+    <!-- CI/CD -->
+    <section class="w-full max-w-5xl flex flex-col gap-6">
+      <h2 class="text-h2 text-brand-wine">CI/CD</h2>
+      <ResponsiveGrid>
+        <Card 
+          title="GitHub Actions" 
+          description="Automated pipelines, testing workflows, and deployment strategies." 
+        />
+        <Card 
+          title="Jenkins" 
+          description="Enterprise‑level pipelines, legacy systems, and automation orchestration." 
+        />
+        <Card 
+          title="CI Architecture" 
+          description="Parallelization, caching strategies, and pipeline reliability." 
+        />
+        <Card 
+          title="Monitoring" 
+          description="Logs, metrics, observability, and quality gates for continuous delivery." 
+        />
+      </ResponsiveGrid>
+    </section>
+
+  </main>
+</BaseLayout>

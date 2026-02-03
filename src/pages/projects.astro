@@ -1,0 +1,52 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro"
+import SectionTitle from "../components/SectionTitle.astro"
+import ResponsiveGrid from "../components/ResponsiveGrid.astro"
+import Card from "../components/Card.astro"
+---
+
+<BaseLayout title="Projects">
+  <main class="py-paddingPage flex flex-col items-center gap-12">
+
+    <SectionTitle 
+      title="Projects"
+      subtitle="A curated selection of projects that reflect my work in automation, engineering, and product development"
+    />
+
+    <section class="w-full max-w-5xl flex flex-col gap-6">
+      <ResponsiveGrid>
+
+        <Card 
+          title="FocusFlow"
+          description="A productivity and workflow optimization product designed to bring clarity, structure, and engineering discipline to daily operations."
+          href="/products#focusflow"
+          cta="View details"
+        />
+
+        <Card 
+          title="Donna"
+          description="An AI‑powered assistant created to support teams with automation, documentation, and technical clarity across engineering workflows."
+          href="/products#donna"
+          cta="View details"
+        />
+
+        <Card 
+          title="Automation Framework"
+          description="A modular and scalable automation framework integrating API, UI, and CI/CD layers, built with maintainability and long‑term reliability in mind."
+        />
+
+        <Card 
+          title="QA Knowledge Base"
+          description="A structured documentation system covering testing strategies, patterns, and engineering practices to support quality teams and onboarding."
+        />
+
+        <Card 
+          title="Portfolio Website"
+          description="A fast, modern, component‑based portfolio built with Astro, TypeScript, and TailwindCSS, focused on clarity, performance, and clean architecture."
+        />
+
+      </ResponsiveGrid>
+    </section>
+
+  </main>
+</BaseLayout>

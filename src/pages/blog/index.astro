@@ -1,0 +1,36 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro"
+import SectionTitle from "../../components/SectionTitle.astro"
+import { getCollection } from "astro:content"
+
+const posts = await getCollection("blog")
+---
+
+<BaseLayout title="Blog">
+  <main class="py-paddingPage flex flex-col items-center gap-12">
+
+    <SectionTitle 
+      title="Blog"
+      subtitle="Insights on quality engineering, automation, productivity, and modern software practices"
+    />
+
+    <div class="w-full max-w-4xl flex flex-col gap-8">
+
+      {posts
+        .sort((a, b) => new Date(b.data.date) - new Date(a.data.date))
+        .map(post => (
+          <a 
+            href={`/blog/${post.slug}`}
+            class="block border border-neutralTech-200 rounded-md p-6 bg-surface shadow-soft transition-colors fast ease-linearish hover:border-neutralTech-300"
+          >
+            <h2 class="text-h3 text-brand-wine">{post.data.title}</h2>
+            <p class="text-body text-neutralTech-700 mt-2">{post.data.description}</p>
+            <p class="text-sm text-neutralTech-500 mt-1">{post.data.date}</p>
+          </a>
+        ))
+      }
+
+    </div>
+
+  </main>
+</BaseLayout>
