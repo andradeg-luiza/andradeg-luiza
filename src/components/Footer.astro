@@ -1,87 +1,76 @@
 ---
 const social = [
-  { href: "https://github.com/luizagusmao", label: "GitHub" },
-  { href: "https://www.linkedin.com/in/luizagusmao", label: "LinkedIn" },
-  { href: "https://youtube.com", label: "YouTube" },
-]
-
-const nav = [
-  { href: "/about", label: "About" },
-  { href: "/tech", label: "Tech" },
-  { href: "/projects", label: "Projects" },
-  { href: "/products", label: "Products" },
-  { href: "/timeline", label: "Timeline" },
-  { href: "/services", label: "Services" },
-  { href: "/contact", label: "Contact" },
-  { href: "/blog", label: "Blog" },
+  { href: "https://www.linkedin.com/in/andradegluiza/", icon: "linkedin" },
+  { href: "https://github.com/andradeg-luiza", icon: "github" },
+  { href: "https://wa.me/5581994563827", icon: "whatsapp" },
 ]
 ---
 
 <footer class="w-full bg-brand-surface border-t border-neutralTech-200 mt-section">
-  <div class="max-w-container mx-auto px-4 py-section flex flex-col gap-gapSection">
+  <div class="max-w-[900px] mx-auto px-4 py-10 grid grid-cols-[auto_auto_1fr] gap-10 items-start">
 
-    <!-- Newsletter -->
-    <div class="flex flex-col gap-2">
-      <h2 class="text-h3 text-brand-wine">Newsletter</h2>
-      <p class="text-body text-neutralTech-700">
-        Receba atualizações sobre projetos, artigos e novos conteúdos.
-      </p>
+    <!-- Column 1: Home -->
+    <div class="flex flex-col">
+      <a 
+        href="/" 
+        class="text-body font-semibold text-brand-wine hover:text-brand-wineMuted transition-colors fast ease-linearish"
+      >
+        Home
+      </a>
+    </div>
 
-      <form class="flex flex-col sm:flex-row gap-2">
+    <!-- Column 2: Social Icons -->
+    <div class="flex justify-center gap-6">
+      {social.map(item => (
+        <a 
+          href={item.href}
+          class="text-neutralTech-700 hover:text-brand-wineMuted transition-colors fast ease-linearish"
+          aria-label={item.icon}
+        >
+          {item.icon === "linkedin" && (
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M4.98 3.5A2.5 2.5 0 1 1 5 8.5a2.5 2.5 0 0 1 0-5ZM3 9h4v12H3Zm7 0h4v1.7h.1c.6-1.1 2-2.2 4.1-2.2 4.4 0 5.2 2.9 5.2 6.6V21h-4v-5.2c0-1.2 0-2.8-1.7-2.8s-2 1.3-2 2.7V21h-4Z"/>
+            </svg>
+          )}
+
+          {item.icon === "github" && (
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.3.8-.6v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.2-1.2-1.6-1.2-1.6-1-.7.1-.7.1-.7 1.1.1 1.7 1.1 1.7 1.1 1 .1.6 2.1 2.6 2.1.6-1 .9-1.6.9-1.6-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.4 1.2-3.3-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11 11 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8.1 3.1.8.9 1.2 2 1.2 3.3 0 4.5-2.7 5.5-5.3 5.8.4.3.9 1.1.9 2.3v3.4c0 .3.2.7.8.6A10.9 10.9 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/>
+            </svg>
+          )}
+
+          {item.icon === "whatsapp" && (
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 0a12 12 0 0 0-10.3 18.2L0 24l6-1.6A12 12 0 1 0 12 0Zm0 21.8a9.8 9.8 0 0 1-5-1.4l-.4-.2-3.6 1 1-3.5-.2-.4A9.8 9.8 0 1 1 12 21.8Zm5.4-7.3c-.3-.2-1.7-.9-2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1-.3-.2-1.2-.4-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.5-.6c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.2-.7-1.7-1-2.3-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.7.3-.2.3-1 1-1 2.4s1 2.8 1.1 3c.2.2 2 3.1 4.8 4.3 2.8 1.2 2.8.8 3.3.7.5 0 1.7-.7 1.9-1.3.2-.6.2-1.2.2-1.3 0-.1-.2-.2-.5-.4Z"/>
+            </svg>
+          )}
+        </a>
+      ))}
+    </div>
+
+    <!-- Column 3: Newsletter -->
+    <div class="flex flex-col gap-2 text-right">
+      <form class="flex gap-2 justify-end">
         <input 
           type="email" 
-          placeholder="Seu email"
-          class="px-3 py-2 border border-neutralTech-300 rounded-sm text-body text-neutralTech-800 bg-neutralTech-50 transition-colors fast ease-linearish focus:shadow-focus"
+          placeholder="Your email to receive updates"
+          class="px-3 py-2 w-64 border border-neutralTech-300 rounded-sm text-body text-neutralTech-800 bg-neutralTech-50 transition-colors fast ease-linearish focus:shadow-focus"
         />
         <button 
           type="submit"
-          class="px-4 py-2 bg-brand-wine text-neutralTech-50 rounded-sm text-body transition-colors fast ease-linearish hover:bg-brand-wineMuted"
+          class="px-4 py-2 bg-brand-wine text-neutralTech-50 rounded-sm text-body transition-colors fast ease-linearish hover:bg-brand-wineMuted whitespace-nowrap"
         >
-          Inscrever
+          Join
         </button>
       </form>
     </div>
 
-    <!-- Navegação -->
-    <div class="flex flex-col gap-2">
-      <h2 class="text-h3 text-brand-wine">Navegação</h2>
-      <ul class="flex flex-wrap gap-gapSection text-body">
-        {nav.map(item => (
-          <li>
-            <a 
-              href={item.href}
-              class="text-neutralTech-700 transition-colors fast ease-linearish hover:text-brand-wineMuted"
-            >
-              {item.label}
-            </a>
-          </li>
-        ))}
-      </ul>
-    </div>
+  </div>
 
-    <!-- Redes sociais -->
-    <div class="flex flex-col gap-2">
-      <h2 class="text-h3 text-brand-wine">Redes sociais</h2>
-      <ul class="flex gap-gapSection text-body">
-        {social.map(item => (
-          <li>
-            <a 
-              href={item.href}
-              class="text-neutralTech-700 transition-colors fast ease-linearish hover:text-brand-wineMuted"
-            >
-              {item.label}
-            </a>
-          </li>
-        ))}
-      </ul>
-    </div>
-
-    <!-- Copyright -->
-    <div class="pt-4 border-t border-neutralTech-200">
-      <p class="text-small text-neutralTech-600">
-        © {new Date().getFullYear()} Luiza Gusmão — Todos os direitos reservados.
-      </p>
-    </div>
-
+  <!-- Copyright -->
+  <div class="pt-4 border-t border-neutralTech-200 text-center">
+    <p class="text-small text-neutralTech-600">
+      © {new Date().getFullYear()} Luiza Gusmão — All rights reserved.
+    </p>
   </div>
 </footer>
