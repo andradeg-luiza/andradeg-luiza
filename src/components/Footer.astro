@@ -4,6 +4,17 @@ const social = [
   { href: "https://www.linkedin.com/in/luizagusmao", label: "LinkedIn" },
   { href: "https://youtube.com", label: "YouTube" },
 ]
+
+const nav = [
+  { href: "/about", label: "About" },
+  { href: "/tech", label: "Tech" },
+  { href: "/projects", label: "Projects" },
+  { href: "/products", label: "Products" },
+  { href: "/timeline", label: "Timeline" },
+  { href: "/services", label: "Services" },
+  { href: "/contact", label: "Contact" },
+  { href: "/blog", label: "Blog" },
+]
 ---
 
 <footer class="w-full bg-brand-surface border-t border-neutralTech-200 mt-section">
@@ -29,6 +40,23 @@ const social = [
           Inscrever
         </button>
       </form>
+    </div>
+
+    <!-- Navegação -->
+    <div class="flex flex-col gap-2">
+      <h2 class="text-h3 text-brand-wine">Navegação</h2>
+      <ul class="flex flex-wrap gap-gapSection text-body">
+        {nav.map(item => (
+          <li>
+            <a 
+              href={item.href}
+              class="text-neutralTech-700 transition-colors fast ease-linearish hover:text-brand-wineMuted"
+            >
+              {item.label}
+            </a>
+          </li>
+        ))}
+      </ul>
     </div>
 
     <!-- Redes sociais -->
