@@ -13,6 +13,7 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -25,8 +26,11 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Set BASE_URL for GitHub Pages
+        run: echo "BASE_URL=/andradeg-luiza/" >> $GITHUB_ENV
+
       - name: Build
-        run: npm run build
+        run: npm run build -- --base $BASE_URL
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
