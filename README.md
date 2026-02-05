@@ -1,108 +1,81 @@
-# Luiza Gusmão — Personal Page
+# Luiza Gusmão — Personal Website
 
-This is my personal page, built with Astro and deployed on GitHub Pages.  
-My goal is to present my professional journey, technical expertise, and evolution as a creator of digital products.
-
----
-
-## About the Project
-
-I created this page to consolidate my professional presence and demonstrate my experience as a QA Specialist, SDET, and digital product creator.
-
-This project reflects:
-
-- my 16-year career in technology  
-- my technical strength and creativity  
-- my goal of building a career that leads to freedom and entrepreneurship  
-- my evolution as the creator of FocusFlow and Donna AI  
-
-The architecture follows modern standards for development, testing, performance, and accessibility.
+This repository contains my personal website, built with Astro and designed to present my professional journey, technical expertise, and evolution as an engineer and creator.  
+The project reflects my experience in QA, automation, SDET practices, and modern front‑end engineering.
 
 ---
 
-## Tech Stack
+## 🚀 About the Project
 
-### Front-end
-- Astro  
-- TailwindCSS  
-- Modern HTML and CSS  
-- Vanilla JavaScript  
-- SEO‑optimized architecture  
-- High‑performance static and hybrid rendering  
+This website was created to consolidate my professional presence and communicate my technical strengths with clarity and structure.  
+It highlights:
 
-### Back-end (Astro API Routes)
-- Lightweight API routes  
-- Security middlewares  
-- Structured logging  
-- Endpoints for:
-  - projects  
-  - messages (contact)  
-  - products (FocusFlow and Donna)  
-  - short videos (shorts)  
+- my 16+ years of experience in technology  
+- my transition from Support → QA → Automation → SDET  
+- my engineering mindset and product‑oriented approach  
+- my work in automation frameworks, testing, CI/CD, and workflow optimization  
 
-### Database
-- SQLite  
-- Prisma ORM  
-- Tables:
-  - projects  
-  - messages  
-  - products  
-  - logs  
-  - shorts  
+The site is fully static in its current version (1.0), optimized for performance, accessibility, and clean architecture.
 
 ---
 
-## Automated Testing
+## 🧰 Tech Stack
+
+### Front‑end
+- **Astro**
+- **TailwindCSS**
+- **TypeScript**
+- Component‑based architecture
+- SEO‑optimized structure
+- High‑performance static rendering
+
+### Styling & Layout
+- Custom design system  
+- Responsive components  
+- Utility‑first styling  
+
+---
+
+## 🧪 Automated Testing
 
 ### Unit Tests
-- Vitest  
-- Testing Library  
-- Coverage for:
-  - critical logic  
-  - helpers  
-  - services  
-  - isolated components  
+- **Vitest**
+- Testing Library
+- Coverage for helpers, logic, and isolated components
 
-### End-to-End Tests
-- Playwright  
+### End‑to‑End Tests
+- **Playwright**
 - UI testing  
-- API testing  
-- Cross‑browser testing  
-- Responsive testing  
-- Full user flows  
+- API testing (future dynamic version)  
+- Cross‑browser and responsive testing  
 
-### Regression Testing
+### Regression
 - Automated execution in CI  
-- Functional regression  
-- Optional visual regression  
-- Snapshots  
-- Trace Viewer  
+- Snapshots and trace viewer  
 
 ---
 
-## CI/CD — GitHub Actions
+## 🔄 CI/CD — GitHub Actions
 
-### Pipeline 1 — Build and Test
+### Pipeline 1 — Build & Test
 - Install dependencies  
-- Run Playwright tests  
 - Run unit tests  
+- Run Playwright tests  
 - Lint  
 - Build Astro  
 
-### Pipeline 2 — Deploy (GitHub Pages)
-- Automatic deployment  
-- Only if all tests pass  
-- Versioned deployment with tags  
+### Pipeline 2 — Deploy
+- Deploy to GitHub Pages  
+- Only runs if all tests pass  
 
 ---
 
-## Hosting
-- Primary: GitHub Pages  
-- Future options: Hostinger, Render, Railway  
+## 🌐 Hosting
+- **GitHub Pages**
 
 ---
 
-## Project Structure
+## 📁 Project Structure
 
 ```
 /
@@ -112,84 +85,68 @@ The architecture follows modern standards for development, testing, performance,
 │   ├── pages/
 │   ├── styles/
 │   ├── lib/
-│   ├── server/
-│   └── database/
-├── prisma/
+│   └── server/
+├── public/
 ├── tests/
 │   ├── unit/
-│   ├── e2e/
-│   └── api/
-├── public/
+│   └── e2e/
 └── README.md
 ```
 
 ---
 
-## Page Sections
+## 📄 Current Pages
 
 - Home  
 - About  
-- Career timeline  
 - Technologies  
-- Dynamic project wall  
-- Products (FocusFlow and Donna)  
-- Contact  
-- Blog (Markdown)  
-- Newsletter  
+- Projects  
+- Timeline  
 - Services  
-- QA and automation consulting  
-- Short‑form videos (shorts)  
+- Contact  
+- Newsletter (footer)  
 
 ---
 
-## Roadmap
+## 🗺️ Roadmap
 
-### 1.0 — Static Page
+### 1.0 — Static Version (current)
 - Pages, layout, and content  
-- Initial design system  
-- Markdown blog  
+- Design system  
+- Initial structure  
 
-### 1.1 — Dynamic Page
+### 1.1 — Automated Testing
+- Unit tests (Vitest)  
+- E2E tests (Playwright)  
+
+### 1.2 — CI/CD
+- Build & test pipeline  
+- Deployment pipeline  
+
+### 2.0 — Dynamic Version (future)
 - Database integration  
-- Dynamic projects  
 - API routes  
 - Admin utilities  
 
-### 2.0 — Product Integration
-- FocusFlow page  
-- Donna page  
-- Product APIs  
-
-### 3.0 — Expansion as a Creator
-- Consulting services  
-- Newsletter  
-- Video content  
-- Professional positioning  
-
 ---
 
-## About Me
+## 👩‍💻 About Me
 
-I am a QA Specialist, SDET, and digital product creator with:
+I am a QA Specialist, SDET, and creator of engineering‑focused tools.  
+My background includes:
 
-- 16 years of experience in technology  
+- 16 years in technology  
 - 11 years in technical support  
-- 5 years in QA  
-- Strong experience in automation (Playwright, Cypress, PactumJS)  
-- Solid background in Agile environments  
-- CI/CD experience  
-- Database and API automation skills  
+- 5 years in QA and automation  
+- Strong experience with Playwright, Cypress, PactumJS  
+- CI/CD, API testing, debugging, and engineering workflows  
 - Advanced Git  
 - English B2  
 
-I am the creator of:
-
-- FocusFlow  
-- Donna AI  
-
-My goal is to build a career that gives me freedom, creativity, and the ability to create my own products.
+My long‑term goal is to build tools that bring clarity, structure, and efficiency to engineering teams.
 
 ---
 
-## License
+## 📄 License
 MIT License.
+```
