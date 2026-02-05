@@ -1,8 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro"
 import SectionTitle from "../components/SectionTitle.astro"
-import ResponsiveGrid from "../components/ResponsiveGrid.astro"
-import Card from "../components/Card.astro"
 ---
 
 <BaseLayout title="Services">
@@ -10,101 +8,100 @@ import Card from "../components/Card.astro"
 
     <SectionTitle 
       title="Services"
-      subtitle="Practical, engineering‑driven support across QA, automation, and modern software workflows"
+      subtitle="Engineering‑driven support across QA, automation, CI/CD, and modern software workflows"
     />
 
-    <section class="w-full max-w-5xl flex flex-col gap-12">
+    <section class="w-full max-w-4xl flex flex-col gap-16">
 
-      <!-- Automation -->
-      <div class="flex flex-col gap-6">
-        <h2 class="text-h2 text-brand-wine">Test Automation</h2>
-        <p class="text-body text-neutralTech-700 max-w-3xl">
-          Automation focused on reliability, maintainability, and real impact on delivery speed and quality.
+      <!-- Test Automation -->
+      <div class="flex flex-col gap-4 border-b border-neutralTech-200 pb-10">
+        <h2 class="text-h3 font-semibold text-brand-wine">
+          Do you need Test Automation?
+        </h2>
+
+        <p class="text-body text-neutralTech-700">
+          I design and implement automation that is stable, scalable, and aligned with real engineering needs. 
+          My work covers UI, API, and performance automation with a strong focus on maintainability, reliability, 
+          and long‑term value. I help teams reduce manual effort, increase confidence in releases, and build 
+          automation that truly supports delivery speed and quality.
         </p>
 
-        <ResponsiveGrid>
-          <Card 
-            title="Framework Design"
-            description="UI, API, and performance automation with scalable, modular architectures."
-          />
-          <Card 
-            title="Stable Test Suites"
-            description="Regression, integration, and end‑to‑end suites optimized for speed and consistency."
-          />
-          <Card 
-            title="CI/CD Integration"
-            description="Automation embedded into pipelines for continuous validation and fast feedback."
-          />
-        </ResponsiveGrid>
+        <a 
+          href="https://wa.me/5581994563827"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-brand-wineMuted hover:text-brand-wine transition-colors fast ease-linearish font-medium text-body"
+        >
+          Talk to me on WhatsApp →
+        </a>
       </div>
 
       <!-- CI/CD -->
-      <div class="flex flex-col gap-6">
-        <h2 class="text-h2 text-brand-wine">CI/CD & Quality Engineering</h2>
-        <p class="text-body text-neutralTech-700 max-w-3xl">
-          Pipelines and engineering practices that support safe, repeatable, and observable delivery.
+      <div class="flex flex-col gap-4 border-b border-neutralTech-200 pb-10">
+        <h2 class="text-h3 font-semibold text-brand-wine">
+          Do you need CI/CD or Quality Engineering?
+        </h2>
+
+        <p class="text-body text-neutralTech-700">
+          I build pipelines and engineering practices that support safe, repeatable, and observable delivery. 
+          From pipeline architecture to automated quality gates, I help teams adopt workflows that reduce risk, 
+          improve visibility, and ensure consistent standards across environments. My approach blends automation, 
+          metrics, and engineering discipline to create reliable delivery systems.
         </p>
 
-        <ResponsiveGrid>
-          <Card 
-            title="Pipeline Architecture"
-            description="Fast, reliable workflows with parallelization, caching, and automated checks."
-          />
-          <Card 
-            title="Quality Gates"
-            description="Metrics, validations, and automated controls to ensure consistent standards."
-          />
-          <Card 
-            title="Observability"
-            description="Logs, metrics, dashboards, and reporting for clear visibility into quality."
-          />
-        </ResponsiveGrid>
+        <a 
+          href="https://wa.me/5581994563827"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-brand-wineMuted hover:text-brand-wine transition-colors fast ease-linearish font-medium text-body"
+        >
+          Talk to me on WhatsApp →
+        </a>
       </div>
 
       <!-- Internal Tools -->
-      <div class="flex flex-col gap-6">
-        <h2 class="text-h2 text-brand-wine">Internal Tools & Automation</h2>
-        <p class="text-body text-neutralTech-700 max-w-3xl">
-          Tools and workflows that reduce manual effort and bring clarity to engineering operations.
+      <div class="flex flex-col gap-4 border-b border-neutralTech-200 pb-10">
+        <h2 class="text-h3 font-semibold text-brand-wine">
+          Do you need Internal Tools or Engineering Automation?
+        </h2>
+
+        <p class="text-body text-neutralTech-700">
+          I create tools and automation that reduce manual work, improve clarity, and support engineering operations. 
+          This includes documentation tools, workflow automation, integration scripts, and utilities that help teams 
+          move faster with less friction. My focus is always on clarity, maintainability, and real impact.
         </p>
 
-        <ResponsiveGrid>
-          <Card 
-            title="Engineering Tools"
-            description="Utilities for testing, documentation, and team productivity."
-          />
-          <Card 
-            title="Process Automation"
-            description="Automation of repetitive tasks, data flows, and operational routines."
-          />
-          <Card 
-            title="Integration Scripts"
-            description="APIs and connectors that unify systems and streamline workflows."
-          />
-        </ResponsiveGrid>
+        <a 
+          href="https://wa.me/5581994563827"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-brand-wineMuted hover:text-brand-wine transition-colors fast ease-linearish font-medium text-body"
+        >
+          Talk to me on WhatsApp →
+        </a>
       </div>
 
       <!-- Hybrid QA + Dev -->
-      <div class="flex flex-col gap-6">
-        <h2 class="text-h2 text-brand-wine">Hybrid QA + Development</h2>
-        <p class="text-body text-neutralTech-700 max-w-3xl">
-          A blend of QA and engineering to support teams with technical depth and quality expertise.
+      <div class="flex flex-col gap-4">
+        <h2 class="text-h3 font-semibold text-brand-wine">
+          Do you need Hybrid QA + Development support?
+        </h2>
+
+        <p class="text-body text-neutralTech-700">
+          I combine QA expertise with engineering skills to support teams that need technical depth. 
+          This includes SDET practices, code quality improvements, lightweight backend support, 
+          and small internal interfaces or dashboards. I help teams build testable architectures, 
+          improve maintainability, and adopt engineering‑driven quality strategies.
         </p>
 
-        <ResponsiveGrid>
-          <Card 
-            title="SDET Practices"
-            description="Testable architectures, tooling, and engineering‑driven quality strategies."
-          />
-          <Card 
-            title="Code Quality"
-            description="Refactoring, maintainability improvements, and lightweight backend support."
-          />
-          <Card 
-            title="Frontend & Tools"
-            description="Small interfaces, dashboards, and internal utilities for teams."
-          />
-        </ResponsiveGrid>
+        <a 
+          href="https://wa.me/5581994563827"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-brand-wineMuted hover:text-brand-wine transition-colors fast ease-linearish font-medium text-body"
+        >
+          Talk to me on WhatsApp →
+        </a>
       </div>
 
     </section>

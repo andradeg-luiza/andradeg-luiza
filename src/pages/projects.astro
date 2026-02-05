@@ -1,8 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro"
 import SectionTitle from "../components/SectionTitle.astro"
-import ResponsiveGrid from "../components/ResponsiveGrid.astro"
-import Card from "../components/Card.astro"
 ---
 
 <BaseLayout title="Projects">
@@ -10,42 +8,110 @@ import Card from "../components/Card.astro"
 
     <SectionTitle 
       title="Projects"
-      subtitle="A curated selection of projects that reflect my work in automation, engineering, and product development"
+      subtitle="A curated and technical overview of the systems, tools, and products I’ve engineered"
     />
 
-    <section class="w-full max-w-5xl flex flex-col gap-6">
-      <ResponsiveGrid>
+    <section class="w-full max-w-4xl flex flex-col gap-12">
 
-        <Card 
-          title="FocusFlow"
-          description="A productivity and workflow optimization product designed to bring clarity, structure, and engineering discipline to daily operations."
-          href="/products#focusflow"
-          cta="View details"
-        />
+      <!-- Project 1 -->
+      <div class="flex flex-col gap-3 border-b border-neutralTech-200 pb-8">
+        <h2 class="text-h3 font-semibold text-brand-wine">1. Portfolio Website</h2>
 
-        <Card 
-          title="Donna"
-          description="An AI‑powered assistant created to support teams with automation, documentation, and technical clarity across engineering workflows."
-          href="/products#donna"
-          cta="View details"
-        />
+        <a 
+          href="https://github.com/andradeg-luiza/andradeg-luiza"
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="text-brand-wineMuted hover:text-brand-wine transition-colors fast ease-linearish text-body font-medium"
+        >
+          Explore this project →
+        </a>
 
-        <Card 
-          title="Automation Framework"
-          description="A modular and scalable automation framework integrating API, UI, and CI/CD layers, built with maintainability and long‑term reliability in mind."
-        />
+        <p class="text-body text-neutralTech-700">
+          A fully engineered personal platform built with Astro, TypeScript, and TailwindCSS, designed to showcase technical expertise, projects, and long‑term engineering direction. 
+          The system includes API routes, structured logging, SQLite + Prisma ORM, and a modular architecture optimized for performance, accessibility, and maintainability. 
+          It integrates unit tests (Vitest) and end‑to‑end tests (Playwright), ensuring reliability across components and user flows. 
+          CI/CD pipelines via GitHub Actions automate testing, linting, building, and deployment to GitHub Pages.
+        </p>
+      </div>
 
-        <Card 
-          title="QA Knowledge Base"
-          description="A structured documentation system covering testing strategies, patterns, and engineering practices to support quality teams and onboarding."
-        />
+      <!-- Project 2 -->
+      <div class="flex flex-col gap-3 border-b border-neutralTech-200 pb-8">
+        <h2 class="text-h3 font-semibold text-brand-wine">2. FocusFlow — Productivity & Workflow System</h2>
 
-        <Card 
-          title="Portfolio Website"
-          description="A fast, modern, component‑based portfolio built with Astro, TypeScript, and TailwindCSS, focused on clarity, performance, and clean architecture."
-        />
+        <a 
+          href="https://github.com/andradeg-luiza/focusflow"
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="text-brand-wineMuted hover:text-brand-wine transition-colors fast ease-linearish text-body font-medium"
+        >
+          Explore this project →
+        </a>
 
-      </ResponsiveGrid>
+        <p class="text-body text-neutralTech-700">
+          FocusFlow is a structured productivity system designed to improve execution, prioritization, and workflow clarity. 
+          Built with a strong engineering mindset, it applies principles of task orchestration, modular architecture, and maintainable code design. 
+          The project reflects deep understanding of state management, UI/UX for productivity tools, and automation‑driven workflows.
+        </p>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="flex flex-col gap-3 border-b border-neutralTech-200 pb-8">
+        <h2 class="text-h3 font-semibold text-brand-wine">3. Auto Apply Bot — Automated Job Application Tool</h2>
+
+        <a 
+          href="https://github.com/andradeg-luiza/autoapplybot"
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="text-brand-wineMuted hover:text-brand-wine transition-colors fast ease-linearish text-body font-medium"
+        >
+          Explore this project →
+        </a>
+
+        <p class="text-body text-neutralTech-700">
+          An automation tool designed to streamline job application workflows by interacting with job platforms programmatically. 
+          The bot automates repetitive tasks such as form filling, data extraction, and structured submissions. 
+          Built with Node.js, automation scripts, and robust error handling, it showcases strong skills in browser automation, workflow optimization, API interaction, and reliability engineering.
+        </p>
+      </div>
+
+      <!-- Project 4 -->
+      <div class="flex flex-col gap-3 border-b border-neutralTech-200 pb-8">
+        <h2 class="text-h3 font-semibold text-brand-wine">4. Donna — Engineering Assistant</h2>
+
+        <a 
+          href="https://github.com/andradeg-luiza/donna"
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="text-brand-wineMuted hover:text-brand-wine transition-colors fast ease-linearish text-body font-medium"
+        >
+          Explore this project →
+        </a>
+
+        <p class="text-body text-neutralTech-700">
+          Donna is an AI‑powered engineering assistant focused on automation, documentation, and workflow optimization. 
+          It integrates structured logic, modular services, and automation routines to support engineering tasks such as generating documentation, organizing workflows, and assisting with testing processes.
+        </p>
+      </div>
+
+      <!-- Project 5 -->
+      <div class="flex flex-col gap-3">
+        <h2 class="text-h3 font-semibold text-brand-wine">5. QA Knowledge Base</h2>
+
+        <a 
+          href="https://www.linkedin.com/in/andradegluiza/"
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="text-brand-wineMuted hover:text-brand-wine transition-colors fast ease-linearish text-body font-medium"
+        >
+          Explore this project →
+        </a>
+
+        <p class="text-body text-neutralTech-700">
+          A comprehensive and evolving knowledge base documenting QA methodologies, automation strategies, testing patterns, engineering workflows, and best practices. 
+          It consolidates insights from 16+ years of experience across support, QA, automation, and SDET roles.
+        </p>
+      </div>
+
     </section>
 
   </main>

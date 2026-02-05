@@ -1,75 +1,64 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro"
 import SectionTitle from "../components/SectionTitle.astro"
-import ResponsiveGrid from "../components/ResponsiveGrid.astro"
-import Card from "../components/Card.astro"
 ---
 
 <BaseLayout title="Contact">
-  <main class="py-paddingPage flex flex-col items-center gap-16">
+  <main class="py-paddingPage flex flex-col items-center gap-12">
 
     <SectionTitle 
       title="Contact"
       subtitle="Reach out for collaborations, engineering support, or professional opportunities"
     />
 
-    <!-- Work With Me -->
-    <section class="w-full max-w-4xl flex flex-col gap-6">
-      <h2 class="text-h2 text-brand-wine">Work With Me</h2>
-      <p class="text-body text-neutralTech-700">
-        I support teams with automation, QA engineering, internal tools, and modern software practices. 
-        Clear communication, structured delivery, and technical depth guide my work.
-      </p>
+    <section class="w-full max-w-3xl flex flex-col gap-16">
 
-      <ResponsiveGrid>
-        <Card 
-          title="Automation & QA"
-          description="Support with frameworks, pipelines, and engineering‑driven quality practices."
-        />
-        <Card 
-          title="Engineering Support"
-          description="Internal tools, backend scripts, documentation systems, and workflow automation."
-        />
-        <Card 
-          title="Consulting"
-          description="Quality strategy, modernization, and technical guidance for teams and products."
-        />
-      </ResponsiveGrid>
-    </section>
+      <!-- WhatsApp -->
+      <div class="flex flex-col gap-3 border-b border-neutralTech-200 pb-10">
+        <h2 class="text-h3 font-semibold text-brand-wine">WhatsApp</h2>
+        <p class="text-body text-neutralTech-700">
+          Direct and fast communication for projects, questions, or collaborations.
+        </p>
+        <a 
+          href="https://wa.me/5581994563827"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-brand-wineMuted hover:text-brand-wine transition-colors fast ease-linearish font-medium text-body"
+        >
+          Send a message →
+        </a>
+      </div>
 
-    <!-- Contact Methods -->
-    <section class="w-full max-w-4xl flex flex-col gap-6">
-      <h2 class="text-h2 text-brand-wine">Get in Touch</h2>
-      <p class="text-body text-neutralTech-700">
-        The best ways to reach me for projects, collaborations, or professional conversations.
-      </p>
-
-      <ResponsiveGrid>
-        <Card 
-          title="WhatsApp"
-          description="Direct contact for quick communication."
-          cta="Open WhatsApp"
-          href="https://wa.me/5581993901967"
-        />
-        <Card 
-          title="Email"
-          description="For detailed inquiries or project discussions."
-          cta="Send email"
+      <!-- Email -->
+      <div class="flex flex-col gap-3 border-b border-neutralTech-200 pb-10">
+        <h2 class="text-h3 font-semibold text-brand-wine">Email</h2>
+        <p class="text-body text-neutralTech-700">
+          For detailed inquiries, proposals, or professional conversations.
+        </p>
+        <a 
           href="mailto:andradeg.luiza@outlook.com"
-        />
-        <Card 
-          title="LinkedIn"
-          description="Professional profile and networking."
-          cta="Visit profile"
+          class="text-brand-wineMuted hover:text-brand-wine transition-colors fast ease-linearish font-medium text-body"
+        >
+          Send an email →
+        </a>
+      </div>
+
+      <!-- LinkedIn -->
+      <div class="flex flex-col gap-3">
+        <h2 class="text-h3 font-semibold text-brand-wine">LinkedIn</h2>
+        <p class="text-body text-neutralTech-700">
+          Professional profile, networking, and career‑focused communication.
+        </p>
+        <a 
           href="https://www.linkedin.com/in/andradegluiza/"
-        />
-        <Card 
-          title="GitHub"
-          description="Code, tools, and engineering experiments."
-          cta="View repositories"
-          href="https://github.com/andradeg-luiza"
-        />
-      </ResponsiveGrid>
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-brand-wineMuted hover:text-brand-wine transition-colors fast ease-linearish font-medium text-body"
+        >
+          Visit profile →
+        </a>
+      </div>
+
     </section>
 
   </main>
