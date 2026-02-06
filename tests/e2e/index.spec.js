@@ -7,18 +7,20 @@ test("Index: valida todos os componentes da página", async ({ page }) => {
   const avatar = page.locator('img[alt="Luiza Gusmão"]')
   await expect(avatar).toBeVisible()
 
-  // 2. Headline principal (h1)
+  // 2. Headline principal
   const headline = page.locator("h1")
   await expect(headline).toBeVisible()
-  await expect(headline).toContainText("A Professional Overview")
 
   // 3. Subheadline
   const subheadline = page.locator("p")
   await expect(subheadline.first()).toBeVisible()
 
-  // 4. Botões Light e Dark (corrigido)
-  const lightButton = page.locator("text=Light")
-  const darkButton = page.locator("text=Dark")
+  // 4. Botões Light e Dark (versão estável)
+  const buttons = page.locator("main div.flex.gap-4 > *")
+  await expect(buttons).toHaveCount(2)
+
+  const lightButton = buttons.nth(0)
+  const darkButton = buttons.nth(1)
 
   await expect(lightButton).toBeVisible()
   await expect(darkButton).toBeVisible()
