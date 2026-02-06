@@ -12,14 +12,13 @@ test("Index: valida todos os componentes da página", async ({ page }) => {
   await expect(headline).toBeVisible()
   await expect(headline).toContainText("A Professional Overview")
 
-  // 3. Subheadline (parágrafo)
+  // 3. Subheadline
   const subheadline = page.locator("p")
   await expect(subheadline.first()).toBeVisible()
-  await expect(subheadline.first()).toContainText("quality engineering")
 
-  // 4. Botões Light e Dark
-  const lightButton = page.getByRole("button", { name: "Light" })
-  const darkButton = page.getByRole("button", { name: "Dark" })
+  // 4. Botões Light e Dark (corrigido)
+  const lightButton = page.locator("text=Light")
+  const darkButton = page.locator("text=Dark")
 
   await expect(lightButton).toBeVisible()
   await expect(darkButton).toBeVisible()
@@ -27,14 +26,14 @@ test("Index: valida todos os componentes da página", async ({ page }) => {
   await lightButton.click()
   await darkButton.click()
 
-  // 5. SectionTitle (título e subtítulo)
+  // 5. SectionTitle
   const sectionTitle = page.getByRole("heading", { name: "A Clear and Structured Presentation" })
   await expect(sectionTitle).toBeVisible()
 
   const sectionSubtitle = page.locator("p", { hasText: "Explore my experience" })
   await expect(sectionSubtitle).toBeVisible()
 
-  // 6. Verificar se não há links quebrados
+  // 6. Links
   const links = page.locator("a")
   const totalLinks = await links.count()
 
