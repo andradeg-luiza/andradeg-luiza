@@ -3,20 +3,29 @@ import BaseLayout from "../layouts/BaseLayout.astro"
 import SectionTitle from "../components/SectionTitle.astro"
 import ResponsiveGrid from "../components/ResponsiveGrid.astro"
 import Card from "../components/Card.astro"
+
+const sectionTitleClasses =
+  "text-h1 md:text-h1 font-bold text-brand-wine dark:text-brand-beige tracking-tight transition-colors duration-base"
+
+const sectionWrapper =
+  "w-full max-w-5xl flex flex-col gap-6"
 ---
 
 <BaseLayout title="Tech">
   <main class="py-paddingPage flex flex-col items-center gap-12">
 
-    <SectionTitle 
-      title="Technologies & Tools"
-      subtitle="A concise overview of the technologies I apply across QA, automation, development, and modern engineering workflows"
-    />
+    <!-- Título centralizado -->
+    <div class="w-full max-w-5xl text-center">
+      <SectionTitle 
+        class="items-center text-center [&>h2]:text-h1"
+        title="Technologies & Tools"
+        subtitle="A concise overview of the technologies I apply across QA, automation, development, and modern engineering workflows"
+      />
+    </div>
 
-    <section class="w-full max-w-5xl flex flex-col gap-6">
-      <h2 class="text-h1 md:text-h1 font-bold text-brand-wine dark:text-brand-beige tracking-tight">
-        QA
-      </h2>
+    <!-- QA -->
+    <section class={sectionWrapper} aria-labelledby="tech-qa">
+      <h2 id="tech-qa" class={sectionTitleClasses}>QA</h2>
       <ResponsiveGrid>
         <Card 
           title="Testing Practices" 
@@ -33,10 +42,9 @@ import Card from "../components/Card.astro"
       </ResponsiveGrid>
     </section>
 
-    <section class="w-full max-w-5xl flex flex-col gap-6">
-      <h2 class="text-h1 md:text-h1 font-bold text-brand-wine dark:text-brand-beige tracking-tight">
-        DevTools
-      </h2>
+    <!-- DevTools -->
+    <section class={sectionWrapper} aria-labelledby="tech-devtools">
+      <h2 id="tech-devtools" class={sectionTitleClasses}>DevTools</h2>
       <ResponsiveGrid>
         <Card 
           title="Versioning & Workflow" 
@@ -53,10 +61,9 @@ import Card from "../components/Card.astro"
       </ResponsiveGrid>
     </section>
 
-    <section class="w-full max-w-5xl flex flex-col gap-6">
-      <h2 class="text-h1 md:text-h1 font-bold text-brand-wine dark:text-brand-beige tracking-tight">
-        Front-end
-      </h2>
+    <!-- Front-end -->
+    <section class={sectionWrapper} aria-labelledby="tech-frontend">
+      <h2 id="tech-frontend" class={sectionTitleClasses}>Front-end</h2>
       <ResponsiveGrid>
         <Card 
           title="JavaScript & TypeScript" 
@@ -73,10 +80,9 @@ import Card from "../components/Card.astro"
       </ResponsiveGrid>
     </section>
 
-    <section class="w-full max-w-5xl flex flex-col gap-6">
-      <h2 class="text-h1 md:text-h1 font-bold text-brand-wine dark:text-brand-beige tracking-tight">
-        Back-end
-      </h2>
+    <!-- Back-end -->
+    <section class={sectionWrapper} aria-labelledby="tech-backend">
+      <h2 id="tech-backend" class={sectionTitleClasses}>Back-end</h2>
       <ResponsiveGrid>
         <Card 
           title="Node.js & Express" 
@@ -93,10 +99,9 @@ import Card from "../components/Card.astro"
       </ResponsiveGrid>
     </section>
 
-    <section class="w-full max-w-5xl flex flex-col gap-6">
-      <h2 class="text-h1 md:text-h1 font-bold text-brand-wine dark:text-brand-beige tracking-tight">
-        CI/CD
-      </h2>
+    <!-- CI/CD -->
+    <section class={sectionWrapper} aria-labelledby="tech-cicd">
+      <h2 id="tech-cicd" class={sectionTitleClasses}>CI/CD</h2>
       <ResponsiveGrid>
         <Card 
           title="Pipelines" 

@@ -7,27 +7,37 @@ const nav = [
   { href: "/services", label: "Services" },
   { href: "/contact", label: "Contact" },
 ]
----
 
+const current = Astro.url.pathname
+
+const linkBase =
+  "transition-colors duration-base text-neutralTech-700 dark:text-neutralTech-200 hover:text-brand-wineMuted dark:hover:text-brand-beige"
+---
 <header class="w-full bg-brand-surface dark:bg-brand-wine border-b border-neutralTech-200 dark:border-neutralTech-800 transition-colors duration-base">
   <div class="max-w-container mx-auto px-4 py-4 flex items-center justify-between">
 
-    <a href="/" class="text-h4 font-semibold text-brand-wine dark:text-brand-beige hover:text-brand-wineMuted dark:hover:text-neutralTech-200 transition-colors duration-base">
+    <a 
+      href="/" 
+      class="text-h4 font-semibold text-brand-wine dark:text-brand-beige hover:text-brand-wineMuted dark:hover:text-neutralTech-200 transition-colors duration-base"
+    >
       Luiza Gusmão
     </a>
 
-    <nav>
+    <nav aria-label="Main navigation">
       <ul class="flex gap-6 text-body">
-        {nav.map(item => (
-          <li>
-            <a 
-              href={item.href}
-              class="text-neutralTech-700 dark:text-neutralTech-200 hover:text-brand-wineMuted dark:hover:text-brand-beige transition-colors duration-base"
-            >
-              {item.label}
-            </a>
-          </li>
-        ))}
+        {nav.map(item => {
+          const isActive = current === item.href
+          return (
+            <li>
+              <a 
+                href={item.href}
+                class={`${linkBase} ${isActive ? "font-semibold underline underline-offset-4" : ""}`}
+              >
+                {item.label}
+              </a>
+            </li>
+          )
+        })}
       </ul>
     </nav>
 

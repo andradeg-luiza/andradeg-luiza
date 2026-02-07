@@ -7,13 +7,14 @@ import TimelineItem from "../components/TimelineItem.astro"
 <BaseLayout title="Timeline">
   <main class="py-paddingPage flex flex-col items-center gap-12">
 
-    <SectionTitle 
-      class="mt-4"
-      titleClass="text-h1 md:text-[3.5rem] font-semibold text-brand-wine dark:text-brand-beige"
-      subtitleClass="text-h4 md:text-h3 text-neutralTech-700 dark:text-neutralTech-200"
-      title="Career Timeline"
-      subtitle="A concise view of my evolution — from Support Analyst to QA, Automation, SDET, and Product Creation"
-    />
+    <!-- Título centralizado e maior -->
+    <div class="w-full max-w-3xl text-center">
+      <SectionTitle 
+        class="items-center text-center [&>h2]:text-h1 mt-4"
+        title="Career Timeline"
+        subtitle="A concise view of my evolution — from Support Analyst to QA, Automation, SDET, and Product Creation"
+      />
+    </div>
 
     <div class="flex flex-col gap-8 w-full max-w-3xl">
 

@@ -1,66 +1,79 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro"
 import SectionTitle from "../components/SectionTitle.astro"
+
+const sectionClasses =
+  "flex flex-col gap-3 border-b border-neutralTech-200 dark:border-neutralTech-800 pb-10"
+
+const titleClasses =
+  "text-h3 font-semibold text-brand-wine dark:text-brand-beige transition-colors duration-base"
+
+const paragraphClasses =
+  "text-body text-neutralTech-700 dark:text-neutralTech-200 transition-colors duration-base"
+
+const linkClasses =
+  "text-brand-wineMuted dark:text-neutralTech-200 hover:text-brand-wine dark:hover:text-brand-beige transition-colors duration-base font-medium text-body"
 ---
 
 <BaseLayout title="Contact">
   <main class="py-paddingPage flex flex-col items-center gap-12">
 
-    <SectionTitle 
-      title="Contact"
-      subtitle="Reach out for collaborations, engineering support, or professional opportunities"
-    />
+    <!-- Título maior e centralizado -->
+    <div class="w-full max-w-3xl text-center">
+      <SectionTitle 
+        class="items-center text-center [&>h2]:text-h1"
+        title="Contact"
+        subtitle="Reach out for collaborations, engineering support, or professional opportunities"
+      />
+    </div>
 
     <section class="w-full max-w-3xl flex flex-col gap-16">
 
-      <div class="flex flex-col gap-3 border-b border-neutralTech-200 dark:border-neutralTech-800 pb-10">
-        <h2 class="text-h3 font-semibold text-brand-wine dark:text-brand-beige">
-          WhatsApp
-        </h2>
-        <p class="text-body text-neutralTech-700 dark:text-neutralTech-200">
+      <section class={sectionClasses} aria-labelledby="contact-whatsapp">
+        <h2 id="contact-whatsapp" class={titleClasses}>WhatsApp</h2>
+        <p class={paragraphClasses}>
           Direct and fast communication for projects, questions, or collaborations.
         </p>
         <a 
           href="https://wa.me/5581994563827"
           target="_blank"
           rel="noopener noreferrer"
-          class="text-brand-wineMuted dark:text-neutralTech-200 hover:text-brand-wine dark:hover:text-brand-beige transition-colors duration-base font-medium text-body"
+          class={linkClasses}
+          aria-label="Send a WhatsApp message to Luiza"
         >
           Send a message →
         </a>
-      </div>
+      </section>
 
-      <div class="flex flex-col gap-3 border-b border-neutralTech-200 dark:border-neutralTech-800 pb-10">
-        <h2 class="text-h3 font-semibold text-brand-wine dark:text-brand-beige">
-          Email
-        </h2>
-        <p class="text-body text-neutralTech-700 dark:text-neutralTech-200">
+      <section class={sectionClasses} aria-labelledby="contact-email">
+        <h2 id="contact-email" class={titleClasses}>Email</h2>
+        <p class={paragraphClasses}>
           For detailed inquiries, proposals, or professional conversations.
         </p>
         <a 
           href="mailto:andradeg.luiza@outlook.com"
-          class="text-brand-wineMuted dark:text-neutralTech-200 hover:text-brand-wine dark:hover:text-brand-beige transition-colors duration-base font-medium text-body"
+          class={linkClasses}
+          aria-label="Send an email to Luiza"
         >
           Send an email →
         </a>
-      </div>
+      </section>
 
-      <div class="flex flex-col gap-3">
-        <h2 class="text-h3 font-semibold text-brand-wine dark:text-brand-beige">
-          LinkedIn
-        </h2>
-        <p class="text-body text-neutralTech-700 dark:text-neutralTech-200">
+      <section class="flex flex-col gap-3" aria-labelledby="contact-linkedin">
+        <h2 id="contact-linkedin" class={titleClasses}>LinkedIn</h2>
+        <p class={paragraphClasses}>
           Professional profile, networking, and career‑focused communication.
         </p>
         <a 
           href="https://www.linkedin.com/in/andradegluiza/"
           target="_blank"
           rel="noopener noreferrer"
-          class="text-brand-wineMuted dark:text-neutralTech-200 hover:text-brand-wine dark:hover:text-brand-beige transition-colors duration-base font-medium text-body"
+          class={linkClasses}
+          aria-label="Visit Luiza's LinkedIn profile"
         >
           Visit profile →
         </a>
-      </div>
+      </section>
 
     </section>
 

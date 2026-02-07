@@ -13,16 +13,19 @@ const sizes = {
   xl: "w-48 h-48"
 }
 
+const sizeClass = sizes[size] ?? sizes.md
+
 const borderClass = bordered
   ? "border-2 border-neutralTech-300 dark:border-neutralTech-700 transition-colors duration-base"
   : ""
 ---
 
-<div class={`rounded-full overflow-hidden ${sizes[size]} ${borderClass}`}>
+<div class={`rounded-full overflow-hidden ${sizeClass} ${borderClass}`}>
   <img 
     src={src} 
     alt={alt} 
     class="w-full h-full object-cover"
     loading="lazy"
+    decoding="async"
   />
 </div>

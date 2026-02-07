@@ -10,12 +10,19 @@ function setTheme(mode) {
   }
 }
 
-function loadTheme() {
+function initTheme() {
   const saved = localStorage.getItem("theme")
-  if (saved === "dark") {
-    document.documentElement.classList.add("dark")
+
+  if (saved) {
+    setTheme(saved)
+    return
   }
+
+  const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches
+  setTheme(prefersDark ? "dark" : "light")
 }
 
-loadTheme()
-window.setTheme = setTheme
+if (typeof window !== "undefined") {
+  initTheme()
+  window.setTheme = setTheme
+}

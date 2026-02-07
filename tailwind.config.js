@@ -28,39 +28,34 @@ export default {
         error: "#6F2D34",
         info: "#5C6A72",
       },
+
       fontFamily: {
-        sans: [
-          "Inter",
-          "system-ui",
-          "-apple-system",
-          "BlinkMacSystemFont",
-          "sans-serif",
-        ],
-        mono: [
-          "JetBrains Mono",
-          "ui-monospace",
-          "SFMono-Regular",
-          "monospace",
-        ],
+        sans: ["Inter", "system-ui", "-apple-system", "BlinkMacSystemFont", "sans-serif"],
+        mono: ["JetBrains Mono", "ui-monospace", "SFMono-Regular", "monospace"],
       },
+
       spacing: {
         section: "4.5rem",
         container: "68rem",
         gapSection: "2rem",
         paddingPage: "3rem",
       },
+
       borderRadius: {
         sm: "0.25rem",
         md: "0.375rem",
         lg: "0.5rem",
       },
+
       boxShadow: {
         soft: "0 1px 4px rgba(0,0,0,0.025)",
         focus: "0 0 0 2px rgba(78, 31, 40, 0.3)",
       },
+
       transitionTimingFunction: {
         linearish: "cubic-bezier(0.4, 0, 0.6, 1)",
       },
+
       transitionDuration: {
         fast: "100ms",
         base: "200ms",

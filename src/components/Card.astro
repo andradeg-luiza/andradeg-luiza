@@ -6,31 +6,49 @@ const {
   href = null,
   cta = "Saiba mais"
 } = Astro.props
+
+const wrapperClasses =
+  "bg-brand-surface dark:bg-brand-wine border border-neutralTech-200 dark:border-neutralTech-700 rounded-md p-4 shadow-soft transition-colors duration-base hover:border-neutralTech-300 dark:hover:border-neutralTech-500"
+
+const titleClasses =
+  "text-h3 text-brand-wine dark:text-brand-beige transition-colors duration-base"
+
+const descClasses =
+  "text-body text-neutralTech-700 dark:text-neutralTech-200 transition-colors duration-base"
+
+const iconClasses =
+  "text-brand-wine dark:text-brand-beige text-h3 transition-colors duration-base"
+
+const linkClasses =
+  "text-body text-brand-wine dark:text-brand-beige transition-colors duration-base hover:text-brand-wineMuted dark:hover:text-neutralTech-200"
+
+const hasLink = typeof href === "string" && href.length > 0
 ---
 
-<div class="bg-brand-surface dark:bg-brand-wine border border-neutralTech-200 dark:border-neutralTech-700 rounded-md p-4 shadow-soft transition-colors duration-base hover:border-neutralTech-300 dark:hover:border-neutralTech-500">
+<div class={wrapperClasses}>
   <div class="flex flex-col gap-3">
 
     {icon && (
-      <div class="text-brand-wine dark:text-brand-beige text-h3 transition-colors duration-base">
+      <div class={iconClasses}>
         {icon}
       </div>
     )}
 
-    <h3 class="text-h3 text-brand-wine dark:text-brand-beige transition-colors duration-base">
+    <h3 class={titleClasses}>
       {title}
     </h3>
 
     {description && (
-      <p class="text-body text-neutralTech-700 dark:text-neutralTech-200 transition-colors duration-base">
+      <p class={descClasses}>
         {description}
       </p>
     )}
 
-    {href && (
+    {hasLink && (
       <a 
         href={href}
-        class="text-body text-brand-wine dark:text-brand-beige transition-colors duration-base hover:text-brand-wineMuted dark:hover:text-neutralTech-200"
+        class={linkClasses}
+        aria-label={`${cta} sobre ${title}`}
       >
         {cta} →
       </a>

@@ -10,11 +10,24 @@ body {
   @apply antialiased font-sans transition-colors duration-base;
 }
 
-a {
-  @apply transition-colors duration-100 ease-linear;
+*, *::before, *::after {
+  @apply antialiased;
 }
 
-button:focus,
-a:focus {
+a {
+  @apply transition-colors duration-base ease-linear;
+}
+
+button,
+a {
+  @apply touch-manipulation;
+}
+
+button:focus-visible,
+a:focus-visible {
   @apply outline-none shadow-focus;
+}
+
+img {
+  @apply select-none;
 }

@@ -1,111 +1,137 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro"
 import SectionTitle from "../components/SectionTitle.astro"
+
+const blockClasses =
+  "flex flex-col gap-3 border-b border-neutralTech-200 dark:border-neutralTech-800 pb-8"
+
+const titleClasses =
+  "text-h3 font-semibold text-brand-wine dark:text-brand-beige transition-colors duration-base"
+
+const paragraphClasses =
+  "text-body text-neutralTech-700 dark:text-neutralTech-200 transition-colors duration-base"
+
+const linkClasses =
+  "text-brand-wineMuted dark:text-neutralTech-200 hover:text-brand-wine dark:hover:text-brand-beige transition-colors duration-base text-body font-medium"
 ---
 
 <BaseLayout title="Projects">
   <main class="py-paddingPage flex flex-col items-center gap-12">
 
-    <SectionTitle 
-      title="Projects"
-      subtitle="A curated and technical overview of the systems, tools, and products I’ve engineered"
-    />
+    <!-- Título centralizado -->
+    <div class="w-full max-w-4xl text-center">
+      <SectionTitle 
+        class="items-center text-center [&>h2]:text-h1"
+        title="Projects"
+        subtitle="A curated and technical overview of the systems, tools, and products I’ve engineered"
+      />
+    </div>
 
     <section class="w-full max-w-4xl flex flex-col gap-12">
 
-      <div class="flex flex-col gap-3 border-b border-neutralTech-200 dark:border-neutralTech-800 pb-8">
-        <h2 class="text-h3 font-semibold text-brand-wine dark:text-brand-beige">1. Portfolio Website</h2>
+      <!-- PROJECT 1 -->
+      <section class={blockClasses} aria-labelledby="project-portfolio">
+        <h2 id="project-portfolio" class={titleClasses}>1. Portfolio Website</h2>
 
         <a 
           href="https://github.com/andradeg-luiza/andradeg-luiza"
           target="_blank" 
           rel="noopener noreferrer"
-          class="text-brand-wineMuted dark:text-neutralTech-200 hover:text-brand-wine dark:hover:text-brand-beige transition-colors duration-base text-body font-medium"
+          class={linkClasses}
+          aria-label="Explore the Portfolio Website project"
         >
           Explore this project →
         </a>
 
-        <p class="text-body text-neutralTech-700 dark:text-neutralTech-200">
+        <p class={paragraphClasses}>
           A fully engineered personal platform built with Astro, TypeScript, and TailwindCSS, designed to showcase technical expertise, projects, and long‑term engineering direction. 
-          The system includes API routes, structured logging, SQLite + Prisma ORM, and a modular architecture optimized for performance, accessibility, and maintainability. 
-          It integrates unit tests (Vitest) and end‑to‑end tests (Playwright), ensuring reliability across components and user flows. 
+          The system follows a modular architecture optimized for performance, accessibility, and maintainability. 
+          It includes unit tests (Vitest) and end‑to‑end tests (Playwright), ensuring reliability across components and user flows. 
           CI/CD pipelines via GitHub Actions automate testing, linting, building, and deployment to GitHub Pages.
         </p>
-      </div>
+      </section>
 
-      <div class="flex flex-col gap-3 border-b border-neutralTech-200 dark:border-neutralTech-800 pb-8">
-        <h2 class="text-h3 font-semibold text-brand-wine dark:text-brand-beige">2. FocusFlow — Productivity & Workflow System</h2>
+      <!-- PROJECT 2 -->
+      <section class={blockClasses} aria-labelledby="project-focusflow">
+        <h2 id="project-focusflow" class={titleClasses}>2. FocusFlow — Productivity & Workflow System</h2>
 
         <a 
           href="https://github.com/andradeg-luiza/focusflow"
           target="_blank" 
           rel="noopener noreferrer"
-          class="text-brand-wineMuted dark:text-neutralTech-200 hover:text-brand-wine dark:hover:text-brand-beige transition-colors duration-base text-body font-medium"
+          class={linkClasses}
+          aria-label="Explore the FocusFlow project"
         >
           Explore this project →
         </a>
 
-        <p class="text-body text-neutralTech-700 dark:text-neutralTech-200">
+        <p class={paragraphClasses}>
           FocusFlow is a structured productivity system designed to improve execution, prioritization, and workflow clarity. 
           Built with a strong engineering mindset, it applies principles of task orchestration, modular architecture, and maintainable code design. 
           The project reflects deep understanding of state management, UI/UX for productivity tools, and automation‑driven workflows.
         </p>
-      </div>
+      </section>
 
-      <div class="flex flex-col gap-3 border-b border-neutralTech-200 dark:border-neutralTech-800 pb-8">
-        <h2 class="text-h3 font-semibold text-brand-wine dark:text-brand-beige">3. Auto Apply Bot — Automated Job Application Tool</h2>
+      <!-- PROJECT 3 -->
+      <section class={blockClasses} aria-labelledby="project-autoapplybot">
+        <h2 id="project-autoapplybot" class={titleClasses}>3. Auto Apply Bot — Automated Job Application Tool</h2>
 
         <a 
           href="https://github.com/andradeg-luiza/autoapplybot"
           target="_blank" 
           rel="noopener noreferrer"
-          class="text-brand-wineMuted dark:text-neutralTech-200 hover:text-brand-wine dark:hover:text-brand-beige transition-colors duration-base text-body font-medium"
+          class={linkClasses}
+          aria-label="Explore the Auto Apply Bot project"
         >
           Explore this project →
         </a>
 
-        <p class="text-body text-neutralTech-700 dark:text-neutralTech-200">
+        <p class={paragraphClasses}>
           An automation tool designed to streamline job application workflows by interacting with job platforms programmatically. 
           The bot automates repetitive tasks such as form filling, data extraction, and structured submissions. 
           Built with Node.js, automation scripts, and robust error handling, it showcases strong skills in browser automation, workflow optimization, API interaction, and reliability engineering.
         </p>
-      </div>
+      </section>
 
-      <div class="flex flex-col gap-3 border-b border-neutralTech-200 dark:border-neutralTech-800 pb-8">
-        <h2 class="text-h3 font-semibold text-brand-wine dark:text-brand-beige">4. Donna — Engineering Assistant</h2>
+      <!-- PROJECT 4 -->
+      <section class={blockClasses} aria-labelledby="project-donna">
+        <h2 id="project-donna" class={titleClasses}>4. Donna — Engineering Assistant</h2>
 
         <a 
           href="https://github.com/andradeg-luiza/donna"
           target="_blank" 
           rel="noopener noreferrer"
-          class="text-brand-wineMuted dark:text-neutralTech-200 hover:text-brand-wine dark:hover:text-brand-beige transition-colors duration-base text-body font-medium"
+          class={linkClasses}
+          aria-label="Explore the Donna project"
         >
           Explore this project →
         </a>
 
-        <p class="text-body text-neutralTech-700 dark:text-neutralTech-200">
+        <p class={paragraphClasses}>
           Donna is an AI‑powered engineering assistant focused on automation, documentation, and workflow optimization. 
           It integrates structured logic, modular services, and automation routines to support engineering tasks such as generating documentation, organizing workflows, and assisting with testing processes.
         </p>
-      </div>
+      </section>
 
-      <div class="flex flex-col gap-3">
-        <h2 class="text-h3 font-semibold text-brand-wine dark:text-brand-beige">5. QA Knowledge Base</h2>
+      <!-- PROJECT 5 -->
+      <section class="flex flex-col gap-3" aria-labelledby="project-qakb">
+        <h2 id="project-qakb" class={titleClasses}>5. QA Knowledge Base</h2>
 
         <a 
           href="https://www.linkedin.com/in/andradegluiza/"
           target="_blank" 
           rel="noopener noreferrer"
-          class="text-brand-wineMuted dark:text-neutralTech-200 hover:text-brand-wine dark:hover:text-brand-beige transition-colors duration-base text-body font-medium"
+          class={linkClasses}
+          aria-label="Explore the QA Knowledge Base project"
         >
           Explore this project →
         </a>
 
-        <p class="text-body text-neutralTech-700 dark:text-neutralTech-200">
+        <p class={paragraphClasses}>
           A comprehensive and evolving knowledge base documenting QA methodologies, automation strategies, testing patterns, engineering workflows, and best practices. 
           It consolidates insights from 16+ years of experience across support, QA, automation, and SDET roles.
         </p>
-      </div>
+      </section>
 
     </section>
 

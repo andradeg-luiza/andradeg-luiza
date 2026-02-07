@@ -3,6 +3,9 @@ import BaseLayout from "../layouts/BaseLayout.astro"
 import SectionTitle from "../components/SectionTitle.astro"
 import Button from "../components/Button.astro"
 import Avatar from "../components/Avatar.astro"
+
+const paragraphClasses =
+  "text-body text-neutralTech-700 dark:text-neutralTech-200 transition-colors duration-base"
 ---
 
 <BaseLayout title="Luiza Gusmão">
@@ -15,25 +18,30 @@ import Avatar from "../components/Avatar.astro"
       bordered={true}
     />
 
-    <h1 class="text-h1 md:text-display font-semibold text-brand-wine dark:text-brand-beige max-w-3xl">
+    <h1 class="text-h1 md:text-display font-semibold text-brand-wine dark:text-brand-beige max-w-3xl transition-colors duration-base">
       A Professional Overview of My Engineering Journey
     </h1>
 
-    <p class="text-body text-neutralTech-700 dark:text-neutralTech-200 max-w-2xl">
+    <p class={`${paragraphClasses} max-w-2xl`}>
       This platform introduces my work in quality engineering, automation, and product development —
       a clear path through my experience, solutions, and the systems I build.
     </p>
 
     <div class="flex gap-4">
-      <Button size="lg" onclick="setTheme('light')">Light</Button>
-      <Button variant="secondary" size="lg" onclick="setTheme('dark')">Dark</Button>
+      <!-- Botão bordô → ativa DARK -->
+      <Button variant="darkMode" size="lg" onclick="setTheme('dark')">Dark</Button>
+
+      <!-- Botão bege → ativa LIGHT -->
+      <Button variant="lightMode" size="lg" onclick="setTheme('light')">Light</Button>
     </div>
 
-    <SectionTitle 
-      class="mt-24"
-      title="A Clear and Structured Presentation"
-      subtitle="Explore my experience, technologies, projects, products, and the evolution of my career"
-    />
+    <div class="mt-16 w-full max-w-3xl text-center">
+      <SectionTitle 
+        class="items-center text-center [&>h2]:text-h1"
+        title="A Clear and Structured Presentation"
+        subtitle="Explore my experience, technologies, projects, products, and the evolution of my career"
+      />
+    </div>
 
   </main>
 </BaseLayout>

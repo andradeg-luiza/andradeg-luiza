@@ -11,11 +11,14 @@ const {
 const base =
   "inline-flex items-center justify-center rounded-sm font-medium transition-colors duration-base ease-linearish"
 
+/* Variantes FIXAS — não mudam com o tema */
 const variants = {
-  primary:
-    "bg-brand-wine text-neutralTech-50 hover:bg-brand-wineMuted dark:bg-brand-beige dark:text-brand-wine dark:hover:bg-neutralTech-200",
-  secondary:
-    "border border-neutralTech-300 text-neutralTech-800 bg-neutralTech-50 hover:bg-neutralTech-100 dark:border-neutralTech-700 dark:text-neutralTech-100 dark:bg-neutralTech-800 dark:hover:bg-neutralTech-700",
+  darkMode: "bg-brand-wine text-brand-beige border border-brand-beige hover:bg-brand-wineMuted",
+  lightMode: "bg-brand-beige text-brand-wine border border-brand-wine hover:bg-brand-surface",
+
+  /* Mantive as variantes originais caso use em outros lugares */
+  primary: "bg-brand-wine text-brand-beige hover:bg-brand-wineMuted",
+  secondary: "bg-neutralTech-50 text-neutralTech-900 border border-neutralTech-300 hover:bg-neutralTech-100",
 }
 
 const sizes = {
@@ -24,15 +27,23 @@ const sizes = {
   lg: "px-5 py-3 text-h4",
 }
 
-const classes = `${base} ${variants[variant]} ${sizes[size]}`
+const classes = `${base} ${variants[variant] ?? variants.primary} ${sizes[size] ?? sizes.md}`
 ---
 
 {href ? (
-  <a href={href} class={classes} onclick={onclick}>
+  <a 
+    href={href} 
+    class={classes} 
+    {...(onclick ? { onclick } : {})}
+  >
     {children}
   </a>
 ) : (
-  <button type={type} class={classes} onclick={onclick}>
+  <button 
+    type={type} 
+    class={classes} 
+    {...(onclick ? { onclick } : {})}
+  >
     {children}
   </button>
 )}

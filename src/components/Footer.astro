@@ -1,31 +1,36 @@
 ---
 const social = [
-  { href: "https://www.linkedin.com/in/andradegluiza/", icon: "linkedin" },
-  { href: "https://github.com/andradeg-luiza", icon: "github" },
-  { href: "https://wa.me/5581994563827", icon: "whatsapp" },
+  { href: "https://www.linkedin.com/in/andradegluiza/", icon: "linkedin", label: "LinkedIn" },
+  { href: "https://github.com/andradeg-luiza", icon: "github", label: "GitHub" },
+  { href: "https://wa.me/5581994563827", icon: "whatsapp", label: "WhatsApp" },
 ]
+
+const linkBase =
+  "transition-colors duration-base text-neutralTech-700 dark:text-neutralTech-200 hover:text-brand-wineMuted dark:hover:text-brand-beige"
 ---
-
 <footer class="w-full bg-brand-surface dark:bg-brand-wine border-t border-neutralTech-200 dark:border-neutralTech-800 mt-section transition-colors duration-base">
-  <div class="max-w-[900px] mx-auto px-4 py-10 grid grid-cols-[auto_auto_1fr] gap-10 items-start">
+  <div class="max-w-[900px] mx-auto px-4 py-10 flex flex-col md:flex-row justify-between items-center gap-10">
 
-    <div class="flex flex-col">
-      <a 
-        href="/" 
-        class="text-body font-semibold text-brand-wine dark:text-brand-beige hover:text-brand-wineMuted dark:hover:text-neutralTech-200 transition-colors duration-base"
-      >
-        Home
-      </a>
-    </div>
+    <!-- Left: Home icon -->
+    <a 
+      href="/" 
+      aria-label="Home"
+      class="text-brand-wine dark:text-brand-beige hover:text-brand-wineMuted dark:hover:text-neutralTech-200 transition-colors duration-base"
+    >
+      <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M12 3 2 12h3v8h6v-5h2v5h6v-8h3z"/>
+      </svg>
+    </a>
 
+    <!-- Center: Social icons -->
     <div class="flex justify-center gap-6">
       {social.map(item => (
         <a 
           href={item.href}
           target="_blank"
           rel="noopener noreferrer"
-          class="text-neutralTech-700 dark:text-neutralTech-200 hover:text-brand-wineMuted dark:hover:text-brand-beige transition-colors duration-base"
-          aria-label={item.icon}
+          aria-label={item.label}
+          class={linkBase}
         >
           {item.icon === "linkedin" && (
             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -48,27 +53,10 @@ const social = [
       ))}
     </div>
 
-    <div class="flex flex-col gap-2 text-right">
-      <form class="flex gap-2 justify-end">
-        <input 
-          type="email" 
-          placeholder="Your email to receive updates"
-          class="px-3 py-2 w-64 border border-neutralTech-300 dark:border-neutralTech-700 rounded-sm text-body text-neutralTech-800 dark:text-neutralTech-100 bg-neutralTech-50 dark:bg-neutralTech-800 transition-colors duration-base focus:shadow-focus"
-        />
-        <button 
-          type="submit"
-          class="px-4 py-2 bg-brand-wine dark:bg-brand-beige text-neutralTech-50 dark:text-brand-wine rounded-sm text-body transition-colors duration-base hover:bg-brand-wineMuted dark:hover:bg-neutralTech-200 whitespace-nowrap"
-        >
-          Join
-        </button>
-      </form>
-    </div>
-
-  </div>
-
-  <div class="pt-4 border-t border-neutralTech-200 dark:border-neutralTech-800 text-center transition-colors duration-base">
-    <p class="text-small text-neutralTech-600 dark:text-neutralTech-300">
+    <!-- Right: Copyright -->
+    <p class="text-small text-neutralTech-600 dark:text-neutralTech-300 text-center md:text-right">
       © {new Date().getFullYear()} Luiza Gusmão — All rights reserved.
     </p>
+
   </div>
 </footer>

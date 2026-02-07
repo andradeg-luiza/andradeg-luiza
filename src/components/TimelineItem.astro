@@ -1,24 +1,45 @@
 ---
 const { year, title, description } = Astro.props
+
+const dotClasses =
+  "w-3 h-3 rounded-full bg-brand-wine dark:bg-brand-beige transition-colors duration-base"
+
+const lineClasses =
+  "flex-1 w-px bg-neutralTech-300 dark:bg-neutralTech-700 transition-colors duration-base"
+
+const yearClasses =
+  "text-small font-semibold text-brand-wine dark:text-brand-beige transition-colors duration-base"
+
+const titleClasses =
+  "text-h4 font-semibold text-neutralTech-900 dark:text-neutralTech-100 transition-colors duration-base"
+
+const descClasses =
+  "text-body text-neutralTech-700 dark:text-neutralTech-200 transition-colors duration-base"
 ---
 
 <div class="grid grid-cols-[auto_1fr] gap-4">
   <div class="flex flex-col items-center">
-    <div class="w-3 h-3 rounded-full bg-brand-wine dark:bg-brand-beige transition-colors duration-base"></div>
-    <div class="flex-1 w-px bg-neutralTech-300 dark:bg-neutralTech-700 transition-colors duration-base"></div>
+    <div class={dotClasses}></div>
+    <div class={lineClasses}></div>
   </div>
 
   <div class="flex flex-col gap-1 pb-6">
-    <span class="text-small font-semibold text-brand-wine dark:text-brand-beige transition-colors duration-base">
-      {year}
-    </span>
+    {year && (
+      <time class={yearClasses} datetime={year}>
+        {year}
+      </time>
+    )}
 
-    <h3 class="text-h4 font-semibold text-neutralTech-900 dark:text-neutralTech-100 transition-colors duration-base">
-      {title}
-    </h3>
+    {title && (
+      <h3 class={titleClasses}>
+        {title}
+      </h3>
+    )}
 
-    <p class="text-body text-neutralTech-700 dark:text-neutralTech-200 transition-colors duration-base">
-      {description}
-    </p>
+    {description && (
+      <p class={descClasses}>
+        {description}
+      </p>
+    )}
   </div>
 </div>
