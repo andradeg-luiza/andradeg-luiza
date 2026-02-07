@@ -9,6 +9,7 @@ node_modules/
 
 # evidências de testes
 test-results
+playwright-report
 
 # logs
 npm-debug.log*
