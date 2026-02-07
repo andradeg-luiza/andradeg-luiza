@@ -48,6 +48,6 @@ export class TechPage extends BasePage {
   }
 
   async goto() {
-    await super.goto("/tech")
+    await super.goto("/tech/")
   }
 }

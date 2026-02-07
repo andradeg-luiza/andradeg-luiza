@@ -31,6 +31,7 @@ export class ContactPage extends BasePage {
   }
 
   async goto() {
-    await super.goto("/contact")
+    // CORREÇÃO: usar barra no final e esperar DOM completo
+    await super.goto("/contact/")
   }
 }

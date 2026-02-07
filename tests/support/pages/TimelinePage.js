@@ -23,7 +23,7 @@ export class TimelinePage extends BasePage {
   }
 
   async goto() {
-    await super.goto("/timeline")
+    await super.goto("/timeline/")
   }
 
   async openEvent1() {

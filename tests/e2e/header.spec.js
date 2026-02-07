@@ -2,7 +2,7 @@ import { test, expect } from "@playwright/test"
 import { HeaderPage } from "../support/pages/HeaderPage"
 
 test.describe("Header", () => {
-  test("links de navegação funcionam", async ({ page }) => {
+  test("Navigation links work", async ({ page }) => {
     const header = new HeaderPage(page)
 
     await header.goto()

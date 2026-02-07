@@ -13,7 +13,10 @@ export class FooterPage extends BasePage {
     // Social links
     this.githubLink = page.getByTestId("footer-github")
     this.linkedinLink = page.getByTestId("footer-linkedin")
-    this.emailLink = page.getByTestId("footer-email")
+    this.whatsappLink = page.getByTestId("footer-whatsapp")
+
+    // Home link (left icon)
+    this.homeLink = page.getByTestId("footer-home")
   }
 
   async goto() {
@@ -28,7 +31,11 @@ export class FooterPage extends BasePage {
     await this.linkedinLink.click()
   }
 
-  async clickEmail() {
-    await this.emailLink.click()
+  async clickWhatsapp() {
+    await this.whatsappLink.click()
+  }
+
+  async clickHome() {
+    await this.homeLink.click()
   }
 }

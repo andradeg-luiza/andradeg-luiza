@@ -25,7 +25,7 @@ export class ServicesPage extends BasePage {
   }
 
   async goto() {
-    await super.goto("/services")
+    await super.goto("/services/")
   }
 
   async openService1() {

@@ -27,7 +27,7 @@ export class ProjectsPage extends BasePage {
   }
 
   async goto() {
-    await super.goto("/projects")
+    await super.goto("/projects/")
   }
 
   async openProject1() {

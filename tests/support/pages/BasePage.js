@@ -6,7 +6,13 @@ export class BasePage {
   }
 
   async goto(path = "/") {
-    await this.page.goto(path)
+    // Primeiro limpa qualquer estado persistido (tema, preferências, etc.)
+    await this.page.addInitScript(() => {
+      localStorage.clear();
+    });
+
+    // Agora navega para a página desejada
+    await this.page.goto(path, { waitUntil: "networkidle" });
   }
 
   root(testId) {

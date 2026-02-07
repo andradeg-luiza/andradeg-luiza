@@ -4,11 +4,14 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build --base $BASE_URL",
+    "build": "astro build",
     "preview": "astro preview",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx,.astro",
     "format": "prettier --write .",
-    "astro": "astro"
+    "astro": "astro",
+    "test:e2e": "playwright test",
+    "test:e2e:ui": "playwright test --ui",
+    "test:e2e:debug": "PWDEBUG=1 playwright test"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.0",

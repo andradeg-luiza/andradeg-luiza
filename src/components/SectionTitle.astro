@@ -1,5 +1,5 @@
 ---
-const { title, subtitle } = Astro.props
+const { title, subtitle, class: className, ...rest } = Astro.props
 
 const titleClasses =
   "text-h2 md:text-h1 font-semibold text-brand-wine dark:text-brand-beige transition-colors duration-base"
@@ -8,7 +8,7 @@ const subtitleClasses =
   "text-body md:text-h4 text-neutralTech-700 dark:text-neutralTech-200 transition-colors duration-base"
 ---
 
-<div class="flex flex-col gap-1">
+<div class={`flex flex-col gap-1 ${className || ""}`} {...rest}>
   {title && (
     <h2 class={titleClasses}>
       {title}
