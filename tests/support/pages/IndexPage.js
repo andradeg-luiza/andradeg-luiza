@@ -4,17 +4,20 @@ export class IndexPage extends BasePage {
   constructor(page) {
     super(page)
 
-    this.avatar = page.locator("img[alt='Luiza Gusmão']")
-    this.title = page.getByRole("heading", { level: 1 })
-    this.paragraph = page.locator("p")
+    // Full page
+    this.pageRoot = page.getByTestId("home-page")
 
-    this.darkButton = page.getByRole("button", { name: "Dark" })
-    this.lightButton = page.getByRole("button", { name: "Light" })
+    // Key elements
+    this.avatar = page.getByTestId("home-avatar")
+    this.title = page.getByTestId("home-title")
+    this.intro = page.getByTestId("home-intro")
 
-    this.sectionTitle = page.getByRole("heading", { name: "A Clear and Structured Presentation" })
-    this.sectionSubtitle = page.getByText(
-      "Explore my experience, technologies, projects, products, and the evolution of my career"
-    )
+    // Theme buttons
+    this.darkButton = page.getByTestId("home-btn-dark")
+    this.lightButton = page.getByTestId("home-btn-light")
+
+    // Bottom section (SectionTitle)
+    this.sectionTitle = page.getByTestId("home-section-title")
   }
 
   async goto() {

@@ -4,20 +4,43 @@ export class ServicesPage extends BasePage {
   constructor(page) {
     super(page)
 
-    this.title = page.getByRole("heading", { name: /services/i })
+    // Full page
+    this.pageRoot = page.getByTestId("services-page")
 
-    this.serviceCards = page.locator("[data-testid='service-card']")
+    // Header
+    this.header = page.getByTestId("services-header")
+    this.title = page.getByTestId("services-title")
 
-    this.cardHeadings = page.getByRole("heading", { level: 3 })
+    // Service sections (1 to 4)
+    this.service1 = page.getByTestId("services-section-1")
+    this.service2 = page.getByTestId("services-section-2")
+    this.service3 = page.getByTestId("services-section-3")
+    this.service4 = page.getByTestId("services-section-4")
 
-    this.learnMoreLinks = page.getByRole("link", { name: /learn more|details|saiba mais/i })
+    // Contact links (WhatsApp)
+    this.service1Link = page.getByTestId("services-section-1-link")
+    this.service2Link = page.getByTestId("services-section-2-link")
+    this.service3Link = page.getByTestId("services-section-3-link")
+    this.service4Link = page.getByTestId("services-section-4-link")
   }
 
   async goto() {
     await super.goto("/services")
   }
 
-  async openFirstServiceDetails() {
-    await this.learnMoreLinks.first().click()
+  async openService1() {
+    await this.service1Link.click()
+  }
+
+  async openService2() {
+    await this.service2Link.click()
+  }
+
+  async openService3() {
+    await this.service3Link.click()
+  }
+
+  async openService4() {
+    await this.service4Link.click()
   }
 }

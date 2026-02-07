@@ -4,14 +4,16 @@ export class FooterPage extends BasePage {
   constructor(page) {
     super(page)
 
-    this.footer = page.locator("footer")
+    // Footer root
+    this.footer = page.getByTestId("footer")
 
-    this.copyright =
-      page.getByText(/©|202|Luiza|Gusmão|All rights reserved/i)
+    // Footer text
+    this.text = page.getByTestId("footer-text")
 
-    this.githubLink = page.getByRole("link", { name: /github/i })
-    this.linkedinLink = page.getByRole("link", { name: /linkedin/i })
-    this.emailLink = page.getByRole("link", { name: /email|contact/i })
+    // Social links
+    this.githubLink = page.getByTestId("footer-github")
+    this.linkedinLink = page.getByTestId("footer-linkedin")
+    this.emailLink = page.getByTestId("footer-email")
   }
 
   async goto() {

@@ -4,15 +4,17 @@ export class HeaderPage extends BasePage {
   constructor(page) {
     super(page)
 
-    this.header = page.locator("header")
+    // Header root
+    this.header = page.getByTestId("header")
 
-    this.homeLink = page.getByRole("link", { name: "Home" })
-    this.aboutLink = page.getByRole("link", { name: "About" })
-    this.servicesLink = page.getByRole("link", { name: "Services" })
-    this.projectsLink = page.getByRole("link", { name: "Projects" })
-    this.techLink = page.getByRole("link", { name: "Tech" })
-    this.timelineLink = page.getByRole("link", { name: "Timeline" })
-    this.contactLink = page.getByRole("link", { name: "Contact" })
+    // Main navigation
+    this.homeLink = page.getByTestId("nav-home")
+    this.aboutLink = page.getByTestId("nav-about")
+    this.servicesLink = page.getByTestId("nav-services")
+    this.projectsLink = page.getByTestId("nav-projects")
+    this.techLink = page.getByTestId("nav-tech")
+    this.timelineLink = page.getByTestId("nav-timeline")
+    this.contactLink = page.getByTestId("nav-contact")
   }
 
   async goto() {

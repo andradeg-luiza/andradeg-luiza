@@ -9,12 +9,20 @@ export class BasePage {
     await this.page.goto(path)
   }
 
+  root(testId) {
+    return this.page.getByTestId(testId)
+  }
+
   html() {
     return this.page.locator("html")
   }
 
   async expectVisible(locator) {
     await expect(locator).toBeVisible()
+  }
+
+  async expectHidden(locator) {
+    await expect(locator).toBeHidden()
   }
 
   async expectHasClass(locator, className) {
