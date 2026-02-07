@@ -8,7 +8,6 @@ import Avatar from "../components/Avatar.astro"
 <BaseLayout title="Luiza Gusmão">
   <main class="py-paddingPage flex flex-col items-center text-center gap-10">
 
-    <!-- Foto / Avatar -->
     <Avatar 
       src="/images/me.jpg" 
       alt="Luiza Gusmão" 
@@ -16,24 +15,20 @@ import Avatar from "../components/Avatar.astro"
       bordered={true}
     />
 
-    <!-- Headline principal -->
-    <h1 class="text-h1 md:text-display font-semibold text-brand-wine max-w-3xl">
+    <h1 class="text-h1 md:text-display font-semibold text-brand-wine dark:text-brand-beige max-w-3xl">
       A Professional Overview of My Engineering Journey
     </h1>
 
-    <!-- Subheadline -->
-    <p class="text-body text-neutralTech-700 max-w-2xl">
+    <p class="text-body text-neutralTech-700 dark:text-neutralTech-200 max-w-2xl">
       This platform introduces my work in quality engineering, automation, and product development —
       a clear path through my experience, solutions, and the systems I build.
     </p>
 
-    <!-- CTAs (sem link, para futuro Light/Dark mode) -->
     <div class="flex gap-4">
-      <Button size="lg">Light</Button>
-      <Button variant="secondary" size="lg">Dark</Button>
+      <Button size="lg" onclick="setTheme('light')">Light</Button>
+      <Button variant="secondary" size="lg" onclick="setTheme('dark')">Dark</Button>
     </div>
 
-    <!-- Seção de introdução -->
     <SectionTitle 
       class="mt-24"
       title="A Clear and Structured Presentation"

@@ -7,7 +7,7 @@ html {
 }
 
 body {
-  @apply bg-brand-beige text-neutralTech-900 antialiased font-sans;
+  @apply antialiased font-sans transition-colors duration-base;
 }
 
 a {

@@ -4,35 +4,35 @@ const {
   size = "md",
   href = null,
   type = "button",
-  children
+  children,
+  onclick = null,
 } = Astro.props
 
-// Variantes
 const base =
-  "inline-flex items-center justify-center rounded-sm font-medium transition-colors fast ease-linearish"
+  "inline-flex items-center justify-center rounded-sm font-medium transition-colors duration-base ease-linearish"
 
 const variants = {
-  primary: "bg-brand-wine text-neutralTech-50 hover:bg-brand-wineMuted",
+  primary:
+    "bg-brand-wine text-neutralTech-50 hover:bg-brand-wineMuted dark:bg-brand-beige dark:text-brand-wine dark:hover:bg-neutralTech-200",
   secondary:
-    "border border-neutralTech-300 text-neutralTech-800 bg-neutralTech-50 hover:bg-neutralTech-100"
+    "border border-neutralTech-300 text-neutralTech-800 bg-neutralTech-50 hover:bg-neutralTech-100 dark:border-neutralTech-700 dark:text-neutralTech-100 dark:bg-neutralTech-800 dark:hover:bg-neutralTech-700",
 }
 
-// Tamanhos
 const sizes = {
   sm: "px-3 py-1.5 text-small",
   md: "px-4 py-2 text-body",
-  lg: "px-5 py-3 text-h4"
+  lg: "px-5 py-3 text-h4",
 }
 
 const classes = `${base} ${variants[variant]} ${sizes[size]}`
 ---
 
 {href ? (
-  <a href={href} class={classes}>
+  <a href={href} class={classes} onclick={onclick}>
     {children}
   </a>
 ) : (
-  <button type={type} class={classes}>
+  <button type={type} class={classes} onclick={onclick}>
     {children}
   </button>
 )}

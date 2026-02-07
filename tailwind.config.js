@@ -1,18 +1,16 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+  darkMode: "class",
   content: ["./src/**/*.{astro,html,js,ts,jsx,tsx,md,mdx}"],
   theme: {
     extend: {
       colors: {
-        // 🎯 Paleta Institucional — DACH / Engenharia
         brand: {
-          wine: "#4E1F28",        // Bordô técnico fechado
-          wineMuted: "#66323B",  // Hover discreto
-          beige: "#F3EFE8",      // Fundo técnico
-          surface: "#ECE7DF",    // Superfície neutra
+          wine: "#4E1F28",
+          wineMuted: "#66323B",
+          beige: "#F3EFE8",
+          surface: "#ECE7DF",
         },
-
-        // 🎯 Neutros técnicos (cinzas minerais)
         neutralTech: {
           50: "#FAFAF9",
           100: "#F1F1EE",
@@ -25,15 +23,11 @@ export default {
           800: "#3E3D39",
           900: "#262523",
         },
-
-        // 🎯 Estados funcionais (não emocionais)
         success: "#4B6B5A",
         warning: "#8F7A45",
         error: "#6F2D34",
         info: "#5C6A72",
       },
-
-      // ✍️ Tipografia técnica
       fontFamily: {
         sans: [
           "Inter",
@@ -49,37 +43,28 @@ export default {
           "monospace",
         ],
       },
-
-      // 📐 Tokens de espaçamento técnico
       spacing: {
-        section: "4.5rem",      // Espaçamento vertical entre seções
-        container: "68rem",     // Largura máxima do conteúdo
-        gapSection: "2rem",     // Espaçamento interno entre blocos
-        paddingPage: "3rem",    // Padding vertical padrão das páginas
+        section: "4.5rem",
+        container: "68rem",
+        gapSection: "2rem",
+        paddingPage: "3rem",
       },
-
-      // 🧱 Bordas discretas (técnicas)
       borderRadius: {
-        sm: "0.25rem",   // leve, técnico
-        md: "0.375rem",  // moderado
-        lg: "0.5rem",    // discreto
+        sm: "0.25rem",
+        md: "0.375rem",
+        lg: "0.5rem",
       },
-
-      // 🪄 Sombras mínimas (funcionais)
       boxShadow: {
-        soft: "0 1px 4px rgba(0,0,0,0.025)",      // Sombra quase imperceptível
-        focus: "0 0 0 2px rgba(78, 31, 40, 0.3)", // Estado de foco técnico
+        soft: "0 1px 4px rgba(0,0,0,0.025)",
+        focus: "0 0 0 2px rgba(78, 31, 40, 0.3)",
       },
-
-      // 🎬 Motion funcional e discreto
       transitionTimingFunction: {
-        linearish: "cubic-bezier(0.4, 0, 0.6, 1)", // Easing técnico
+        linearish: "cubic-bezier(0.4, 0, 0.6, 1)",
       },
-
       transitionDuration: {
-        fast: "100ms",  // Mudanças rápidas e funcionais
-        base: "200ms",  // Padrão técnico
-        slow: "300ms",  // Ainda discreto
+        fast: "100ms",
+        base: "200ms",
+        slow: "300ms",
       },
     },
   },

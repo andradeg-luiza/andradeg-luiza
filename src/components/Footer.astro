@@ -6,27 +6,25 @@ const social = [
 ]
 ---
 
-<footer class="w-full bg-brand-surface border-t border-neutralTech-200 mt-section">
+<footer class="w-full bg-brand-surface dark:bg-brand-wine border-t border-neutralTech-200 dark:border-neutralTech-800 mt-section transition-colors duration-base">
   <div class="max-w-[900px] mx-auto px-4 py-10 grid grid-cols-[auto_auto_1fr] gap-10 items-start">
 
-    <!-- Column 1: Home -->
     <div class="flex flex-col">
       <a 
         href="/" 
-        class="text-body font-semibold text-brand-wine hover:text-brand-wineMuted transition-colors fast ease-linearish"
+        class="text-body font-semibold text-brand-wine dark:text-brand-beige hover:text-brand-wineMuted dark:hover:text-neutralTech-200 transition-colors duration-base"
       >
         Home
       </a>
     </div>
 
-    <!-- Column 2: Social Icons -->
     <div class="flex justify-center gap-6">
       {social.map(item => (
         <a 
           href={item.href}
           target="_blank"
           rel="noopener noreferrer"
-          class="text-neutralTech-700 hover:text-brand-wineMuted transition-colors fast ease-linearish"
+          class="text-neutralTech-700 dark:text-neutralTech-200 hover:text-brand-wineMuted dark:hover:text-brand-beige transition-colors duration-base"
           aria-label={item.icon}
         >
           {item.icon === "linkedin" && (
@@ -50,17 +48,16 @@ const social = [
       ))}
     </div>
 
-    <!-- Column 3: Newsletter -->
     <div class="flex flex-col gap-2 text-right">
       <form class="flex gap-2 justify-end">
         <input 
           type="email" 
           placeholder="Your email to receive updates"
-          class="px-3 py-2 w-64 border border-neutralTech-300 rounded-sm text-body text-neutralTech-800 bg-neutralTech-50 transition-colors fast ease-linearish focus:shadow-focus"
+          class="px-3 py-2 w-64 border border-neutralTech-300 dark:border-neutralTech-700 rounded-sm text-body text-neutralTech-800 dark:text-neutralTech-100 bg-neutralTech-50 dark:bg-neutralTech-800 transition-colors duration-base focus:shadow-focus"
         />
         <button 
           type="submit"
-          class="px-4 py-2 bg-brand-wine text-neutralTech-50 rounded-sm text-body transition-colors fast ease-linearish hover:bg-brand-wineMuted whitespace-nowrap"
+          class="px-4 py-2 bg-brand-wine dark:bg-brand-beige text-neutralTech-50 dark:text-brand-wine rounded-sm text-body transition-colors duration-base hover:bg-brand-wineMuted dark:hover:bg-neutralTech-200 whitespace-nowrap"
         >
           Join
         </button>
@@ -69,9 +66,8 @@ const social = [
 
   </div>
 
-  <!-- Copyright -->
-  <div class="pt-4 border-t border-neutralTech-200 text-center">
-    <p class="text-small text-neutralTech-600">
+  <div class="pt-4 border-t border-neutralTech-200 dark:border-neutralTech-800 text-center transition-colors duration-base">
+    <p class="text-small text-neutralTech-600 dark:text-neutralTech-300">
       © {new Date().getFullYear()} Luiza Gusmão — All rights reserved.
     </p>
   </div>

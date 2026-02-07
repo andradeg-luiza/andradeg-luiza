@@ -9,22 +9,20 @@ const nav = [
 ]
 ---
 
-<header class="w-full bg-brand-surface border-b border-neutralTech-200">
+<header class="w-full bg-brand-surface dark:bg-brand-wine border-b border-neutralTech-200 dark:border-neutralTech-800 transition-colors duration-base">
   <div class="max-w-container mx-auto px-4 py-4 flex items-center justify-between">
 
-    <!-- Logo / Name -->
-    <a href="/" class="text-h4 font-semibold text-brand-wine hover:text-brand-wineMuted transition-colors fast ease-linearish">
+    <a href="/" class="text-h4 font-semibold text-brand-wine dark:text-brand-beige hover:text-brand-wineMuted dark:hover:text-neutralTech-200 transition-colors duration-base">
       Luiza Gusmão
     </a>
 
-    <!-- Navigation -->
     <nav>
       <ul class="flex gap-6 text-body">
         {nav.map(item => (
           <li>
             <a 
               href={item.href}
-              class="text-neutralTech-700 hover:text-brand-wineMuted transition-colors fast ease-linearish"
+              class="text-neutralTech-700 dark:text-neutralTech-200 hover:text-brand-wineMuted dark:hover:text-brand-beige transition-colors duration-base"
             >
               {item.label}
             </a>
