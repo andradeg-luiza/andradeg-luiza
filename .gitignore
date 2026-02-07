@@ -7,6 +7,9 @@ dist/
 # dependencies
 node_modules/
 
+# evidências de testes
+test-results
+
 # logs
 npm-debug.log*
 yarn-debug.log*
