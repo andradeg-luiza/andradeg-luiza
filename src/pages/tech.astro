@@ -12,108 +12,185 @@ const sectionWrapper =
 ---
 
 <BaseLayout title="Tech">
-  <main class="py-paddingPage flex flex-col items-center gap-12">
+  <main 
+    class="py-paddingPage flex flex-col items-center gap-12"
+    data-testid="tech-page"
+  >
 
     <!-- Título centralizado -->
-    <div class="w-full max-w-5xl text-center">
+    <div 
+      class="w-full max-w-5xl text-center"
+      data-testid="tech-header"
+    >
       <SectionTitle 
         class="items-center text-center [&>h2]:text-h1"
         title="Technologies & Tools"
         subtitle="A concise overview of the technologies I apply across QA, automation, development, and modern engineering workflows"
+        data-testid="tech-title"
       />
     </div>
 
     <!-- QA -->
-    <section class={sectionWrapper} aria-labelledby="tech-qa">
-      <h2 id="tech-qa" class={sectionTitleClasses}>QA</h2>
-      <ResponsiveGrid>
+    <section 
+      class={sectionWrapper} 
+      aria-labelledby="tech-qa"
+      data-testid="tech-qa-section"
+    >
+      <h2 
+        id="tech-qa" 
+        class={sectionTitleClasses}
+        data-testid="tech-qa-title"
+      >
+        QA
+      </h2>
+
+      <ResponsiveGrid data-testid="tech-qa-grid">
         <Card 
           title="Testing Practices" 
-          description="Exploratory, functional, regression, and integration testing with structured analysis and clear documentation." 
+          description="Exploratory, functional, regression, and integration testing with structured analysis and clear documentation."
+          data-testid="tech-qa-card-1"
         />
         <Card 
           title="Automation" 
-          description="UI, API, and performance automation focused on reliability and maintainability. Tools: Cypress, K6, Pactum, TestComplete." 
+          description="UI, API, and performance automation focused on reliability and maintainability. Tools: Cypress, K6, Pactum, TestComplete."
+          data-testid="tech-qa-card-2"
         />
         <Card 
           title="Quality Engineering" 
-          description="Test architecture, coverage strategy, risk assessment, and alignment with engineering workflows." 
+          description="Test architecture, coverage strategy, risk assessment, and alignment with engineering workflows."
+          data-testid="tech-qa-card-3"
         />
       </ResponsiveGrid>
     </section>
 
     <!-- DevTools -->
-    <section class={sectionWrapper} aria-labelledby="tech-devtools">
-      <h2 id="tech-devtools" class={sectionTitleClasses}>DevTools</h2>
-      <ResponsiveGrid>
+    <section 
+      class={sectionWrapper} 
+      aria-labelledby="tech-devtools"
+      data-testid="tech-devtools-section"
+    >
+      <h2 
+        id="tech-devtools" 
+        class={sectionTitleClasses}
+        data-testid="tech-devtools-title"
+      >
+        DevTools
+      </h2>
+
+      <ResponsiveGrid data-testid="tech-devtools-grid">
         <Card 
           title="Versioning & Workflow" 
-          description="Git, branching strategies, and collaborative development practices." 
+          description="Git, branching strategies, and collaborative development practices."
+          data-testid="tech-devtools-card-1"
         />
         <Card 
           title="APIs & Debugging" 
-          description="Postman, Bruno, and API validation with structured collections and automation flows." 
+          description="Postman, Bruno, and API validation with structured collections and automation flows."
+          data-testid="tech-devtools-card-2"
         />
         <Card 
           title="Environments & Tooling" 
-          description="Docker, VS Code, and reproducible setups for consistent engineering workflows." 
+          description="Docker, VS Code, and reproducible setups for consistent engineering workflows."
+          data-testid="tech-devtools-card-3"
         />
       </ResponsiveGrid>
     </section>
 
     <!-- Front-end -->
-    <section class={sectionWrapper} aria-labelledby="tech-frontend">
-      <h2 id="tech-frontend" class={sectionTitleClasses}>Front-end</h2>
-      <ResponsiveGrid>
+    <section 
+      class={sectionWrapper} 
+      aria-labelledby="tech-frontend"
+      data-testid="tech-frontend-section"
+    >
+      <h2 
+        id="tech-frontend" 
+        class={sectionTitleClasses}
+        data-testid="tech-frontend-title"
+      >
+        Front-end
+      </h2>
+
+      <ResponsiveGrid data-testid="tech-frontend-grid">
         <Card 
           title="JavaScript & TypeScript" 
-          description="Core language fundamentals, async flows, and typed architectures for scalable codebases." 
+          description="Core language fundamentals, async flows, and typed architectures for scalable codebases."
+          data-testid="tech-frontend-card-1"
         />
         <Card 
           title="Astro" 
-          description="Fast, component‑based development for clean and efficient interfaces." 
+          description="Fast, component‑based development for clean and efficient interfaces."
+          data-testid="tech-frontend-card-2"
         />
         <Card 
           title="TailwindCSS" 
-          description="Utility‑first styling and responsive design with consistent visual structure." 
+          description="Utility‑first styling and responsive design with consistent visual structure."
+          data-testid="tech-frontend-card-3"
         />
       </ResponsiveGrid>
     </section>
 
     <!-- Back-end -->
-    <section class={sectionWrapper} aria-labelledby="tech-backend">
-      <h2 id="tech-backend" class={sectionTitleClasses}>Back-end</h2>
-      <ResponsiveGrid>
+    <section 
+      class={sectionWrapper} 
+      aria-labelledby="tech-backend"
+      data-testid="tech-backend-section"
+    >
+      <h2 
+        id="tech-backend" 
+        class={sectionTitleClasses}
+        data-testid="tech-backend-title"
+      >
+        Back-end
+      </h2>
+
+      <ResponsiveGrid data-testid="tech-backend-grid">
         <Card 
           title="Node.js & Express" 
-          description="APIs, automation scripts, backend tooling, and structured service design." 
+          description="APIs, automation scripts, backend tooling, and structured service design."
+          data-testid="tech-backend-card-1"
         />
         <Card 
           title="API Documentation" 
-          description="Clear and maintainable API documentation using Swagger and OpenAPI standards." 
+          description="Clear and maintainable API documentation using Swagger and OpenAPI standards."
+          data-testid="tech-backend-card-2"
         />
         <Card 
           title="Engineering Practices" 
-          description="Unit testing, code reuse, modular design, and maintainable backend architectures." 
+          description="Unit testing, code reuse, modular design, and maintainable backend architectures."
+          data-testid="tech-backend-card-3"
         />
       </ResponsiveGrid>
     </section>
 
     <!-- CI/CD -->
-    <section class={sectionWrapper} aria-labelledby="tech-cicd">
-      <h2 id="tech-cicd" class={sectionTitleClasses}>CI/CD</h2>
-      <ResponsiveGrid>
+    <section 
+      class={sectionWrapper} 
+      aria-labelledby="tech-cicd"
+      data-testid="tech-cicd-section"
+    >
+      <h2 
+        id="tech-cicd" 
+        class={sectionTitleClasses}
+        data-testid="tech-cicd-title"
+      >
+        CI/CD
+      </h2>
+
+      <ResponsiveGrid data-testid="tech-cicd-grid">
         <Card 
           title="Pipelines" 
-          description="Automated workflows with GitHub Actions and Jenkins for continuous validation." 
+          description="Automated workflows with GitHub Actions and Jenkins for continuous validation."
+          data-testid="tech-cicd-card-1"
         />
         <Card 
           title="CI Architecture" 
-          description="Parallelization, caching, and pipeline reliability for scalable delivery." 
+          description="Parallelization, caching, and pipeline reliability for scalable delivery."
+          data-testid="tech-cicd-card-2"
         />
         <Card 
           title="Observability" 
-          description="Logs, metrics, dashboards, and quality gates for continuous improvement." 
+          description="Logs, metrics, dashboards, and quality gates for continuous improvement."
+          data-testid="tech-cicd-card-3"
         />
       </ResponsiveGrid>
     </section>
