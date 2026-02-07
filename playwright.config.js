@@ -2,13 +2,23 @@ import { defineConfig } from "@playwright/test"
 
 export default defineConfig({
   testDir: "./tests/e2e",
+
+  fullyParallel: true,
+
   use: {
-    headless: true,
     baseURL: "http://localhost:4321",
+    headless: true,
+    trace: "on-first-retry",
+    screenshot: "only-on-failure",
+    video: "retain-on-failure",
   },
-  webServer: {
-    command: "npm run dev",
-    port: 4321,
-    reuseExistingServer: !process.env.CI,
-  },
+
+  retries: 1,
+
+  reporter: [
+    ["list"],
+    ["html", { open: "never" }]
+  ],
+
+  timeout: 30_000,
 })
