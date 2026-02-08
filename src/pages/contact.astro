@@ -16,10 +16,16 @@ const linkClasses =
 ---
 
 <BaseLayout title="Contact">
-  <main class="py-paddingPage flex flex-col items-center gap-12" data-testid="contact-page">
+  <main 
+    class="py-paddingPage flex flex-col items-center gap-12" 
+    data-testid="contact-page"
+  >
 
-    <!-- Título maior e centralizado -->
-    <div class="w-full max-w-3xl text-center" data-testid="contact-header">
+    <!-- Header -->
+    <div 
+      class="w-full max-w-3xl text-center" 
+      data-testid="contact-header"
+    >
       <SectionTitle 
         class="items-center text-center [&>h2]:text-h1"
         title="Contact"
@@ -28,19 +34,30 @@ const linkClasses =
       />
     </div>
 
+    <!-- Contact Methods -->
     <section class="w-full max-w-3xl flex flex-col gap-16">
 
+      <!-- WhatsApp -->
       <section 
         class={sectionClasses} 
         aria-labelledby="contact-whatsapp"
         data-testid="contact-section-whatsapp"
       >
-        <h2 id="contact-whatsapp" class={titleClasses} data-testid="contact-whatsapp-title">
+        <h2 
+          id="contact-whatsapp" 
+          class={titleClasses}
+          data-testid="contact-whatsapp-title"
+        >
           WhatsApp
         </h2>
-        <p class={paragraphClasses} data-testid="contact-whatsapp-text">
+
+        <p 
+          class={paragraphClasses}
+          data-testid="contact-whatsapp-text"
+        >
           Direct and fast communication for projects, questions, or collaborations.
         </p>
+
         <a 
           href="https://wa.me/5581994563827"
           target="_blank"
@@ -53,17 +70,27 @@ const linkClasses =
         </a>
       </section>
 
+      <!-- Email -->
       <section 
         class={sectionClasses} 
         aria-labelledby="contact-email"
         data-testid="contact-section-email"
       >
-        <h2 id="contact-email" class={titleClasses} data-testid="contact-email-title">
+        <h2 
+          id="contact-email" 
+          class={titleClasses}
+          data-testid="contact-email-title"
+        >
           Email
         </h2>
-        <p class={paragraphClasses} data-testid="contact-email-text">
+
+        <p 
+          class={paragraphClasses}
+          data-testid="contact-email-text"
+        >
           For detailed inquiries, proposals, or professional conversations.
         </p>
+
         <a 
           href="mailto:andradeg.luiza@outlook.com"
           class={linkClasses}
@@ -74,17 +101,27 @@ const linkClasses =
         </a>
       </section>
 
+      <!-- LinkedIn -->
       <section 
         class="flex flex-col gap-3" 
         aria-labelledby="contact-linkedin"
         data-testid="contact-section-linkedin"
       >
-        <h2 id="contact-linkedin" class={titleClasses} data-testid="contact-linkedin-title">
+        <h2 
+          id="contact-linkedin" 
+          class={titleClasses}
+          data-testid="contact-linkedin-title"
+        >
           LinkedIn
         </h2>
-        <p class={paragraphClasses} data-testid="contact-linkedin-text">
+
+        <p 
+          class={paragraphClasses}
+          data-testid="contact-linkedin-text"
+        >
           Professional profile, networking, and career‑focused communication.
         </p>
+
         <a 
           href="https://www.linkedin.com/in/andradegluiza/"
           target="_blank"
