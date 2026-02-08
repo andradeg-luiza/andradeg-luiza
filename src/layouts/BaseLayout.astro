@@ -13,12 +13,11 @@ const { title, description } = Astro.props
     <meta name="description" content={description} />
     <title>{title}</title>
 
-    <!-- Anti-flash definitivo -->
+    <!-- Theme anti-flash -->
     <script>
       (function () {
         const saved = localStorage.getItem("theme")
         const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches
-
         const shouldBeDark = saved === "dark" || (!saved && prefersDark)
 
         if (shouldBeDark) {
@@ -29,6 +28,7 @@ const { title, description } = Astro.props
       })()
     </script>
 
+    <!-- Theme switcher -->
     <script src="/scripts/theme.js" defer></script>
   </head>
 
