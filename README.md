@@ -5,29 +5,42 @@ The project reflects my experience in QA, automation, SDET practices, and modern
 
 ---
 
-## 🚀 About the Project
+## About the Project
 
 This website was created to consolidate my professional presence and communicate my technical strengths with clarity and structure.  
 It highlights:
 
-- my 16+ years of experience in technology  
-- my transition from Support → QA → Automation → SDET  
-- my engineering mindset and product‑oriented approach  
-- my work in automation frameworks, testing, CI/CD, and workflow optimization  
+- more than 16 years of experience in technology  
+- a transition from Support → QA → Automation → SDET  
+- an engineering‑driven and product‑oriented mindset  
+- work in automation frameworks, testing, CI/CD, and workflow optimization  
 
 The site is fully static in its current version (1.0), optimized for performance, accessibility, and clean architecture.
 
 ---
 
-## 🧰 Tech Stack
+## Documentation
+
+The project includes a documentation set describing architecture, components, testing strategy, and design system:
+
+- [Changelog](./CHANGELOG.md)  
+- [Contributing Guidelines](./CONTRIBUTING.md)  
+- [Architecture](./docs/architecture.md)  
+- [Components](./docs/components.md)  
+- [Testing](./docs/testing.md)  
+- [Design System](./docs/design-system.md)  
+
+---
+
+## Tech Stack
 
 ### Front‑end
-- **Astro**
-- **TailwindCSS**
-- **TypeScript**
-- Component‑based architecture
-- SEO‑optimized structure
-- High‑performance static rendering
+- Astro  
+- TailwindCSS  
+- TypeScript  
+- Component‑based architecture  
+- SEO‑optimized structure  
+- High‑performance static rendering  
 
 ### Styling & Layout
 - Custom design system  
@@ -36,18 +49,13 @@ The site is fully static in its current version (1.0), optimized for performance
 
 ---
 
-## 🧪 Automated Testing
-
-### Unit Tests
-- **Vitest**
-- Testing Library
-- Coverage for helpers, logic, and isolated components
+## Automated Testing
 
 ### End‑to‑End Tests
-- **Playwright**
+- Playwright  
 - UI testing  
-- API testing (future dynamic version)  
 - Cross‑browser and responsive testing  
+- Page Object Model structure  
 
 ### Regression
 - Automated execution in CI  
@@ -55,27 +63,27 @@ The site is fully static in its current version (1.0), optimized for performance
 
 ---
 
-## 🔄 CI/CD — GitHub Actions
+## CI/CD — GitHub Actions
 
 ### Pipeline 1 — Build & Test
 - Install dependencies  
-- Run unit tests  
 - Run Playwright tests  
 - Lint  
 - Build Astro  
 
 ### Pipeline 2 — Deploy
 - Deploy to GitHub Pages  
-- Only runs if all tests pass  
+- Triggered only if all tests pass  
 
 ---
 
-## 🌐 Hosting
-- **GitHub Pages**
+## Hosting
+
+- GitHub Pages  
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 /
@@ -88,14 +96,20 @@ The site is fully static in its current version (1.0), optimized for performance
 │   └── server/
 ├── public/
 ├── tests/
-│   ├── unit/
 │   └── e2e/
+├── docs/
+│   ├── architecture.md
+│   ├── components.md
+│   ├── testing.md
+│   └── design-system.md
+├── CHANGELOG.md
+├── CONTRIBUTING.md
 └── README.md
 ```
 
 ---
 
-## 📄 Current Pages
+## Current Pages
 
 - Home  
 - About  
@@ -108,7 +122,7 @@ The site is fully static in its current version (1.0), optimized for performance
 
 ---
 
-## 🗺️ Roadmap
+## Roadmap
 
 ### 1.0 — Static Version (current)
 - Pages, layout, and content  
@@ -116,11 +130,10 @@ The site is fully static in its current version (1.0), optimized for performance
 - Initial structure  
 
 ### 1.1 — Automated Testing
-- Unit tests (Vitest)  
 - E2E tests (Playwright)  
 
 ### 1.2 — CI/CD
-- Build & test pipeline  
+- Build and test pipeline  
 - Deployment pipeline  
 
 ### 2.0 — Dynamic Version (future)
@@ -130,7 +143,7 @@ The site is fully static in its current version (1.0), optimized for performance
 
 ---
 
-## 👩‍💻 About Me
+## About Me
 
 I am a QA Specialist, SDET, and creator of engineering‑focused tools.  
 My background includes:
@@ -138,7 +151,7 @@ My background includes:
 - 16 years in technology  
 - 11 years in technical support  
 - 5 years in QA and automation  
-- Strong experience with Playwright, Cypress, PactumJS  
+- Experience with Playwright, Cypress, PactumJS  
 - CI/CD, API testing, debugging, and engineering workflows  
 - Advanced Git  
 - English B2  
@@ -147,6 +160,6 @@ My long‑term goal is to build tools that bring clarity, structure, and efficie
 
 ---
 
-## 📄 License
+## License
+
 MIT License.
-```
