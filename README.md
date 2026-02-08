@@ -26,6 +26,7 @@ The project includes a documentation set describing architecture, components, te
 - [Changelog](./CHANGELOG.md)  
 - [Contributing Guidelines](./CONTRIBUTING.md)  
 - [Architecture](./docs/architecture.md)  
+- [Architecture Flowchart](./docs/architecture-flowchart.md) 
 - [Components](./docs/components.md)  
 - [Testing](./docs/testing.md)  
 - [Design System](./docs/design-system.md)  
