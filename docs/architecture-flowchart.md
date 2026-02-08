@@ -1,6 +1,5 @@
 # Architecture Flowchart
 
-```mermaid
 flowchart TD
 
     %% ROOT
@@ -21,8 +20,8 @@ flowchart TD
     B --> B6[server/]
 
     %% COMPONENTS
-    B1 --> C1[UI Components\nCard, SectionTitle,\nResponsiveGrid, Avatar, Button]
-    B1 --> C2[Structural Components\nHeader, Footer]
+    B1 --> C1[UI Components]
+    B1 --> C2[Structural Components]
 
     %% LAYOUTS
     B2 --> L1[BaseLayout.astro]
@@ -38,16 +37,16 @@ flowchart TD
 
     %% STYLES
     B4 --> S1[global.css]
-    B4 --> S2[Tailwind Config]
+    B4 --> S2[tailwind.config]
 
     %% LIB
-    B5 --> L2[Utilities & Helpers]
+    B5 --> L2[Utilities]
 
     %% SERVER (future)
-    B6 --> Srv1[API Routes\n(Future 2.x)]
+    B6 --> Srv1[API Routes - Future]
 
     %% PUBLIC
-    C --> Cpub1[Static Assets\nImages, Icons, Scripts]
+    C --> Cpub1[Static Assets]
 
     %% TESTS
     D --> T1[e2e/]
@@ -72,8 +71,3 @@ flowchart TD
     L1 --> C1
     L1 --> C2
     L1 --> S1
-
-    %% THEME SYSTEM
-    Cpub1 --> Theme[theme.js\nDark/Light Mode]
-
-```
