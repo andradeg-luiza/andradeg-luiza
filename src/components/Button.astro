@@ -35,7 +35,7 @@ const classes = `${base} ${variants[variant] ?? variants.primary} ${sizes[size] 
   <a 
     href={href} 
     class={classes} 
-    {...props}
+    {...rest}
   >
     {children}
   </a>
@@ -43,7 +43,7 @@ const classes = `${base} ${variants[variant] ?? variants.primary} ${sizes[size] 
   <button 
     type={type} 
     class={classes} 
-    {...props}
+    {...rest}
   >
     {children}
   </button>

@@ -14,16 +14,17 @@ const paragraphClasses =
     data-testid="home-page"
   >
 
-    <!-- Wrapper com testid -->
+    <!-- Avatar -->
     <div data-testid="home-avatar">
       <Avatar 
         src="/images/me.jpg" 
         alt="Luiza Gusmão" 
         size="xl" 
-        bordered={true}
+        bordered
       />
     </div>
 
+    <!-- Title -->
     <h1 
       class="text-h1 md:text-display font-semibold text-brand-wine dark:text-brand-beige max-w-3xl transition-colors duration-base"
       data-testid="home-title"
@@ -31,6 +32,7 @@ const paragraphClasses =
       A Professional Overview of My Engineering Journey
     </h1>
 
+    <!-- Intro -->
     <p 
       class={`${paragraphClasses} max-w-2xl`}
       data-testid="home-intro"
@@ -39,6 +41,7 @@ const paragraphClasses =
       a clear path through my experience, solutions, and the systems I build.
     </p>
 
+    <!-- Theme buttons -->
     <div class="flex gap-4" data-testid="home-theme-buttons">
       <Button 
         variant="darkMode" 
@@ -59,6 +62,7 @@ const paragraphClasses =
       </Button>
     </div>
 
+    <!-- Section title -->
     <div class="mt-16 w-full max-w-3xl text-center" data-testid="home-section-title">
       <SectionTitle 
         class="items-center text-center [&>h2]:text-h1"
