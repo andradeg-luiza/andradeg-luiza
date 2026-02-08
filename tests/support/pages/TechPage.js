@@ -48,6 +48,7 @@ export class TechPage extends BasePage {
   }
 
   async goto() {
+    // Rota estável do Astro Preview
     await super.goto("/tech/")
   }
 }

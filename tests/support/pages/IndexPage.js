@@ -21,7 +21,8 @@ export class IndexPage extends BasePage {
   }
 
   async goto() {
-    await super.goto("/")
+    // Usa a rota estável gerada pelo Astro
+    await super.goto("/index.html")
   }
 
   async enableDark() {

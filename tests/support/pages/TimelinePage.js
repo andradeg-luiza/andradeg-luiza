@@ -23,6 +23,7 @@ export class TimelinePage extends BasePage {
   }
 
   async goto() {
+    // Rota estável do Astro Preview
     await super.goto("/timeline/")
   }
 

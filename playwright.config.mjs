@@ -3,12 +3,15 @@ import { defineConfig } from "@playwright/test";
 export default defineConfig({
   testDir: "./tests/e2e",
 
-  fullyParallel: true,
+  // Evita múltiplos servidores Astro rodando ao mesmo tempo
+  fullyParallel: false,
+  workers: 1,
 
+  // Usa build + preview (HTML estático e estável)
   webServer: {
-    command: "node ./node_modules/astro/astro.js dev --host --port 4321",
+    command: "npm run build && npm run preview -- --port 4321",
     url: "http://localhost:4321",
-    reuseExistingServer: false,
+    reuseExistingServer: true,
     timeout: 120_000
   },
 

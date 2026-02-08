@@ -6,13 +6,16 @@ export class BasePage {
   }
 
   async goto(path = "/") {
-    // Primeiro limpa qualquer estado persistido (tema, preferências, etc.)
+    // Limpa estado persistido ANTES da navegação
     await this.page.addInitScript(() => {
       localStorage.clear();
     });
 
-    // Agora navega para a página desejada
-    await this.page.goto(path, { waitUntil: "networkidle" });
+    // Navega para a rota desejada
+    await this.page.goto(path, { waitUntil: "domcontentloaded" });
+
+    // Aguarda o Astro terminar de montar o DOM real
+    await this.page.waitForLoadState("networkidle");
   }
 
   root(testId) {
