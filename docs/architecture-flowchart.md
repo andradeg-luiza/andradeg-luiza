@@ -1,30 +1,28 @@
-# Architecture Flowchart
-
 flowchart TD
 
     %% ROOT
-    A[Project Root] --> B[src/]
-    A --> C[public/]
-    A --> D[tests/]
-    A --> E[docs/]
+    A[Project Root] --> B[src]
+    A --> C[public]
+    A --> D[tests]
+    A --> E[docs]
     A --> F[CHANGELOG.md]
     A --> G[CONTRIBUTING.md]
     A --> H[README.md]
 
     %% SRC
-    B --> B1[components/]
-    B --> B2[layouts/]
-    B --> B3[pages/]
-    B --> B4[styles/]
-    B --> B5[lib/]
-    B --> B6[server/]
+    B --> B1[components]
+    B --> B2[layouts]
+    B --> B3[pages]
+    B --> B4[styles]
+    B --> B5[lib]
+    B --> B6[server]
 
     %% COMPONENTS
     B1 --> C1[UI Components]
     B1 --> C2[Structural Components]
 
     %% LAYOUTS
-    B2 --> L1[BaseLayout.astro]
+    B2 --> L1[BaseLayout]
 
     %% PAGES
     B3 --> P1[Home]
@@ -43,15 +41,15 @@ flowchart TD
     B5 --> L2[Utilities]
 
     %% SERVER (future)
-    B6 --> Srv1[API Routes - Future]
+    B6 --> Srv1[API Routes Future]
 
     %% PUBLIC
     C --> Cpub1[Static Assets]
 
     %% TESTS
-    D --> T1[e2e/]
+    D --> T1[e2e]
     T1 --> T2[Page Objects]
-    T1 --> T3[Support Utilities]
+    T1 --> T3[Support Utils]
 
     %% DOCS
     E --> Doc1[architecture.md]
