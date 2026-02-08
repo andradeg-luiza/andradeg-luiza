@@ -14,7 +14,7 @@ const linkBase =
 >
   <div class="max-w-[900px] mx-auto px-4 py-10 flex flex-col md:flex-row justify-between items-center gap-10">
 
-    <!-- Left: Home icon -->
+    <!-- Home -->
     <a 
       href="/" 
       aria-label="Home"
@@ -26,7 +26,7 @@ const linkBase =
       </svg>
     </a>
 
-    <!-- Center: Social icons -->
+    <!-- Social -->
     <div class="flex justify-center gap-6" data-testid="footer-social">
       {social.map(item => (
         <a 
@@ -58,7 +58,7 @@ const linkBase =
       ))}
     </div>
 
-    <!-- Right: Copyright -->
+    <!-- Copyright -->
     <p 
       class="text-small text-neutralTech-600 dark:text-neutralTech-300 text-center md:text-right"
       data-testid="footer-text"

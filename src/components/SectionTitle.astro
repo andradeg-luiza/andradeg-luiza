@@ -9,15 +9,6 @@ const subtitleClasses =
 ---
 
 <div class={`flex flex-col gap-1 ${className || ""}`} {...rest}>
-  {title && (
-    <h2 class={titleClasses}>
-      {title}
-    </h2>
-  )}
-
-  {subtitle && (
-    <p class={subtitleClasses}>
-      {subtitle}
-    </p>
-  )}
+  {title && <h2 class={titleClasses}>{title}</h2>}
+  {subtitle && <p class={subtitleClasses}>{subtitle}</p>}
 </div>
