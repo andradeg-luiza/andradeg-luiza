@@ -1,4 +1,6 @@
-# Architecture Flowchart
+## Architecture Flowchart
+
+```mermaid
 flowchart TD
     A[Root] --> B[src]
     A --> C[public]
@@ -33,3 +35,4 @@ flowchart TD
     E --> Doc2[comp]
     E --> Doc3[test]
     E --> Doc4[design]
+```
