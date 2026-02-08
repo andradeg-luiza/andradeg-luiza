@@ -2,22 +2,33 @@
 import BaseLayout from "../layouts/BaseLayout.astro"
 import Avatar from "../components/Avatar.astro"
 
-const sectionClasses = "max-w-3xl text-left flex flex-col gap-6"
-const titleClasses = "text-h2 md:text-h1 font-semibold text-brand-wine dark:text-brand-beige transition-colors duration-base"
-const paragraphClasses = "text-body text-neutralTech-700 dark:text-neutralTech-200 transition-colors duration-base"
+const sectionClasses =
+  "max-w-3xl text-left flex flex-col gap-6"
+
+const titleClasses =
+  "text-h2 md:text-h1 font-semibold text-brand-wine dark:text-brand-beige transition-colors duration-base"
+
+const paragraphClasses =
+  "text-body text-neutralTech-700 dark:text-neutralTech-200 transition-colors duration-base"
 ---
 
 <BaseLayout title="About">
-  <main class="py-paddingPage flex flex-col items-center text-center gap-12" data-testid="about-page">
+  <main 
+    class="py-paddingPage flex flex-col items-center text-center gap-12" 
+    data-testid="about-page"
+  >
 
-    <Avatar 
-      src="/images/me.jpg"
-      alt="Luiza Gusmão"
-      size="xl"
-      bordered={true}
-      data-testid="about-avatar"
-    />
+    <!-- Avatar -->
+    <div data-testid="about-avatar">
+      <Avatar 
+        src="/images/me.jpg"
+        alt="Luiza Gusmão"
+        size="xl"
+        bordered
+      />
+    </div>
 
+    <!-- Title -->
     <h1 
       class="text-h2 md:text-h1 font-semibold text-brand-wine dark:text-brand-beige transition-colors duration-base max-w-3xl text-left"
       data-testid="about-title"
@@ -25,6 +36,7 @@ const paragraphClasses = "text-body text-neutralTech-700 dark:text-neutralTech-2
       A Clear and Structured View of My Career
     </h1>
 
+    <!-- Intro -->
     <p 
       class="text-body md:text-h4 text-neutralTech-700 dark:text-neutralTech-200 transition-colors duration-base max-w-3xl text-left"
       data-testid="about-intro"
@@ -32,29 +44,45 @@ const paragraphClasses = "text-body text-neutralTech-700 dark:text-neutralTech-2
       An overview of my background, principles, and long‑term direction in engineering, automation, and product creation
     </p>
 
+    <!-- Story -->
     <section class={sectionClasses} data-testid="about-section-story">
-      <h2 class={titleClasses} data-testid="about-section-story-title">My Story</h2>
+      <h2 class={titleClasses} data-testid="about-section-story-title">
+        My Story
+      </h2>
+
       <p class={paragraphClasses} data-testid="about-section-story-text">
         My career spans more than 16 years across different layers of technology. I began in technical support, where I developed strong analytical skills, resilience, and a deep understanding of real‑world systems. Over time, I transitioned into Quality Assurance, refining my ability to design tests, analyze risks, and ensure reliability. This evolution naturally led me into automation and, eventually, into the role of SDET — combining development, testing, and engineering practices to build scalable and maintainable solutions. Today, I also create my own products, applying everything I’ve learned to build tools that bring clarity, structure, and efficiency to teams.
       </p>
     </section>
 
+    <!-- Values -->
     <section class={sectionClasses} data-testid="about-section-values">
-      <h2 class={titleClasses} data-testid="about-section-values-title">Core Values</h2>
+      <h2 class={titleClasses} data-testid="about-section-values-title">
+        Core Values
+      </h2>
+
       <p class={paragraphClasses} data-testid="about-section-values-text">
         I believe in engineering grounded in clarity, consistency, and purpose. My work is guided by principles such as transparency, thoughtful design, and long‑term maintainability. I value processes that empower teams, communication that reduces friction, and solutions that balance technical depth with practical execution. Above all, I prioritize building systems that people can trust.
       </p>
     </section>
 
+    <!-- Mission -->
     <section class={sectionClasses} data-testid="about-section-mission">
-      <h2 class={titleClasses} data-testid="about-section-mission-title">Mission</h2>
+      <h2 class={titleClasses} data-testid="about-section-mission-title">
+        Mission
+      </h2>
+
       <p class={paragraphClasses} data-testid="about-section-mission-text">
         My mission is to elevate software quality through automation, engineering excellence, and well‑structured workflows. I aim to help teams move faster with confidence, reduce operational risk, and adopt practices that support sustainable growth. Whether through automation frameworks, internal tools, or product development, my focus is always on creating clarity and enabling better decision‑making.
       </p>
     </section>
 
+    <!-- Vision -->
     <section class={sectionClasses} data-testid="about-section-vision">
-      <h2 class={titleClasses} data-testid="about-section-vision-title">Vision for the Future</h2>
+      <h2 class={titleClasses} data-testid="about-section-vision-title">
+        Vision for the Future
+      </h2>
+
       <p class={paragraphClasses} data-testid="about-section-vision-text">
         Looking ahead, I aim to continue creating tools and engineering practices that support teams globally. Each product I build — including FocusFlow and Donna — strengthens my skills and shapes the way I approach the next challenge. My long‑term vision is to grow as a creator and engineer, eventually developing a scalable, impactful product in the tech space. Whether it emerges from my current work or from future ideas, my goal is to build solutions that simplify complexity, elevate engineering culture, and help people work with more structure, intention, and clarity.
       </p>
