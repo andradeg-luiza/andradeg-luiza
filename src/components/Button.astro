@@ -1,4 +1,6 @@
 ---
+const props = Astro.props
+
 const {
   variant = "primary",
   size = "md",
@@ -6,17 +8,16 @@ const {
   type = "button",
   children,
   onclick = null,
-} = Astro.props
+  ...rest
+} = props
 
 const base =
   "inline-flex items-center justify-center rounded-sm font-medium transition-colors duration-base ease-linearish"
 
-/* Variantes FIXAS — não mudam com o tema */
 const variants = {
   darkMode: "bg-brand-wine text-brand-beige border border-brand-beige hover:bg-brand-wineMuted",
   lightMode: "bg-brand-beige text-brand-wine border border-brand-wine hover:bg-brand-surface",
 
-  /* Mantive as variantes originais caso use em outros lugares */
   primary: "bg-brand-wine text-brand-beige hover:bg-brand-wineMuted",
   secondary: "bg-neutralTech-50 text-neutralTech-900 border border-neutralTech-300 hover:bg-neutralTech-100",
 }
@@ -34,7 +35,7 @@ const classes = `${base} ${variants[variant] ?? variants.primary} ${sizes[size] 
   <a 
     href={href} 
     class={classes} 
-    {...(onclick ? { onclick } : {})}
+    {...props}
   >
     {children}
   </a>
@@ -42,7 +43,7 @@ const classes = `${base} ${variants[variant] ?? variants.primary} ${sizes[size] 
   <button 
     type={type} 
     class={classes} 
-    {...(onclick ? { onclick } : {})}
+    {...props}
   >
     {children}
   </button>

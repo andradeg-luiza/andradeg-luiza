@@ -17,7 +17,6 @@ const sectionWrapper =
     data-testid="tech-page"
   >
 
-    <!-- Título centralizado -->
     <div 
       class="w-full max-w-5xl text-center"
       data-testid="tech-header"
@@ -45,21 +44,26 @@ const sectionWrapper =
       </h2>
 
       <ResponsiveGrid data-testid="tech-qa-grid">
-        <Card 
-          title="Testing Practices" 
-          description="Exploratory, functional, regression, and integration testing with structured analysis and clear documentation."
-          data-testid="tech-qa-card-1"
-        />
-        <Card 
-          title="Automation" 
-          description="UI, API, and performance automation focused on reliability and maintainability. Tools: Cypress, K6, Pactum, TestComplete."
-          data-testid="tech-qa-card-2"
-        />
-        <Card 
-          title="Quality Engineering" 
-          description="Test architecture, coverage strategy, risk assessment, and alignment with engineering workflows."
-          data-testid="tech-qa-card-3"
-        />
+        <div data-testid="tech-qa-card-1">
+          <Card 
+            title="Testing Practices" 
+            description="Exploratory, functional, regression, and integration testing with structured analysis and clear documentation."
+          />
+        </div>
+
+        <div data-testid="tech-qa-card-2">
+          <Card 
+            title="Automation" 
+            description="UI, API, and performance automation focused on reliability and maintainability. Tools: Cypress, K6, Pactum, TestComplete."
+          />
+        </div>
+
+        <div data-testid="tech-qa-card-3">
+          <Card 
+            title="Quality Engineering" 
+            description="Test architecture, coverage strategy, risk assessment, and alignment with engineering workflows."
+          />
+        </div>
       </ResponsiveGrid>
     </section>
 
@@ -78,21 +82,26 @@ const sectionWrapper =
       </h2>
 
       <ResponsiveGrid data-testid="tech-devtools-grid">
-        <Card 
-          title="Versioning & Workflow" 
-          description="Git, branching strategies, and collaborative development practices."
-          data-testid="tech-devtools-card-1"
-        />
-        <Card 
-          title="APIs & Debugging" 
-          description="Postman, Bruno, and API validation with structured collections and automation flows."
-          data-testid="tech-devtools-card-2"
-        />
-        <Card 
-          title="Environments & Tooling" 
-          description="Docker, VS Code, and reproducible setups for consistent engineering workflows."
-          data-testid="tech-devtools-card-3"
-        />
+        <div data-testid="tech-devtools-card-1">
+          <Card 
+            title="Versioning & Workflow" 
+            description="Git, branching strategies, and collaborative development practices."
+          />
+        </div>
+
+        <div data-testid="tech-devtools-card-2">
+          <Card 
+            title="APIs & Debugging" 
+            description="Postman, Bruno, and API validation with structured collections and automation flows."
+          />
+        </div>
+
+        <div data-testid="tech-devtools-card-3">
+          <Card 
+            title="Environments & Tooling" 
+            description="Docker, VS Code, and reproducible setups for consistent engineering workflows."
+          />
+        </div>
       </ResponsiveGrid>
     </section>
 
@@ -111,21 +120,26 @@ const sectionWrapper =
       </h2>
 
       <ResponsiveGrid data-testid="tech-frontend-grid">
-        <Card 
-          title="JavaScript & TypeScript" 
-          description="Core language fundamentals, async flows, and typed architectures for scalable codebases."
-          data-testid="tech-frontend-card-1"
-        />
-        <Card 
-          title="Astro" 
-          description="Fast, component‑based development for clean and efficient interfaces."
-          data-testid="tech-frontend-card-2"
-        />
-        <Card 
-          title="TailwindCSS" 
-          description="Utility‑first styling and responsive design with consistent visual structure."
-          data-testid="tech-frontend-card-3"
-        />
+        <div data-testid="tech-frontend-card-1">
+          <Card 
+            title="JavaScript & TypeScript" 
+            description="Core language fundamentals, async flows, and typed architectures for scalable codebases."
+          />
+        </div>
+
+        <div data-testid="tech-frontend-card-2">
+          <Card 
+            title="Astro" 
+            description="Fast, component‑based development for clean and efficient interfaces."
+          />
+        </div>
+
+        <div data-testid="tech-frontend-card-3">
+          <Card 
+            title="TailwindCSS" 
+            description="Utility‑first styling and responsive design with consistent visual structure."
+          />
+        </div>
       </ResponsiveGrid>
     </section>
 
@@ -144,21 +158,26 @@ const sectionWrapper =
       </h2>
 
       <ResponsiveGrid data-testid="tech-backend-grid">
-        <Card 
-          title="Node.js & Express" 
-          description="APIs, automation scripts, backend tooling, and structured service design."
-          data-testid="tech-backend-card-1"
-        />
-        <Card 
-          title="API Documentation" 
-          description="Clear and maintainable API documentation using Swagger and OpenAPI standards."
-          data-testid="tech-backend-card-2"
-        />
-        <Card 
-          title="Engineering Practices" 
-          description="Unit testing, code reuse, modular design, and maintainable backend architectures."
-          data-testid="tech-backend-card-3"
-        />
+        <div data-testid="tech-backend-card-1">
+          <Card 
+            title="Node.js & Express" 
+            description="APIs, automation scripts, backend tooling, and structured service design."
+          />
+        </div>
+
+        <div data-testid="tech-backend-card-2">
+          <Card 
+            title="API Documentation" 
+            description="Clear and maintainable API documentation using Swagger and OpenAPI standards."
+          />
+        </div>
+
+        <div data-testid="tech-backend-card-3">
+          <Card 
+            title="Engineering Practices" 
+            description="Unit testing, code reuse, modular design, and maintainable backend architectures."
+          />
+        </div>
       </ResponsiveGrid>
     </section>
 
@@ -177,21 +196,26 @@ const sectionWrapper =
       </h2>
 
       <ResponsiveGrid data-testid="tech-cicd-grid">
-        <Card 
-          title="Pipelines" 
-          description="Automated workflows with GitHub Actions and Jenkins for continuous validation."
-          data-testid="tech-cicd-card-1"
-        />
-        <Card 
-          title="CI Architecture" 
-          description="Parallelization, caching, and pipeline reliability for scalable delivery."
-          data-testid="tech-cicd-card-2"
-        />
-        <Card 
-          title="Observability" 
-          description="Logs, metrics, dashboards, and quality gates for continuous improvement."
-          data-testid="tech-cicd-card-3"
-        />
+        <div data-testid="tech-cicd-card-1">
+          <Card 
+            title="Pipelines" 
+            description="Automated workflows with GitHub Actions and Jenkins for continuous validation."
+          />
+        </div>
+
+        <div data-testid="tech-cicd-card-2">
+          <Card 
+            title="CI Architecture" 
+            description="Parallelization, caching, and pipeline reliability for scalable delivery."
+          />
+        </div>
+
+        <div data-testid="tech-cicd-card-3">
+          <Card 
+            title="Observability" 
+            description="Logs, metrics, dashboards, and quality gates for continuous improvement."
+          />
+        </div>
       </ResponsiveGrid>
     </section>
 

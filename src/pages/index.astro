@@ -14,13 +14,15 @@ const paragraphClasses =
     data-testid="home-page"
   >
 
-    <Avatar 
-      src="/images/me.jpg" 
-      alt="Luiza Gusmão" 
-      size="xl" 
-      bordered={true}
-      data-testid="home-avatar"
-    />
+    <!-- Wrapper com testid -->
+    <div data-testid="home-avatar">
+      <Avatar 
+        src="/images/me.jpg" 
+        alt="Luiza Gusmão" 
+        size="xl" 
+        bordered={true}
+      />
+    </div>
 
     <h1 
       class="text-h1 md:text-display font-semibold text-brand-wine dark:text-brand-beige max-w-3xl transition-colors duration-base"
@@ -38,7 +40,6 @@ const paragraphClasses =
     </p>
 
     <div class="flex gap-4" data-testid="home-theme-buttons">
-      <!-- Botão bordô → ativa DARK -->
       <Button 
         variant="darkMode" 
         size="lg" 
@@ -48,7 +49,6 @@ const paragraphClasses =
         Dark
       </Button>
 
-      <!-- Botão bege → ativa LIGHT -->
       <Button 
         variant="lightMode" 
         size="lg" 

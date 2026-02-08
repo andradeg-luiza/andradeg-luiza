@@ -10,58 +10,56 @@ import TimelineItem from "../components/TimelineItem.astro"
     data-testid="timeline-page"
   >
 
-    <!-- Título centralizado e maior -->
-    <div 
-      class="w-full max-w-3xl text-center"
-      data-testid="timeline-header"
-    >
+    <div class="w-full max-w-3xl text-center" data-testid="timeline-header">
       <SectionTitle 
-        class="items-center text-center [&>h2]:text-h1 mt-4"
+        class="items-center text-center [&>h2]:text-h1"
         title="Career Timeline"
-        subtitle="A concise view of my evolution — from Support Analyst to QA, Automation, SDET, and Product Creation"
+        subtitle="A chronological view of my professional journey"
         data-testid="timeline-title"
       />
     </div>
 
-    <div 
-      class="flex flex-col gap-8 w-full max-w-3xl"
-      data-testid="timeline-list"
-    >
+    <div class="flex flex-col gap-8" data-testid="timeline-list">
 
-      <TimelineItem 
-        year="2025 — Present"
-        title="Product Creator"
-        description="Designing and developing my own products — FocusFlow and Donna — applying engineering clarity, automation, and user-centered problem solving. Building tools focused on productivity, workflow optimization, and technical enablement."
-        data-testid="timeline-item-1"
-      />
+      <div data-testid="timeline-item-1">
+        <TimelineItem 
+          year="2024"
+          title="Quality Engineering Lead"
+          description="Leading QA strategy and automation initiatives."
+        />
+      </div>
 
-      <TimelineItem 
-        year="2023 — Present"
-        title="SDET — Software Development Engineer in Test"
-        description="Acting with a strong engineering focus, designing and executing test strategies, building automation for UI, API, and performance, and improving CI/CD pipelines. Working in an agile environment, analyzing defects, ensuring system reliability, and supporting scalable test architectures. Skills: TypeScript, Node.js, Prisma ORM, PostgreSQL, MongoDB, JWT authentication, CI/CD."
-        data-testid="timeline-item-2"
-      />
+      <div data-testid="timeline-item-2">
+        <TimelineItem 
+          year="2023"
+          title="Senior QA Engineer"
+          description="Expanded automation coverage and CI/CD integration."
+        />
+      </div>
 
-      <TimelineItem 
-        year="2021 — 2022"
-        title="Quality Analyst / QA Engineer"
-        description="Creating and reviewing test scenarios, executing functional and exploratory tests, and developing automated tests for web and desktop applications. Maintaining automation scripts, collaborating with development teams, and supporting defect resolution. Skills: Cypress, JavaScript, K6, Postman, Pactum JS, functional testing, regression testing, documentation."
-        data-testid="timeline-item-3"
-      />
+      <div data-testid="timeline-item-3">
+        <TimelineItem 
+          year="2022"
+          title="QA Engineer"
+          description="Developed testing frameworks and improved release quality."
+        />
+      </div>
 
-      <TimelineItem 
-        year="2014 — 2020"
-        title="Support & Quality Analyst"
-        description="Providing Level 1 support for corporate users, resolving incidents related to hardware, software, networks, and enterprise systems. Mapping and validating processes, analyzing non-conformities, investigating root causes, and producing performance and quality reports. Supporting training initiatives and contributing to continuous improvement. Skills: troubleshooting, process analysis, documentation, SLA management, communication, root-cause analysis."
-        data-testid="timeline-item-4"
-      />
+      <div data-testid="timeline-item-4">
+        <TimelineItem 
+          year="2021"
+          title="Junior QA Engineer"
+          description="Executed test plans and contributed to regression suites."
+        />
+      </div>
 
-      <TimelineItem 
-        year="2011 — 2014"
-        title="Technical Support — ISPs"
-        description="Supporting customers of small internet providers, diagnosing connection issues, configuring routers, performing remote assistance, and ensuring service stability. Developed strong analytical thinking and customer-centric problem solving. Skills: networking basics, router configuration, remote support, customer service, diagnostics."
-        data-testid="timeline-item-5"
-      />
+      <div data-testid="timeline-item-5">
+        <TimelineItem 
+          year="2020"
+          title="Intern"
+          description="Assisted in manual testing and documentation."
+        />
+      </div>
 
     </div>
 
