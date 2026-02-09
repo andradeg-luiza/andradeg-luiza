@@ -119,7 +119,6 @@ The project includes a documentation set describing architecture, components, te
 - Timeline  
 - Services  
 - Contact  
-- Newsletter (footer)  
 
 ---
 
@@ -136,11 +135,6 @@ The project includes a documentation set describing architecture, components, te
 ### 1.2 — CI/CD
 - Build and test pipeline  
 - Deployment pipeline  
-
-### 2.0 — Dynamic Version (future)
-- Database integration  
-- API routes  
-- Admin utilities  
 
 ---
 
