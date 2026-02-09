@@ -14,12 +14,10 @@ const linkBase =
   "transition-colors duration-base text-neutralTech-700 dark:text-neutralTech-200 hover:text-brand-wineMuted dark:hover:text-brand-beige"
 ---
 <header 
-  class="w-full bg-brand-surface dark:bg-brand-wine border-b border-neutralTech-200 dark:border-neutralTech-800 transition-colors duration-base"
+  class="relative w-full bg-brand-surface dark:bg-brand-wine border-b border-neutralTech-200 dark:border-neutralTech-800 transition-colors duration-base"
   data-testid="header"
 >
-  <div class="max-w-container mx-auto px-4 py-4 flex items-center justify-between">
-
-    <!-- Logo -->
+  <div class="max-w-container mx-auto px-4 py-4 flex items-center">
     <a 
       href="/" 
       class="text-h4 font-semibold text-brand-wine dark:text-brand-beige hover:text-brand-wineMuted dark:hover:text-neutralTech-200 transition-colors duration-base"
@@ -28,64 +26,59 @@ const linkBase =
       Luiza Gusmão
     </a>
 
-    <!-- Mobile Menu Button -->
-    <button 
-      class="mobile-menu-btn md:hidden cursor-pointer flex flex-col gap-1"
-      onclick="toggleMobileMenu()"
-      aria-label="Open menu"
-    >
-      <span class="w-6 h-0.5 bg-current"></span>
-      <span class="w-6 h-0.5 bg-current"></span>
-      <span class="w-6 h-0.5 bg-current"></span>
-    </button>
+    <div class="flex items-center gap-4 ml-auto">
+      <nav aria-label="Main navigation" class="hidden md:block">
+        <ul class="flex gap-6 text-body">
+          {nav.map(item => {
+            const isActive = current === item.href
+            return (
+              <li>
+                <a 
+                  href={item.href}
+                  class={`${linkBase} ${isActive ? "font-semibold underline underline-offset-4" : ""}`}
+                  data-testid={item.testid}
+                >
+                  {item.label}
+                </a>
+              </li>
+            )
+          })}
+        </ul>
+      </nav>
 
-    <!-- Navigation -->
-    <nav aria-label="Main navigation" class="relative">
-
-      <!-- Desktop Menu -->
-      <ul class="hidden md:flex gap-6 text-body">
-        {nav.map(item => {
-          const isActive = current === item.href
-          return (
-            <li>
-              <a 
-                href={item.href}
-                class={`${linkBase} ${isActive ? "font-semibold underline underline-offset-4" : ""}`}
-                data-testid={item.testid}
-              >
-                {item.label}
-              </a>
-            </li>
-          )
-        })}
-      </ul>
-
-      <!-- Mobile Dropdown -->
-      <ul 
-        id="mobile-menu"
-        class="hidden flex-col gap-4 text-body absolute right-0 mt-4 p-4 rounded-lg shadow-lg bg-brand-surface dark:bg-brand-wine border border-neutralTech-200 dark:border-neutralTech-700 md:hidden"
+      <button 
+        class="md:hidden cursor-pointer flex flex-col gap-1"
+        onclick="toggleMobileMenu()"
+        aria-label="Open menu"
       >
-        {nav.map(item => {
-          const isActive = current === item.href
-          return (
-            <li>
-              <a 
-                href={item.href}
-                class={`${linkBase} ${isActive ? "font-semibold underline underline-offset-4" : ""}`}
-                data-testid={item.testid + "-mobile"}
-              >
-                {item.label}
-              </a>
-            </li>
-          )
-        })}
-      </ul>
-
-    </nav>
-
+        <span class="w-6 h-0.5 bg-current"></span>
+        <span class="w-6 h-0.5 bg-current"></span>
+        <span class="w-6 h-0.5 bg-current"></span>
+      </button>
+    </div>
   </div>
 
-  <script>
+  <ul 
+    id="mobile-menu"
+    class="hidden absolute top-full right-0 w-full px-4 py-4 flex-col gap-4 text-body bg-brand-surface dark:bg-brand-wine border-t border-neutralTech-200 dark:border-neutralTech-700 shadow-lg z-50 md:hidden"
+  >
+    {nav.map(item => {
+      const isActive = current === item.href
+      return (
+        <li>
+          <a 
+            href={item.href}
+            class={`${linkBase} ${isActive ? "font-semibold underline underline-offset-4" : ""}`}
+            data-testid={item.testid + "-mobile"}
+          >
+            {item.label}
+          </a>
+        </li>
+      )
+    })}
+  </ul>
+
+  <script is:inline>
     function toggleMobileMenu() {
       const menu = document.getElementById("mobile-menu")
       menu.classList.toggle("hidden")
