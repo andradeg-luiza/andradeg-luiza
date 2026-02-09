@@ -28,9 +28,19 @@ const linkBase =
       Luiza Gusmão
     </a>
 
+    <!-- Mobile Menu Button -->
+    <div 
+      class="mobile-menu-btn md:hidden cursor-pointer flex flex-col gap-1"
+      onclick="toggleMobileMenu()"
+    >
+      <span class="w-6 h-0.5 bg-current"></span>
+      <span class="w-6 h-0.5 bg-current"></span>
+      <span class="w-6 h-0.5 bg-current"></span>
+    </div>
+
     <!-- Navigation -->
-    <nav aria-label="Main navigation">
-      <ul class="flex gap-6 text-body">
+    <nav aria-label="Main navigation" class="relative">
+      <ul class="flex gap-6 text-body md:flex hidden">
         {nav.map(item => {
           const isActive = current === item.href
           return (
@@ -46,7 +56,35 @@ const linkBase =
           )
         })}
       </ul>
+
+      <!-- Mobile Dropdown -->
+      <ul 
+        id="mobile-menu"
+        class="hidden flex-col gap-4 text-body absolute right-0 mt-4 p-4 rounded-lg shadow-lg bg-brand-surface dark:bg-brand-wine border border-neutralTech-200 dark:border-neutralTech-700 md:hidden"
+      >
+        {nav.map(item => {
+          const isActive = current === item.href
+          return (
+            <li>
+              <a 
+                href={item.href}
+                class={`${linkBase} ${isActive ? "font-semibold underline underline-offset-4" : ""}`}
+                data-testid={item.testid + "-mobile"}
+              >
+                {item.label}
+              </a>
+            </li>
+          )
+        })}
+      </ul>
     </nav>
 
   </div>
+
+  <script>
+    function toggleMobileMenu() {
+      const menu = document.getElementById("mobile-menu")
+      menu.classList.toggle("hidden")
+    }
+  </script>
 </header>
