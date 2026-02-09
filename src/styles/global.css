@@ -38,3 +38,84 @@ a:focus-visible {
 img {
   @apply select-none;
 }
+
+/* ------------------------------------------------------ */
+/* MOBILE HEADER RESPONSIVENESS                           */
+/* ------------------------------------------------------ */
+
+@media (max-width: 640px) {
+
+  /* Horizontal scroll menu */
+  nav ul {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    gap: 1rem;
+    padding: 0.25rem 0 0.75rem 0; /* padding reduzido */
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    position: relative;
+  }
+
+  nav ul > li {
+    scroll-snap-align: start;
+  }
+
+  /* Remove scrollbar */
+  nav ul::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Fade nas laterais */
+  nav {
+    position: relative;
+  }
+
+  nav::before,
+  nav::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 32px;
+    pointer-events: none;
+    z-index: 10;
+  }
+
+  /* Fade left */
+  nav::before {
+    left: 0;
+    background: linear-gradient(
+      to right,
+      var(--fade-bg, rgba(255,255,255,1)) 0%,
+      transparent 100%
+    );
+  }
+
+  /* Fade right */
+  nav::after {
+    right: 0;
+    background: linear-gradient(
+      to left,
+      var(--fade-bg, rgba(255,255,255,1)) 0%,
+      transparent 100%
+    );
+  }
+
+  /* Dark mode fade */
+  html.dark nav::before {
+    background: linear-gradient(
+      to right,
+      rgba(17,17,17,1) 0%,
+      transparent 100%
+    );
+  }
+
+  html.dark nav::after {
+    background: linear-gradient(
+      to left,
+      rgba(17,17,17,1) 0%,
+      transparent 100%
+    );
+  }
+}
