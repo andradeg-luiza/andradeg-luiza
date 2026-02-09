@@ -1,3 +1,17 @@
+// 1. Anti-flash: roda imediatamente
+(function () {
+  const saved = localStorage.getItem("theme")
+  const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches
+  const shouldBeDark = saved === "dark" || (!saved && prefersDark)
+
+  if (shouldBeDark) {
+    document.documentElement.classList.add("dark")
+  } else {
+    document.documentElement.classList.remove("dark")
+  }
+})()
+
+// 2. Função global para trocar tema
 function setTheme(mode) {
   const html = document.documentElement
 
@@ -10,6 +24,7 @@ function setTheme(mode) {
   }
 }
 
+// 3. Inicialização (roda depois do load)
 function initTheme() {
   const saved = localStorage.getItem("theme")
 
