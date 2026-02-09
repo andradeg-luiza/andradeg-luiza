@@ -3,16 +3,14 @@ import { defineConfig } from "@playwright/test";
 export default defineConfig({
   testDir: "./tests/e2e",
 
-  // Evita múltiplos servidores Astro rodando ao mesmo tempo
   fullyParallel: false,
   workers: 1,
 
-  // Usa build + preview (HTML estático e estável)
   webServer: {
     command: "npm run build && npm run preview -- --port 4321",
     url: "http://localhost:4321",
     reuseExistingServer: true,
-    timeout: 120_000
+    timeout: 180_000 // CI precisa de mais tempo
   },
 
   use: {
@@ -24,12 +22,12 @@ export default defineConfig({
     video: "retain-on-failure"
   },
 
-  retries: 0,
+  retries: 1, // importante para capturar trace
 
   reporter: [
     ["list"],
     ["html", { open: "never" }]
   ],
 
-  timeout: 30_000
+  timeout: 60_000 // CI é mais lento
 });

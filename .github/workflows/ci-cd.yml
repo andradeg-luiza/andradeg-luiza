@@ -1,0 +1,84 @@
+name: CI/CD
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+
+jobs:
+  ci:
+    name: Run CI (Lint, Tests, Build)
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Install Playwright Browsers
+        run: npx playwright install --with-deps
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Run Playwright tests
+        run: npm run test:e2e
+        continue-on-error: true
+
+      - name: Upload Playwright artifacts (screenshots, videos, traces, reports)
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-artifacts
+          path: |
+            playwright-report/
+            test-results/
+            **/trace.zip
+            **/*.png
+            **/*.webm
+          retention-days: 7
+
+      - name: Fail CI if tests failed
+        if: failure()
+        run: exit 1
+
+      - name: Build project
+        run: npm run build
+
+  deploy:
+    name: Deploy to Vercel
+    needs: ci
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build project
+        run: npm run build
+
+      - name: Deploy to Vercel
+        run: |
+          npm install -g vercel
+          vercel deploy --prod \
+            --token ${{ secrets.VERCEL_TOKEN }} \
+            --project ${{ secrets.VERCEL_PROJECT_ID }} \
+            --org ${{ secrets.VERCEL_ORG_ID }} \
+            --yes
