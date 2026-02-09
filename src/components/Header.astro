@@ -29,18 +29,21 @@ const linkBase =
     </a>
 
     <!-- Mobile Menu Button -->
-    <div 
+    <button 
       class="mobile-menu-btn md:hidden cursor-pointer flex flex-col gap-1"
       onclick="toggleMobileMenu()"
+      aria-label="Open menu"
     >
       <span class="w-6 h-0.5 bg-current"></span>
       <span class="w-6 h-0.5 bg-current"></span>
       <span class="w-6 h-0.5 bg-current"></span>
-    </div>
+    </button>
 
     <!-- Navigation -->
     <nav aria-label="Main navigation" class="relative">
-      <ul class="flex gap-6 text-body md:flex hidden">
+
+      <!-- Desktop Menu -->
+      <ul class="hidden md:flex gap-6 text-body">
         {nav.map(item => {
           const isActive = current === item.href
           return (
@@ -77,6 +80,7 @@ const linkBase =
           )
         })}
       </ul>
+
     </nav>
 
   </div>

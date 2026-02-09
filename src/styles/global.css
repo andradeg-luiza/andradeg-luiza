@@ -82,25 +82,3 @@ img {
     background: #111;
   }
 }
-
-/* ------------------------------------------------------ */
-/* TECH CARDS — ALTURA IGUAL                              */
-/* ------------------------------------------------------ */
-
-.tech-grid {
-  display: grid;
-  grid-auto-rows: 1fr;
-}
-
-.tech-card {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
-/* Força altura igual mesmo se o HTML não estiver perfeito */
-.tech-grid > * {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
