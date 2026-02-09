@@ -157,4 +157,4 @@ My long‑term goal is to build tools that bring clarity, structure, and efficie
 
 ## License
 
-MIT License.
+⚠️ This repository is proprietary. Viewing is allowed, but copying, modification, or redistribution is strictly prohibited.
