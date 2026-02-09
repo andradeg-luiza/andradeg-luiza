@@ -1,7 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro"
 import SectionTitle from "../components/SectionTitle.astro"
-import Button from "../components/Button.astro"
 import Avatar from "../components/Avatar.astro"
 
 const paragraphClasses =
@@ -41,26 +40,59 @@ const paragraphClasses =
       a clear path through my experience, solutions, and the systems I build.
     </p>
 
-    <!-- Theme buttons -->
-    <div class="flex gap-4" data-testid="home-theme-buttons">
-      <Button 
-        variant="darkMode" 
-        size="lg" 
-        onclick="setTheme('dark')"
-        data-testid="home-btn-dark"
-      >
-        Dark
-      </Button>
-
-      <Button 
-        variant="lightMode" 
-        size="lg" 
-        onclick="setTheme('light')"
-        data-testid="home-btn-light"
-      >
+    <!-- Theme Toggle (back to original position) -->
+    <div 
+      class="flex items-center gap-4 select-none cursor-pointer" 
+      onclick="window.toggleTheme()" 
+      data-testid="home-theme-toggle"
+    >
+      <span class="text-base font-medium text-neutralTech-700 dark:text-neutralTech-200">
         Light
-      </Button>
+      </span>
+
+      <div 
+        class="w-16 h-8 rounded-full bg-neutralTech-300 dark:bg-neutralTech-700 relative transition"
+      >
+        <div 
+          id="theme-knob"
+          class="absolute top-1 left-1 w-6 h-6 rounded-full bg-white dark:bg-neutralTech-200 transition-transform"
+        ></div>
+      </div>
+
+      <span class="text-base font-medium text-neutralTech-700 dark:text-neutralTech-200">
+        Dark
+      </span>
     </div>
+
+    <script>
+      window.toggleTheme = function () {
+        const isDark = document.documentElement.classList.contains("dark");
+        const next = isDark ? "light" : "dark";
+
+        if (typeof setTheme === "function") {
+          setTheme(next);
+        } else {
+          document.documentElement.classList.toggle("dark", next === "dark");
+        }
+
+        const knob = document.getElementById("theme-knob");
+        if (knob) {
+          knob.style.transform = next === "dark" 
+            ? "translateX(32px)" 
+            : "translateX(0px)";
+        }
+      };
+
+      window.addEventListener("DOMContentLoaded", () => {
+        const knob = document.getElementById("theme-knob");
+        if (!knob) return;
+
+        const isDark = document.documentElement.classList.contains("dark");
+        knob.style.transform = isDark 
+          ? "translateX(32px)" 
+          : "translateX(0px)";
+      });
+    </script>
 
     <!-- Download CV Link -->
     <a 
