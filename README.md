@@ -78,12 +78,6 @@ The project includes a documentation set describing architecture, components, te
 
 ---
 
-## Hosting
-
-- GitHub Pages  
-
----
-
 ## Project Structure
 
 ```
