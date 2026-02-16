@@ -1,0 +1,66 @@
+---
+// src/pages/en/timeline.astro
+import BaseLayout from "../../layouts/BaseLayout.astro"
+import SectionTitle from "../../components/SectionTitle.astro"
+import TimelineItem from "../../components/TimelineItem.astro"
+---
+
+<BaseLayout title="Timeline">
+  <main class="py-paddingPage flex flex-col items-center gap-12" data-testid="timeline-page">
+    <div class="w-full max-w-3xl text-center" data-testid="timeline-header">
+      <SectionTitle
+        class="items-center text-center [&>h2]:text-h1"
+        title="Career Timeline"
+        subtitle="A chronological view of my professional journey"
+        data-testid="timeline-title"
+      />
+    </div>
+
+    <div class="flex flex-col gap-8" data-testid="timeline-list">
+      <!-- Product Creator -->
+      <div data-testid="timeline-item-1">
+        <TimelineItem
+          year="2025 — Present"
+          title="Product Creator"
+          description="Designing and developing my own products — FocusFlow and Donna — applying engineering clarity, automation, and user-centered problem solving. Building tools focused on productivity, workflow optimization, and technical enablement."
+        />
+      </div>
+
+      <!-- SDET -->
+      <div data-testid="timeline-item-2">
+        <TimelineItem
+          year="2023 — Present"
+          title="SDET — Software Development Engineer in Test"
+          description="Acting with a strong engineering focus, designing and executing test strategies, building automation for UI, API, and performance, and improving CI/CD pipelines. Working in an agile environment, analyzing defects, ensuring system reliability, and supporting scalable test architectures. Skills: TypeScript, Node.js, Prisma ORM, PostgreSQL, MongoDB, JWT authentication, CI/CD."
+        />
+      </div>
+
+      <!-- QA Engineer -->
+      <div data-testid="timeline-item-3">
+        <TimelineItem
+          year="2021 — 2023"
+          title="Quality Analyst / QA Engineer"
+          description="Creating and reviewing test scenarios, executing functional and exploratory tests, and developing automated tests for web and desktop applications. Maintaining automation scripts, collaborating with development teams, and supporting defect resolution. Skills: Cypress, JavaScript, K6, Postman, Pactum JS, functional testing, regression testing, documentation."
+        />
+      </div>
+
+      <!-- Support + Quality Foundations -->
+      <div data-testid="timeline-item-4">
+        <TimelineItem
+          year="2014 — 2021"
+          title="Support & Quality Analyst"
+          description="Providing Level 1 support for corporate users, resolving incidents related to hardware, software, networks, and enterprise systems. Mapping and validating processes, analyzing non-conformities, investigating root causes, and producing performance and quality reports. Supporting training initiatives and contributing to continuous improvement. Skills: troubleshooting, process analysis, documentation, SLA management, communication, root-cause analysis."
+        />
+      </div>
+
+      <!-- Early Support Career -->
+      <div data-testid="timeline-item-5">
+        <TimelineItem
+          year="2011 — 2014"
+          title="Technical Support — ISPs"
+          description="Beginning my career in technical support for internet service providers, assisting customers with connectivity issues, modem/router configuration, and network troubleshooting. Building strong foundations in communication, diagnostics, and customer-focused problem solving."
+        />
+      </div>
+    </div>
+  </main>
+</BaseLayout>

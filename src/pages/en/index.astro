@@ -1,59 +1,49 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro"
-import SectionTitle from "../components/SectionTitle.astro"
-import Avatar from "../components/Avatar.astro"
+// src/pages/en/index.astro
+import BaseLayout from "../../layouts/BaseLayout.astro"
+import SectionTitle from "../../components/SectionTitle.astro"
+import Avatar from "../../components/Avatar.astro"
 
 const paragraphClasses =
   "text-body text-neutralTech-700 dark:text-neutralTech-200 transition-colors duration-base"
 ---
 
 <BaseLayout title="Luiza Gusmão">
-  <main 
+  <main
     class="py-paddingPage flex flex-col items-center text-center gap-10"
     data-testid="home-page"
   >
-
     <!-- Avatar -->
     <div data-testid="home-avatar">
-      <Avatar 
-        src="/images/me.jpg" 
-        alt="Luiza Gusmão" 
-        size="xl" 
-        bordered
-      />
+      <Avatar src="/images/me.jpg" alt="Luiza Gusmão" size="xl" bordered />
     </div>
 
     <!-- Title -->
-    <h1 
+    <h1
       class="text-h1 md:text-display font-semibold text-brand-wine dark:text-brand-beige max-w-3xl transition-colors duration-base"
       data-testid="home-title"
     >
-      Uma Visão Profissional da Minha Jornada em Desenvolvimento e Software
+      A Professional Overview of My Engineering Journey
     </h1>
 
     <!-- Intro -->
-    <p 
-      class={`${paragraphClasses} max-w-2xl`}
-      data-testid="home-intro"
-    >
-      Esta plataforma apresenta meu trabalho em engenharia de qualidade, automação e desenvolvimento de produtos —
-      um caminho claro através da minha experiência, soluções e dos sistemas que construo.
+    <p class={`${paragraphClasses} max-w-2xl`} data-testid="home-intro">
+      This platform introduces my work in quality engineering, automation, and product development —
+      a clear path through my experience, solutions, and the systems I build.
     </p>
 
     <!-- Theme Toggle (back to original position) -->
-    <div 
-      class="flex items-center gap-4 select-none cursor-pointer" 
-      onclick="window.toggleTheme()" 
+    <div
+      class="flex items-center gap-4 select-none cursor-pointer"
+      onclick="window.toggleTheme()"
       data-testid="home-theme-toggle"
     >
       <span class="text-base font-medium text-neutralTech-700 dark:text-neutralTech-200">
         Light
       </span>
 
-      <div 
-        class="w-16 h-8 rounded-full bg-neutralTech-300 dark:bg-neutralTech-700 relative transition"
-      >
-        <div 
+      <div class="w-16 h-8 rounded-full bg-neutralTech-300 dark:bg-neutralTech-700 relative transition">
+        <div
           id="theme-knob"
           class="absolute top-1 left-1 w-6 h-6 rounded-full bg-white dark:bg-neutralTech-200 transition-transform"
         ></div>
@@ -77,9 +67,7 @@ const paragraphClasses =
 
         const knob = document.getElementById("theme-knob");
         if (knob) {
-          knob.style.transform = next === "dark" 
-            ? "translateX(32px)" 
-            : "translateX(0px)";
+          knob.style.transform = next === "dark" ? "translateX(32px)" : "translateX(0px)";
         }
       };
 
@@ -88,30 +76,27 @@ const paragraphClasses =
         if (!knob) return;
 
         const isDark = document.documentElement.classList.contains("dark");
-        knob.style.transform = isDark 
-          ? "translateX(32px)" 
-          : "translateX(0px)";
+        knob.style.transform = isDark ? "translateX(32px)" : "translateX(0px)";
       });
     </script>
 
     <!-- Download CV Link -->
-    <a 
-      href="/Luiza-Gusmao-CV.pdf" 
+    <a
+      href="/Luiza-Gusmao-CV.pdf"
       download
       class="text-lg font-medium text-brand-wine dark:text-brand-beige underline underline-offset-4 hover:opacity-80 transition"
       data-testid="home-download-cv"
     >
-      Currículo →
+      Download CV →
     </a>
 
     <!-- Section title -->
     <div class="mt-16 w-full max-w-3xl text-center" data-testid="home-section-title">
-      <SectionTitle 
+      <SectionTitle
         class="items-center text-center [&>h2]:text-h1"
-        title="Uma Apresentação Clara e Estruturada"
-        subtitle="Explore minha experiência, tecnologias, projetos, produtos e a evolução da minha carreira"
+        title="A Clear and Structured Presentation"
+        subtitle="Explore my experience, technologies, projects, products, and the evolution of my career"
       />
     </div>
-
   </main>
 </BaseLayout>

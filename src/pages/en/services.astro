@@ -1,0 +1,133 @@
+---
+// src/pages/en/services.astro
+import BaseLayout from "../../layouts/BaseLayout.astro"
+import SectionTitle from "../../components/SectionTitle.astro"
+
+const blockClasses =
+  "flex flex-col gap-4 border-b border-neutralTech-200 dark:border-neutralTech-800 pb-10"
+
+const titleClasses =
+  "text-h3 font-semibold text-brand-wine dark:text-brand-beige transition-colors duration-base"
+
+const paragraphClasses =
+  "text-body text-neutralTech-700 dark:text-neutralTech-200 transition-colors duration-base"
+
+const linkClasses =
+  "text-brand-wineMuted dark:text-neutralTech-200 hover:text-brand-wine dark:hover:text-brand-beige transition-colors duration-base font-medium text-body"
+---
+
+<BaseLayout title="Services">
+  <main class="py-paddingPage flex flex-col items-center gap-12" data-testid="services-page">
+    <!-- Header -->
+    <div class="w-full max-w-4xl text-center" data-testid="services-header">
+      <SectionTitle
+        class="items-center text-center [&>h2]:text-h1"
+        title="Services"
+        subtitle="Engineering-driven support across QA, automation, CI/CD, and modern software workflows"
+        data-testid="services-title"
+      />
+    </div>
+
+    <!-- Services List -->
+    <section class="w-full max-w-4xl flex flex-col gap-16">
+      <!-- SERVICE 1 -->
+      <section class={blockClasses} aria-labelledby="service-automation" data-testid="services-section-1">
+        <h2 id="service-automation" class={titleClasses} data-testid="services-section-1-title">
+          Do you need Test Automation?
+        </h2>
+
+        <p class={paragraphClasses} data-testid="services-section-1-text">
+          I design and implement automation that is stable, scalable, and aligned with real engineering needs.
+          My work covers UI, API, and performance automation with a strong focus on maintainability, reliability,
+          and long-term value. I help teams reduce manual effort, increase confidence in releases, and build
+          automation that truly supports delivery speed and quality.
+        </p>
+
+        <a
+          href="https://wa.me/5581994563827"
+          target="_blank"
+          rel="noopener noreferrer"
+          class={linkClasses}
+          aria-label="Talk to Luiza on WhatsApp about test automation"
+          data-testid="services-section-1-link"
+        >
+          Talk to me on WhatsApp →
+        </a>
+      </section>
+
+      <!-- SERVICE 2 -->
+      <section class={blockClasses} aria-labelledby="service-cicd" data-testid="services-section-2">
+        <h2 id="service-cicd" class={titleClasses} data-testid="services-section-2-title">
+          Do you need CI/CD or Quality Engineering?
+        </h2>
+
+        <p class={paragraphClasses} data-testid="services-section-2-text">
+          I build pipelines and engineering practices that support safe, repeatable, and observable delivery.
+          From pipeline architecture to automated quality gates, I help teams adopt workflows that reduce risk,
+          improve visibility, and ensure consistent standards across environments. My approach blends automation,
+          metrics, and engineering discipline to create reliable delivery systems.
+        </p>
+
+        <a
+          href="https://wa.me/5581994563827"
+          target="_blank"
+          rel="noopener noreferrer"
+          class={linkClasses}
+          aria-label="Talk to Luiza on WhatsApp about CI/CD or quality engineering"
+          data-testid="services-section-2-link"
+        >
+          Talk to me on WhatsApp →
+        </a>
+      </section>
+
+      <!-- SERVICE 3 -->
+      <section class={blockClasses} aria-labelledby="service-internal-tools" data-testid="services-section-3">
+        <h2 id="service-internal-tools" class={titleClasses} data-testid="services-section-3-title">
+          Do you need Internal Tools or Engineering Automation?
+        </h2>
+
+        <p class={paragraphClasses} data-testid="services-section-3-text">
+          I create tools and automation that reduce manual work, improve clarity, and support engineering operations.
+          This includes documentation tools, workflow automation, integration scripts, and utilities that help teams
+          move faster with less friction. My focus is always on clarity, maintainability, and real impact.
+        </p>
+
+        <a
+          href="https://wa.me/5581994563827"
+          target="_blank"
+          rel="noopener noreferrer"
+          class={linkClasses}
+          aria-label="Talk to Luiza on WhatsApp about internal tools or engineering automation"
+          data-testid="services-section-3-link"
+        >
+          Talk to me on WhatsApp →
+        </a>
+      </section>
+
+      <!-- SERVICE 4 -->
+      <section class="flex flex-col gap-4" aria-labelledby="service-hybrid" data-testid="services-section-4">
+        <h2 id="service-hybrid" class={titleClasses} data-testid="services-section-4-title">
+          Do you need Hybrid QA + Development support?
+        </h2>
+
+        <p class={paragraphClasses} data-testid="services-section-4-text">
+          I combine QA expertise with engineering skills to support teams that need technical depth.
+          This includes SDET practices, code quality improvements, lightweight backend support,
+          and small internal interfaces or dashboards. I help teams build testable architectures,
+          improve maintainability, and adopt engineering-driven quality strategies.
+        </p>
+
+        <a
+          href="https://wa.me/5581994563827"
+          target="_blank"
+          rel="noopener noreferrer"
+          class={linkClasses}
+          aria-label="Talk to Luiza on WhatsApp about hybrid QA and development support"
+          data-testid="services-section-4-link"
+        >
+          Talk to me on WhatsApp →
+        </a>
+      </section>
+    </section>
+  </main>
+</BaseLayout>

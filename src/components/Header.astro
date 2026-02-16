@@ -1,18 +1,35 @@
 ---
 const nav = [
-  { href: "/about", label: "About", testid: "nav-about" },
-  { href: "/projects", label: "Projects", testid: "nav-projects" },
-  { href: "/timeline", label: "Career Timeline", testid: "nav-timeline" },
-  { href: "/tech", label: "Tech", testid: "nav-tech" },
-  { href: "/services", label: "Services", testid: "nav-services" },
-  { href: "/contact", label: "Contact", testid: "nav-contact" },
+  { href: "/about", label: "Sobre", testid: "nav-about" },
+  { href: "/projects", label: "Projetos", testid: "nav-projects" },
+  { href: "/timeline", label: "Carreira", testid: "nav-timeline" },
+  { href: "/tech", label: "Tecnologias", testid: "nav-tech" },
+  { href: "/services", label: "Serviços", testid: "nav-services" },
+  { href: "/contact", label: "Contatos", testid: "nav-contact" },
+]
+
+// EN nav (separate testids so existing tests remain untouched)
+const navEn = [
+  { href: "/en/about", label: "About", testid: "nav-en-about" },
+  { href: "/en/projects", label: "Projects", testid: "nav-en-projects" },
+  { href: "/en/timeline", label: "Career Timeline", testid: "nav-en-timeline" },
+  { href: "/en/tech", label: "Tech", testid: "nav-en-tech" },
+  { href: "/en/services", label: "Services", testid: "nav-en-services" },
+  { href: "/en/contact", label: "Contact", testid: "nav-en-contact" },
 ]
 
 const current = Astro.url.pathname
+const isEn = current === "/en" || current.startsWith("/en/")
+
+// Switch targets (keeps same page when possible)
+const pathNoLang = isEn ? current.replace(/^\/en(\/|$)/, "/") : current
+const ptHref = pathNoLang === "" ? "/" : pathNoLang
+const enHref = isEn ? current : (current === "/" ? "/en" : `/en${current}`)
 
 const linkBase =
   "transition-colors duration-base text-neutralTech-700 dark:text-neutralTech-200 hover:text-brand-wineMuted dark:hover:text-brand-beige"
 ---
+
 <header 
   class="relative w-full bg-brand-surface dark:bg-brand-wine border-b border-neutralTech-200 dark:border-neutralTech-800 transition-colors duration-base"
   data-testid="header"
@@ -26,10 +43,11 @@ const linkBase =
       Luiza Gusmão
     </a>
 
+    <!-- MANTÉM a estrutura original -->
     <div class="flex items-center gap-4 ml-auto">
       <nav aria-label="Main navigation" class="hidden md:block">
         <ul class="flex gap-6 text-body">
-          {nav.map(item => {
+          {(isEn ? navEn : nav).map(item => {
             const isActive = current === item.href
             return (
               <li>
@@ -45,6 +63,31 @@ const linkBase =
           })}
         </ul>
       </nav>
+
+      <!-- Language Switch (discreto, sem afetar nav/testids existentes) -->
+      <div
+        class="flex items-center gap-2 ml-4 opacity-80 hover:opacity-100 transition-opacity"
+        aria-label="Language switch"
+      >
+        <a
+          href={ptHref}
+          class={`${!isEn ? "opacity-100" : "opacity-60"} transition-opacity`}
+          title="Português"
+          aria-label="Português"
+          data-testid="lang-pt"
+        >
+          <span class="text-base leading-none">🇧🇷</span>
+        </a>
+        <a
+          href={enHref}
+          class={`${isEn ? "opacity-100" : "opacity-60"} transition-opacity`}
+          title="English"
+          aria-label="English"
+          data-testid="lang-en"
+        >
+          <span class="text-base leading-none">🇺🇸</span>
+        </a>
+      </div>
 
       <button 
         class="md:hidden cursor-pointer flex flex-col gap-1"
@@ -62,7 +105,7 @@ const linkBase =
     id="mobile-menu"
     class="hidden absolute top-full right-0 w-full px-4 py-4 flex-col gap-4 text-body bg-brand-surface dark:bg-brand-wine border-t border-neutralTech-200 dark:border-neutralTech-700 shadow-lg z-50 md:hidden"
   >
-    {nav.map(item => {
+    {(isEn ? navEn : nav).map(item => {
       const isActive = current === item.href
       return (
         <li>

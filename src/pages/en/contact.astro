@@ -1,0 +1,102 @@
+---
+// src/pages/en/contact.astro
+import BaseLayout from "../../layouts/BaseLayout.astro"
+import SectionTitle from "../../components/SectionTitle.astro"
+
+const sectionClasses =
+  "flex flex-col gap-3 border-b border-neutralTech-200 dark:border-neutralTech-800 pb-10"
+
+const titleClasses =
+  "text-h3 font-semibold text-brand-wine dark:text-brand-beige transition-colors duration-base"
+
+const paragraphClasses =
+  "text-body text-neutralTech-700 dark:text-neutralTech-200 transition-colors duration-base"
+
+const linkClasses =
+  "text-brand-wineMuted dark:text-neutralTech-200 hover:text-brand-wine dark:hover:text-brand-beige transition-colors duration-base font-medium text-body"
+---
+
+<BaseLayout title="Contact">
+  <main class="py-paddingPage flex flex-col items-center gap-12" data-testid="contact-page">
+    <!-- Header -->
+    <div class="w-full max-w-3xl text-center" data-testid="contact-header">
+      <SectionTitle
+        class="items-center text-center [&>h2]:text-h1"
+        title="Contact"
+        subtitle="Reach out for collaborations, engineering support, or professional opportunities"
+        data-testid="contact-title"
+      />
+    </div>
+
+    <!-- Contact Methods -->
+    <section class="w-full max-w-3xl flex flex-col gap-16">
+      <!-- WhatsApp -->
+      <section
+        class={sectionClasses}
+        aria-labelledby="contact-whatsapp"
+        data-testid="contact-section-whatsapp"
+      >
+        <h2 id="contact-whatsapp" class={titleClasses} data-testid="contact-whatsapp-title">
+          WhatsApp
+        </h2>
+
+        <p class={paragraphClasses} data-testid="contact-whatsapp-text">
+          Direct and fast communication for projects, questions, or collaborations.
+        </p>
+
+        <a
+          href="https://wa.me/5581994563827"
+          target="_blank"
+          rel="noopener noreferrer"
+          class={linkClasses}
+          aria-label="Send a WhatsApp message to Luiza"
+          data-testid="contact-whatsapp-link"
+        >
+          Send a message →
+        </a>
+      </section>
+
+      <!-- Email -->
+      <section class={sectionClasses} aria-labelledby="contact-email" data-testid="contact-section-email">
+        <h2 id="contact-email" class={titleClasses} data-testid="contact-email-title">
+          Email
+        </h2>
+
+        <p class={paragraphClasses} data-testid="contact-email-text">
+          For detailed inquiries, proposals, or professional conversations.
+        </p>
+
+        <a
+          href="mailto:contact@gusmaolima.com"
+          class={linkClasses}
+          aria-label="Send an email to Luiza"
+          data-testid="contact-email-link"
+        >
+          Send an email →
+        </a>
+      </section>
+
+      <!-- LinkedIn -->
+      <section class="flex flex-col gap-3" aria-labelledby="contact-linkedin" data-testid="contact-section-linkedin">
+        <h2 id="contact-linkedin" class={titleClasses} data-testid="contact-linkedin-title">
+          LinkedIn
+        </h2>
+
+        <p class={paragraphClasses} data-testid="contact-linkedin-text">
+          Professional profile, networking, and career-focused communication.
+        </p>
+
+        <a
+          href="https://www.linkedin.com/in/andradegluiza/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class={linkClasses}
+          aria-label="Visit Luiza's LinkedIn profile"
+          data-testid="contact-linkedin-link"
+        >
+          Visit profile →
+        </a>
+      </section>
+    </section>
+  </main>
+</BaseLayout>

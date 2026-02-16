@@ -1,0 +1,153 @@
+---
+// src/pages/en/projects.astro
+import BaseLayout from "../../layouts/BaseLayout.astro"
+import SectionTitle from "../../components/SectionTitle.astro"
+
+const blockClasses =
+  "flex flex-col gap-3 border-b border-neutralTech-200 dark:border-neutralTech-800 pb-8"
+
+const titleClasses =
+  "text-h3 font-semibold text-brand-wine dark:text-brand-beige transition-colors duration-base"
+
+const paragraphClasses =
+  "text-body text-neutralTech-700 dark:text-neutralTech-200 transition-colors duration-base"
+
+const linkClasses =
+  "text-brand-wineMuted dark:text-neutralTech-200 hover:text-brand-wine dark:hover:text-brand-beige transition-colors duration-base text-body font-medium"
+---
+
+<BaseLayout title="Projects">
+  <main class="py-paddingPage flex flex-col items-center gap-12" data-testid="projects-page">
+    <!-- Header -->
+    <div class="w-full max-w-4xl text-center" data-testid="projects-header">
+      <SectionTitle
+        class="items-center text-center [&>h2]:text-h1"
+        title="Projects"
+        subtitle="A curated and technical overview of the systems, tools, and products I’ve engineered"
+        data-testid="projects-title"
+      />
+    </div>
+
+    <!-- Project List -->
+    <section class="w-full max-w-4xl flex flex-col gap-12">
+      <!-- PROJECT 1 -->
+      <section class={blockClasses} aria-labelledby="project-portfolio" data-testid="projects-section-1">
+        <h2 id="project-portfolio" class={titleClasses} data-testid="projects-section-1-title">
+          1. Portfolio Website
+        </h2>
+
+        <a
+          href="https://github.com/andradeg-luiza/andradeg-luiza"
+          target="_blank"
+          rel="noopener noreferrer"
+          class={linkClasses}
+          aria-label="Explore the Portfolio Website project"
+          data-testid="projects-section-1-link"
+        >
+          Explore this project →
+        </a>
+
+        <p class={paragraphClasses} data-testid="projects-section-1-text">
+          A fully engineered personal platform built with Astro, TypeScript, and TailwindCSS, designed to showcase technical expertise, projects, and long-term engineering direction.
+          The system follows a modular architecture optimized for performance, accessibility, and maintainability.
+          It includes unit tests (Vitest) and end-to-end tests (Playwright), ensuring reliability across components and user flows.
+          CI/CD pipelines via GitHub Actions automate testing, linting, building, and deployment to GitHub Pages.
+        </p>
+      </section>
+
+      <!-- PROJECT 2 -->
+      <section class={blockClasses} aria-labelledby="project-focusflow" data-testid="projects-section-2">
+        <h2 id="project-focusflow" class={titleClasses} data-testid="projects-section-2-title">
+          2. FocusFlow — Productivity & Workflow System
+        </h2>
+
+        <a
+          href="https://github.com/andradeg-luiza/focusflow"
+          target="_blank"
+          rel="noopener noreferrer"
+          class={linkClasses}
+          aria-label="Explore the FocusFlow project"
+          data-testid="projects-section-2-link"
+        >
+          Explore this project →
+        </a>
+
+        <p class={paragraphClasses} data-testid="projects-section-2-text">
+          FocusFlow is a structured productivity system designed to improve execution, prioritization, and workflow clarity.
+          Built with a strong engineering mindset, it applies principles of task orchestration, modular architecture, and maintainable code design.
+          The project reflects deep understanding of state management, UI/UX for productivity tools, and automation-driven workflows.
+        </p>
+      </section>
+
+      <!-- PROJECT 3 -->
+      <section class={blockClasses} aria-labelledby="project-autoapplybot" data-testid="projects-section-3">
+        <h2 id="project-autoapplybot" class={titleClasses} data-testid="projects-section-3-title">
+          3. Auto Apply Bot — Automated Job Application Tool
+        </h2>
+
+        <a
+          href="https://github.com/andradeg-luiza/autoapplybot"
+          target="_blank"
+          rel="noopener noreferrer"
+          class={linkClasses}
+          aria-label="Explore the Auto Apply Bot project"
+          data-testid="projects-section-3-link"
+        >
+          Explore this project →
+        </a>
+
+        <p class={paragraphClasses} data-testid="projects-section-3-text">
+          An automation tool designed to streamline job application workflows by interacting with job platforms programmatically.
+          The bot automates repetitive tasks such as form filling, data extraction, and structured submissions.
+          Built with Node.js, automation scripts, and robust error handling, it showcases strong skills in browser automation, workflow optimization, API interaction, and reliability engineering.
+        </p>
+      </section>
+
+      <!-- PROJECT 4 -->
+      <section class={blockClasses} aria-labelledby="project-donna" data-testid="projects-section-4">
+        <h2 id="project-donna" class={titleClasses} data-testid="projects-section-4-title">
+          4. Donna — Engineering Assistant
+        </h2>
+
+        <a
+          href="https://github.com/andradeg-luiza/donna"
+          target="_blank"
+          rel="noopener noreferrer"
+          class={linkClasses}
+          aria-label="Explore the Donna project"
+          data-testid="projects-section-4-link"
+        >
+          Explore this project →
+        </a>
+
+        <p class={paragraphClasses} data-testid="projects-section-4-text">
+          Donna is an AI-powered engineering assistant focused on automation, documentation, and workflow optimization.
+          It integrates structured logic, modular services, and automation routines to support engineering tasks such as generating documentation, organizing workflows, and assisting with testing processes.
+        </p>
+      </section>
+
+      <!-- PROJECT 5 -->
+      <section class="flex flex-col gap-3" aria-labelledby="project-qakb" data-testid="projects-section-5">
+        <h2 id="project-qakb" class={titleClasses} data-testid="projects-section-5-title">
+          5. QA Knowledge Base
+        </h2>
+
+        <a
+          href="https://www.linkedin.com/in/andradegluiza/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class={linkClasses}
+          aria-label="Explore the QA Knowledge Base project"
+          data-testid="projects-section-5-link"
+        >
+          Explore this project →
+        </a>
+
+        <p class={paragraphClasses} data-testid="projects-section-5-text">
+          A comprehensive and evolving knowledge base documenting QA methodologies, automation strategies, testing patterns, engineering workflows, and best practices.
+          It consolidates insights from 16+ years of experience across support, QA, automation, and SDET roles.
+        </p>
+      </section>
+    </section>
+  </main>
+</BaseLayout>
