@@ -43,9 +43,20 @@ Built with real-world architecture from day one.
 ### 🤖 Job Hunter
 An intelligent bot that searches for job openings, tailors your resume using AI, generates a personalized cover letter, and applies automatically.
 
-`C# / .NET 10` · `Clean Architecture` · `OpenAI API` · `Playwright` · `PactumJS`
+`C# / .NET 10` · `Clean Architecture` · `OpenAI API` · `Cypress` · `PactumJS`
 
 > Status: `Planning` · Version: `V0`
+
+---
+
+## 💼 Professional Projects
+
+### 🧾 Accounting Platform
+I professionally developed an accounting website with an integrated online cash management system, delivering both the public-facing platform and business management features.
+
+`ASP.NET Core` · `C#` · `React` · `SQL Server` · `REST API`
+
+> Status: `Delivered` · Type: `Professional Project`
 
 ---
 
